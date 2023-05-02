@@ -1,0 +1,35 @@
+body{
+    text-align: justify;
+    font-size: large;
+    background: #e5b689;
+}
+
+header{
+    text-align: center;
+    background: #e18a3a;
+}
+
+main{
+    font-size: large;
+    text-align: justify;
+    font-family: "Calibri Light", sans-serif;
+}
+
+#pareja-comiendo{
+
+    float: left;
+
+}
+
+#ver-restaurantes {
+    font-size: x-large;
+    font-weight: bold ;
+    padding: 10px;
+    background-color: #e18a3a;
+    border: black 3px solid;
+}
+
+
+
+
+
