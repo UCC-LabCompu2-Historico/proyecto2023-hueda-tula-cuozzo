@@ -83,7 +83,10 @@ a:link, a:visited {
     margin-right: 50px;
 
 }
+#fotoLocalhop{
+    column-count: 2;
 
+}
 
 article{
     column-count: 1;
