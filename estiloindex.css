@@ -42,7 +42,6 @@ main {
 
 #ver-restaurantes {
     text-align: center;
-    padding: 50px;
     background-color: #ff8000;
     font-size: large;
     padding: 20px;
@@ -77,4 +76,18 @@ a:link, a:visited {
 
 .blackpan, .hoppiness, .moly , .wonder{
     display: flex;
+}
+
+#mapas{
+    float: right;
+    margin-right: 50px;
+
+}
+
+
+article{
+    column-count: 1;
+    column-gap:100px;
+    margin-left: 50px;
+    margin-right: 450px;
 }
