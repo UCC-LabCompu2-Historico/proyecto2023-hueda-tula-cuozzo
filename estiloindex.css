@@ -36,7 +36,6 @@ main {
 #ver-restaurantes {
     text-align: center;
     padding: 50px;
-
     background-color: #ff8000;
     font-size: large;
     padding: 20px;
@@ -52,46 +51,23 @@ a:link, a:visited {
     text-align: left;
 }
 
-#imgblacpan, #imgmolly {
+#imgblackpan, #imgmolly {
     float: left;
     padding: 3px;
     border: black 1px solid;
 }
 
 #hoppiness, #wonder {
-    text-align: right;
+    text-align: left;
 }
 
 #imghoppiness , #imgwonder{
-    float: right;
+    float: left;
     padding: 3px;
     border: black 1px solid;
 }
-<<<<<<< HEAD
-=======
 
-#molly {
-    text-align: left;
-}
-#imgmolly{
-    float: left;
-}
-#wonder{
-    text-align: right;
-}
-#imgwonder{
-     float: right;
- }
-.blackpan{
+
+.blackpan, .hoppiness, .moly , .wonder{
     display: flex;
 }
-.hoppiness{
-    display: flex;
-}
-.molly{
-    display: flex;
-}
-.wonder{
-    display: flex;
-}
->>>>>>> 729eaceca55ccfa46eae4507c7a26e8ad1a5b333
