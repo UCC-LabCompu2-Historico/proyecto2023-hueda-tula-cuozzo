@@ -1,10 +1,14 @@
+<<<<<<< HEAD
 #titulo_principal{
     font-weight:  bold;
     font-family: 'Righteous', sans-serif;
+=======
+#titulo_principal {
+    font-weight: bold;
+    font-family: 'Righteous', cursive;
+>>>>>>> 90847daab2444bf30555a6d0b2f84a013486174d
     font-size: xxx-large;
 }
-
-
 
 
 body {
@@ -37,11 +41,7 @@ main {
 
 #ver-restaurantes {
     text-align: center;
-    padding:50px;
-}
-
-a {
-
+    padding: 50px;
     background-color: #ff8000;
     font-size: large;
     padding: 20px;
@@ -53,43 +53,27 @@ a:link, a:visited {
     color: black;
 }
 
-
-#blackpan{
-    text-align: left;
-
-}
-#imgblacpan{
-    float: left;
-}
-
-#hoppiness{
-    text-align: right;
-}
-#imghoppiness{
-    float: right;
-}
-
-#molly {
+#blackpan , #molly {
     text-align: left;
 }
-#imgmolly{
+
+#imgblackpan, #imgmolly {
     float: left;
+    padding: 3px;
+    border: black 1px solid;
 }
-#wonder{
-    text-align: right;
+
+#hoppiness, #wonder {
+    text-align: left;
 }
-#imgwonder{
-     float: right;
- }
-.blackpan{
-    display: flex;
+
+#imghoppiness , #imgwonder{
+    float: left;
+    padding: 3px;
+    border: black 1px solid;
 }
-.hoppiness{
-    display: flex;
-}
-.molly{
-    display: flex;
-}
-.wonder{
+
+
+.blackpan, .hoppiness, .moly , .wonder{
     display: flex;
 }
