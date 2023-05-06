@@ -7,7 +7,6 @@
 #titulo_principal {
     font-weight: bold;
     font-family: 'Righteous', cursive;
-
     font-size: xxx-large;
 }
 
@@ -81,11 +80,6 @@ a:link, a:visited {
 #mapas{
     float: right;
     margin-right: 50px;
-
-}
-#fotoLocalhop{
-    column-count: 2;
-
 }
 
 article{
