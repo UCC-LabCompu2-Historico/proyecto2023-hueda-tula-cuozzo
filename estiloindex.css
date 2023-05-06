@@ -56,6 +56,7 @@ a:link, a:visited {
 
 #blackpan{
     text-align: left;
+
 }
 #imgblacpan{
     float: left;
@@ -71,6 +72,24 @@ a:link, a:visited {
 #molly {
     text-align: left;
 }
+#imgmolly{
+    float: left;
+}
 #wonder{
     text-align: right;
+}
+#imgwonder{
+     float: right;
+ }
+.blackpan{
+    display: flex;
+}
+.hoppiness{
+    display: flex;
+}
+.molly{
+    display: flex;
+}
+.wonder{
+    display: flex;
 }
