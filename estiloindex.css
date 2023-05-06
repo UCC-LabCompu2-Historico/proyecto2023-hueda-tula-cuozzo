@@ -1,35 +1,55 @@
-body{
+#titulo_principal{
+    font-weight:  bold;
+    font-family: 'Righteous', cursive;
+    font-size: xxx-large;
+}
+
+
+
+body {
     text-align: justify;
     font-size: large;
     background: #e5b689;
+    font-family: 'Poppins', sans-serif;
 }
 
-header{
+header {
     text-align: center;
     background: #e18a3a;
-}
 
-main{
     font-size: large;
-    text-align: justify;
-    font-family: "Calibri Light", sans-serif;
+    padding: 5px;
+    border: black 1px solid;
 }
 
-#pareja-comiendo{
+main {
+    font-size: 20px;
+    text-align: justify;
+
+}
+
+#pareja-comiendo {
 
     float: left;
 
 }
 
 #ver-restaurantes {
-    font-size: x-large;
-    font-weight: bold ;
-    padding: 10px;
-    background-color: #e18a3a;
-    border: black 3px solid;
+    text-align: center;
+    padding:50px;
 }
 
+a {
 
+    background-color: #ff8000;
+    font-size: large;
+    padding: 20px;
+    border: black 1px solid;
 
+}
+
+a:link, a:visited {
+    color: black;
+}
 
 
