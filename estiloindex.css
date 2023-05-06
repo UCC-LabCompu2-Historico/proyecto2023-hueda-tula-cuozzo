@@ -1,10 +1,8 @@
-#titulo_principal{
-    font-weight:  bold;
+#titulo_principal {
+    font-weight: bold;
     font-family: 'Righteous', cursive;
     font-size: xxx-large;
 }
-
-
 
 
 body {
@@ -37,10 +35,7 @@ main {
 
 #ver-restaurantes {
     text-align: center;
-    padding:50px;
-}
-
-a {
+    padding: 50px;
 
     background-color: #ff8000;
     font-size: large;
@@ -53,31 +48,22 @@ a:link, a:visited {
     color: black;
 }
 
-
-#blackpan{
+#blackpan , #molly {
     text-align: left;
-
 }
-#imgblacpan{
+
+#imgblacpan, #imgmolly {
     float: left;
+    padding: 3px;
+    border: black 1px solid;
 }
 
-#hoppiness{
+#hoppiness, #wonder {
     text-align: right;
 }
-#imghoppiness{
+
+#imghoppiness , #imgwonder{
     float: right;
+    padding: 3px;
+    border: black 1px solid;
 }
-
-#molly {
-    text-align: left;
-}
-#imgmolly{
-    float: left;
-}
-#wonder{
-    text-align: right;
-}
-#imgwonder{
-     float: right;
- }
