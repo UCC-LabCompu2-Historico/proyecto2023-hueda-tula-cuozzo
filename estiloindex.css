@@ -79,7 +79,16 @@ a:link, a:visited {
 
 #mapas{
     float: right;
+    margin-top: 30px;
     margin-right: 50px;
+
+}
+
+#fotoLocalhop{
+    margin-left: 50px;
+    margin-right: 400px;
+    display: flex;
+    justify-content: space-between;
 }
 
 article{
