@@ -21,9 +21,7 @@
 </header>
 
 <p>
-    <b>Medios de Pago:</b><br>
-    <label for="Efectivo">Efectivo</label>
-    <input type ="radio" name="pago" value="efectivo" id="efectivo">
+    <b><strong>Efectivo</strong></b>
 </p>
 <p>
     <label for="nombre">Nombre:</label>
@@ -38,10 +36,22 @@
     <input type ="number" name="Dni" id="dni" placeholder="Dni">
 </p>
 <p>
+    <label for="cantidad">Cantidad:</label>
+    <input type="text" name="cantidad" id="cantidad" placeholder="¿Con cuanto paga?"> <input type="text" name="vuelto" id="cantidad2" placeholder="Vuelto">
+</p>
+</br>
+<p>
+    <b><strong>Tarjetas</strong></b>
+</p>
+<p>
     <label for="Tarjeta de Debito">Tarjeta de Debito</label>
     <input type ="radio" name="pago" value="Tarjeta de Debito" id="Tarjeta de Debito">
     <label for="Tarjeta de Credito">Tarjeta de Credito</label>
     <input type ="radio" name="pago" value="Tarjeta de Credito" id="Tarjeta de Credito">
+</p>
+<p>
+    <label for="dni2">Dni:</label>
+    <input type ="number" name="Dni" id="dni2" placeholder="Dni">
 </p>
 <p>
     <label for="tarjeta">Numero de tarjeta:</label>
@@ -59,26 +69,12 @@
     <label for="Codigo de seguridad">Codigo de seguridad:</label>
     <input type ="password" name="codigo de seguridad" id="Codigo de seguridad" placeholder="XXX">
 </p>
-<p>
-    Tipo de servicio: <label for="free">Free</label> <input type="checkbox" name="tipo de dervicio" value="free" id="free">\
-    <label for="standard">Standard</label> <input type="checkbox" name="tipo de dervicio" value="standard" id="standard">\
-    <label for="premium"> Premium</label> <input type="checkbox" name="tipo de dervicio" value="premium" id="premium">\
-</p>
-<p>
-    <label for="tema">Tema:</label>
-    <select id="tema">
-        <option value="politica">Política</option>
-        <option value="negocios">Negocios</option>
-        <option value="tecnologia">Tecnología</option>
-        <option value="salud">Salud</option>
-    </select>
 
-</p>
 <p>
     <label for="comentario">Agregue un comentario:</label> <textarea id="comentario"></textarea>
 </p>
 <p>
-    <button type="button">Boton de Enviar</button>
+    <button type="button">PAGAR</button>
 </p>
 
 </form>
