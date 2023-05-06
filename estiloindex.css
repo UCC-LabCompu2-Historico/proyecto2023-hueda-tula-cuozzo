@@ -1,12 +1,13 @@
-<<<<<<< HEAD
-#titulo_principal{
-    font-weight:  bold;
+
+#titulo_principal {
+    font-weight: bold;
     font-family: 'Righteous', sans-serif;
-=======
+}
+
 #titulo_principal {
     font-weight: bold;
     font-family: 'Righteous', cursive;
->>>>>>> 90847daab2444bf30555a6d0b2f84a013486174d
+
     font-size: xxx-large;
 }
 
