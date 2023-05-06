@@ -1,4 +1,15 @@
-
+.blackpan{
+    display: flex;
+}
+.hoppiness{
+    display: flex;
+}
+.molly{
+    display: flex;
+}
+.wonder{
+    display: flex;
+}
 
 #blackpan{
     text-align: left;
