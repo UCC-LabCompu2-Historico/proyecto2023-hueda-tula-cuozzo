@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formas de Pago</title>
+    <meta content="Cuozzo Sofía, Hueda Luciana y Tula Sofía" name="autores">
+    <meta content="Pagina web proyecto para Laboratorio de Computacion 2" name="descripcion">
+    <meta content="hamburguesas, donde, comida, descuento, molly, wonder, hoppiness, blackpan" name="palabras-calves">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Righteous&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="imagenes/icono.png">
+
+    <link rel="stylesheet" href="estiloindex.css" type="text/css">
+</head>
+<body>
+<header>
+    <h1 id="titulo_principal"><u><em>FORMAS DE PAGO</em></u></h1>
+</header>
+
+<p>
+    <b>Medios de Pago:</b><br>
+    <label for="Efectivo">Efectivo</label>
+    <input type ="radio" name="pago" value="efectivo" id="efectivo">
+</p>
+<p>
+    <label for="nombre">Nombre:</label>
+    <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+</p>
+<p>
+    <label for="apellido">Apellido:</label>
+    <input type ="text" name="apellido" id="apellido" placeholder="Apellido">
+</p>
+<p>
+    <label for="dni">Dni:</label>
+    <input type ="number" name="Dni" id="dni" placeholder="Dni">
+</p>
+<p>
+    <label for="Tarjeta de Debito">Tarjeta de Debito</label>
+    <input type ="radio" name="pago" value="Tarjeta de Debito" id="Tarjeta de Debito">
+    <label for="Tarjeta de Credito">Tarjeta de Credito</label>
+    <input type ="radio" name="pago" value="Tarjeta de Credito" id="Tarjeta de Credito">
+</p>
+<p>
+    <label for="tarjeta">Numero de tarjeta:</label>
+    <input type ="text" name="Numero de tarjeta" id="tarjeta" placeholder="XXXX XXXX XXXX XXXX ">
+</p>
+<p>
+    <label for="vencimiento">Vec:</label>
+    <input type ="date" name="Vec" id="vencimiento" placeholder="MM/AA">
+</p>
+<p>
+    <label for="Titular">Titular:</label>
+    <input type ="text" name="titular" id="titular" placeholder="Titular">
+</p>
+<p>
+    <label for="Codigo de seguridad">Codigo de seguridad:</label>
+    <input type ="password" name="codigo de seguridad" id="Codigo de seguridad" placeholder="XXX">
+</p>
+<p>
+    Tipo de servicio: <label for="free">Free</label> <input type="checkbox" name="tipo de dervicio" value="free" id="free">\
+    <label for="standard">Standard</label> <input type="checkbox" name="tipo de dervicio" value="standard" id="standard">\
+    <label for="premium"> Premium</label> <input type="checkbox" name="tipo de dervicio" value="premium" id="premium">\
+</p>
+<p>
+    <label for="tema">Tema:</label>
+    <select id="tema">
+        <option value="politica">Política</option>
+        <option value="negocios">Negocios</option>
+        <option value="tecnologia">Tecnología</option>
+        <option value="salud">Salud</option>
+    </select>
+
+</p>
+<p>
+    <label for="comentario">Agregue un comentario:</label> <textarea id="comentario"></textarea>
+</p>
+<p>
+    <button type="button">Boton de Enviar</button>
+</p>
+
+</form>
+
+</body>
+</html>
