@@ -6,6 +6,7 @@
 
 
 
+
 body {
     text-align: justify;
     font-size: large;
@@ -53,3 +54,23 @@ a:link, a:visited {
 }
 
 
+#blackpan{
+    text-align: left;
+}
+#imgblacpan{
+    float: left;
+}
+
+#hoppiness{
+    text-align: right;
+}
+#imghoppiness{
+    float: right;
+}
+
+#molly {
+    text-align: left;
+}
+#wonder{
+    text-align: right;
+}
