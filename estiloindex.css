@@ -81,3 +81,15 @@ a:link, a:visited {
 #imgwonder{
      float: right;
  }
+.blackpan{
+    display: flex;
+}
+.hoppiness{
+    display: flex;
+}
+.molly{
+    display: flex;
+}
+.wonder{
+    display: flex;
+}
