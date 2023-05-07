@@ -114,4 +114,7 @@ article{
     display: flex;
     justify-content: space-between;
 }
+#boton{
+    text-align: center;
+}
 

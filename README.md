@@ -1,7 +1,15 @@
-# proyecto2023
-Estructura de Proyecto Lab de Compu II - 2023
+# Encontra la mejor hamburguesa
+El objetivo de nuestra página es brindar posibles lugares para comer una rica hamburguesa.
 
-## Requisitos del Primer Parcial
+## Autores
+Tula, Sofia - Hueda, Luciana - Cuozzo, Sofia
+
+## Tecnologia usada
+HTML 5
+CSS
+
+# Link al Sitio
+http://localhost:63342/proyecto2023-hueda-tula-cuozzo/index.html?_ijt=drknf7g5fcg3ae1jbu9trmrokq&_ij_reload=RELOAD_ON_SAVE
 
 ### Sobre el Repositorio
 - [ ] El proyecto debe estar subido al repositorio adecuado "Proyecto2023-ApellidoAlumno1-ApellidoAlumno2"
