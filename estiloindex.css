@@ -58,11 +58,10 @@ main {
 
 #atras {
     text-align: center;
-    background-color: rgba(196, 191, 191, 0);
-    font-family: "serif";
+    background-color: #ff8000;
     font-size: large;
     padding: 20px;
-
+    border: black 1px solid;
 
 }
 
