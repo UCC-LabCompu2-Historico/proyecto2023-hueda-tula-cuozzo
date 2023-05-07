@@ -92,8 +92,8 @@ a:link, a:visited {
 }
 
 #fotoLocalhop{
-    margin-left: 50px;
-    margin-right: 400px;
+    margin-left: 60px;
+    margin-right: 60px;
     display: flex;
     justify-content: space-between;
 }
@@ -101,13 +101,7 @@ a:link, a:visited {
 article{
     column-count: 1;
     column-gap:100px;
-    margin-left: 50px;
+    margin-left: 60px;
     margin-right: 450px;
 }
 
-#fotoHambur1{
-    margin-left: 50px;
-    margin-right: 400px;
-    display: flex;
-    justify-content: space-between;
-}
