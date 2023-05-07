@@ -98,3 +98,9 @@ article{
     margin-right: 450px;
 }
 
+#fotoHambur1{
+    margin-left: 50px;
+    margin-right: 400px;
+    display: flex;
+    justify-content: space-between;
+}
