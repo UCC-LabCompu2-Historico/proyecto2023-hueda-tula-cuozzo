@@ -73,10 +73,11 @@ a:link, a:visited {
 .blackpan, .hoppiness, .moly , .wonder{
     display: flex;
 }
-#hamburguesas{
+#menu{
     text-align: left;
+
 }
-#hoppiargenta{
+#hamburguesas{
     float: left;
     padding: 3px;
     border: black 1px solid;
