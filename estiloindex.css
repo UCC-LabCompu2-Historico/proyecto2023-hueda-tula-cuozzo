@@ -56,6 +56,17 @@ main {
 
 }
 
+#atras {
+    text-align: center;
+    background-color: rgba(196, 191, 191, 0);
+    font-family: "serif";
+    font-size: large;
+    padding: 20px;
+
+
+}
+
+
 a:link, a:visited {
     color: black;
 }
