@@ -92,7 +92,7 @@ a:link, a:visited {
     padding: 3px;
     border: black 1px solid;
 }
-#mapas{
+.mapas{
     float: right;
     margin-top: 30px;
     margin-right: 50px;
