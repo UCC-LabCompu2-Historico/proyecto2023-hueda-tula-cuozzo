@@ -73,11 +73,11 @@ a:link, a:visited {
 .blackpan, .hoppiness, .moly , .wonder{
     display: flex;
 }
-#menu{
+.menu{
     text-align: left;
 
 }
-#hamburguesas{
+.hamburguesas{
     float: left;
     padding: 3px;
     border: black 1px solid;
@@ -105,7 +105,6 @@ article{
 .tipodeham{
     font-size: 18px;
     line-height: 15px;
-    text-align: center;
     width:150px;
     height: 50px;
 }
