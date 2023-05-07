@@ -45,18 +45,45 @@
 
     <br>
 
-    <div id="menu">
-        <img id="hamburguesas" src="imagenes/mollydoble.png" width="170px" alt="Egg Bacon">
-        <h3><u> Egg Bacon</u>  </h3>
-        <p> Pan original con queso gratinado, doble medallon 120 gr, cuadruple queso cheddar, huevo frito,
-            jamón y salsa Molly.</p>
+    <div class="menu">
+        <img class="hamburguesas" src="imagenes/mollybigveggie.png" width="170px" alt="Big Veggie">
+        <h3><u> Big Veggie</u>  </h3>
+        <p> Pan original, medallon de garbanzo, champiñones, rucula, tomates secos y emmental. Incluye papas.</p>
         <br>
-        <select class="tipodeham">
+        <label for="bigveggie"> Tipo de Hamburguesa:</label>
+        <select name="bigveggie" id="bigveggie" class="tipodeham">
+            <option value="simple">Simple ($1150)</option>
+            <option value="doble">Doble ($1350)</option>
+            <option value="triple">Triple ($1600)</option>
+        </select>
+    </div>
+
+    <div class="menu">
+        <img class="hamburguesas" src="imagenes/mollyeggbacon.png" width="170px" alt="Egg Bacon">
+        <h3><u> Egg Bacon</u>  </h3>
+        <p> Pan original, doble medallon 120 gr, cheddar, huevo frito, jamón y salsa Molly. Incluye papas.</p>
+        <br>
+        <label for="eggbacon"> Tipo de Hamburguesa:</label>
+        <select name="eggbacon" id="eggbacon" class="tipodeham">
             <option value="simple">Simple ($1250)</option>
             <option value="doble">Doble ($1450)</option>
             <option value="triple">Triple ($1700)</option>
         </select>
     </div>
+
+    <div class="menu">
+        <img class="hamburguesas" src="imagenes/mollycrispyonion.png" width="170px" alt="Crispy Onion">
+        <h3><u> Crispy Onion</u>  </h3>
+        <p> Pan original, doble medallon 120 gr, cheddar, huevo frito, jamón y salsa Molly. Incluye papas.</p>
+        <br>
+        <label for="crispyonion"> Tipo de Hamburguesa:</label>
+        <select name="crispyonion" id="crispyonion" class="tipodeham">
+            <option value="simple">Simple ($1350)</option>
+            <option value="doble">Doble ($1500)</option>
+            <option value="triple">Triple ($1750)</option>
+        </select>
+    </div>
+
 
 </main>
 
