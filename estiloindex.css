@@ -39,6 +39,13 @@ main {
 
 }
 
+.boton{
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+    width: 100px;
+    height: 50px;
+}
 #ver-restaurantes {
     text-align: center;
     background-color: #ff8000;
