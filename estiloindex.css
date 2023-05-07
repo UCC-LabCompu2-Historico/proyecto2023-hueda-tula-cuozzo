@@ -10,7 +10,6 @@
     font-size: xxx-large;
 }
 
-
 body {
     text-align: justify;
     font-size: large;
@@ -21,17 +20,22 @@ body {
 header {
     text-align: center;
     background: #e18a3a;
-
     font-size: large;
     padding: 5px;
     border: black 1px solid;
 }
 
 main {
-    font-size: 20px;
+    font-size: 19px;
     text-align: justify;
     margin-left: 60px;
+    margin-right: 50px;
 
+}
+.option{
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: 'Poppins', cursive;
 }
 
 #pareja-comiendo {
@@ -48,7 +52,7 @@ main {
     height: 50px;
 }
 #ver-restaurantes {
-    text-align: center;
+    margin-left: 575px ;
     background-color: #ff8000;
     font-size: large;
     padding: 20px;
@@ -56,10 +60,20 @@ main {
 
 }
 
-.atras, .pagar{
+.atras{
     text-align: center;
     background-color: #ff8000;
     font-size: large;
+    padding: 5px;
+    border: black 1px solid;
+
+}
+
+.pagar{
+    margin-left: 555px;
+    font-weight: bolder;
+    background-color: #ff8000;
+    font-size: x-large;
     padding: 5px;
     border: black 1px solid;
 
@@ -83,6 +97,7 @@ a:link, a:visited {
 .blackpan, .hoppiness, .moly , .wonder{
     display: flex;
 }
+
 .menu{
     text-align: left;
 
