@@ -97,4 +97,6 @@ article{
     margin-left: 50px;
     margin-right: 450px;
 }
-
+.fotoformasdepago{
+    display: flex;
+}
