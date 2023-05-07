@@ -56,11 +56,11 @@ main {
 
 }
 
-#atras {
+.atras, .pagar{
     text-align: center;
     background-color: #ff8000;
     font-size: large;
-    padding: 20px;
+    padding: 5px;
     border: black 1px solid;
 
 }
