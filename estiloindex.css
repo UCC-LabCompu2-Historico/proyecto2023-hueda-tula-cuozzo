@@ -60,31 +60,27 @@ a:link, a:visited {
     color: black;
 }
 
-#blackpan , #molly {
+#blackpan , #molly, #hoppiness, #wonder {
     text-align: left;
 }
 
-#imgblackpan, #imgmolly {
+#imgblackpan, #imgmolly, #imghoppiness , #imgwonder {
     float: left;
     padding: 3px;
     border: black 1px solid;
 }
-
-#hoppiness, #wonder {
-    text-align: left;
-}
-
-#imghoppiness , #imgwonder{
-    float: left;
-    padding: 3px;
-    border: black 1px solid;
-}
-
 
 .blackpan, .hoppiness, .moly , .wonder{
     display: flex;
 }
-
+#hamburguesas{
+    text-align: left;
+}
+#hoppiargenta{
+    float: left;
+    padding: 3px;
+    border: black 1px solid;
+}
 #mapas{
     float: right;
     margin-top: 30px;
