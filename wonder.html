@@ -2,9 +2,109 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>WONDER HAMBURGUESERIA</title>
+    <meta content="Cuozzo Sofia, Hueda Luciana, Tula Sofia" name="autores">
+    <meta content="Pagina web proyecto para Laboratorio de Computacion 2" name="descripcion">
+    <meta content="hamburguesas, hamburgueseria, wonder, comida " name="palabras-claves">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.google.com/specimen/Bebas+Neue" rel="stylesheet">
+
+    <link rel="stylesheet" href="estiloindex.css" type="text/css">
+
+    <link rel="shortcut icon" href="imagenes/icono.png">
+
 </head>
+
 <body>
+
+<header>
+    <h1 id="titulo_principal"><u><em>WONDER HAMBURGUESERIA</em></u></h1>
+
+</header>
+
+<br>
+
+<main>
+    <br>
+    <div class="fotoLocal">
+        <img src="imagenes/wonderLugar1.png" width="280px"; height="220px" alt="Foto local de hoppines">
+        <img src="imagenes/wonderLugar2.png" width="280px"; height="220px" alt="Foto local de hoppines">
+        <img src="imagenes/wonderLugar3.png" width="280px"; height="220px" alt="Foto local de hoppines">
+
+
+    </div>
+
+    <iframe class="mapas" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d42993.56375877348!2d-64.23250884266317!3d-31.43628724598254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sRestaurantes%20hoppiness!5e0!3m2!1ses-419!2sar!4v1683409394684!5m2!1ses-419!2sar" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+    <article>
+        <br>
+        La hamburguesa te ofrece la satisfacción de degustar muchos sabores en un solo plato.
+        La opción de poder combinar el sabor jugoso de una buena carne con sabores dulces, salados, ácidos, amargos en un único bocado.
+    </article>
+
+    <br>
+
+    <div class="menu">
+        <br>
+        <u><label for="wonder1" class="option"> Wonder Argentina </label></u>
+        <input id="wonder1" type="radio" name="wonderhamburguesa" value="wonderargentina" >
+        <br>
+        <img class="hamburguesas" src="imagenes/wondeargetina.png" width="170px" alt="Wonder Argentina">
+        <p> Pan de papa, 2 medallones de 100 gr, verduras asadas, chimichurri, queso tybo, mayonesa hellmans. </p>
+        <label for="wonderargentina"> Tipo de Hamburguesa:</label>
+        <select name="wonderargentina" id="wonderargentina" class="tipodeham">
+            <option value="doble">Doble ($2090)</option>
+            <option value="triple">Triple ($2450)</option>
+        </select>
+
+    </div>
+
+    <div class="menu">
+        <br><br>
+        <u><label for="wonder2" class="option"> Wonder Vegetariana</label></u>
+        <input id="wonder2" type="radio" name="wonderhamburguesa" value="wonderveggie" >
+        <br>
+        <img class="hamburguesas" src="imagenes/wonderveggie2.png" width="170px" alt="Wonder Vegetariana">
+        <p> Pan de papa, medallon veggie mixto, salsa wonder, tomate, lechuga, queso tybo.</p>
+        <label for="wonderveggie"> Tipo de Hamburguesa:</label>
+        <select name="wonderveggie" id="wonderveggie" class="tipodeham">
+            <option value="simple">Simple ($1690)</option>
+            <option value="doble">Doble ($1890)</option>
+            <option value="triple">Triple ($2190)</option>
+        </select>
+
+    </div>
+
+
+
+    <div class="menu">
+        <br><br>
+        <u><label for="wonder3" class="option"> Wonder BBQ </label></u>
+        <input id="wonder3" type="radio" name="wonderhamburguesa" value="wonderbomba" >
+        <br>
+        <img class="hamburguesas" src="imagenes/wonderbomba.png" width="170px" alt="Wonder Bomba">
+        <p> Pan de papa, 2 medallones de 100 gr, aros de cebolla, bacon ahumado, queso cheddar, barbacoa.</p>
+
+        <label for="wonderbomba"> Tipo de Hamburguesa:</label>
+        <select name="wonderbomba" id="wonderbomba" class="tipodeham">
+            <option value="doble">Doble ($2090)</option>
+            <option value="triple">Triple ($2400)</option>
+        </select>
+        <br>
+        <br>
+
+    </div>
+
+    <br>
+
+    <a class="atras" href="restaurantes.html" target="_blank">ATRAS</a>
+
+    <a class="pagar" href="formasdepago.html" target="_blank">PAGAR</a>
+
+</main>
 
 </body>
 </html>
