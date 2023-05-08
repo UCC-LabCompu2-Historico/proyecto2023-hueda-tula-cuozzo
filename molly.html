@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Righteous&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="estiloindex.css" type="text/css">
+    <link rel="stylesheet" href="estilo.css" type="text/css">
 
     <link rel="shortcut icon" href="imagenes/icono.png">
 
@@ -29,28 +29,37 @@
 <main>
     <br>
     <div class="fotoLocal">
-        <img src="imagenes/mollylugar.png" width="260"; height="260px" alt="Foto local de hoppines">
-        <img  src="imagenes/mollylugar2.png" width="260"; height="260px"  alt="Foto local de hoppines">
-        <img  src="imagenes/mollylugar3.png" width="260"; height="260px" alt="Foto local de hoppines">
+        <img src="imagenes/mollylugar.png" width="260" ; height="260px" alt="Foto local de hoppines">
+        <img src="imagenes/mollylugar2.png" width="260" ; height="260px" alt="Foto local de hoppines">
+        <img src="imagenes/mollylugar3.png" width="260" ; height="260px" alt="Foto local de hoppines">
 
     </div>
 
-    <iframe class="mapas" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d61071.64570032661!2d-64.21290609137289!3d-31.418540885653687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1smolly%20burger!5e0!3m2!1ses!2sar!4v1683497248307!5m2!1ses!2sar" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe class="mapas"
+            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d61071.64570032661!2d-64.21290609137289!3d-31.418540885653687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1smolly%20burger!5e0!3m2!1ses!2sar!4v1683497248307!5m2!1ses!2sar"
+            width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-    <article >
+    <article>
         <br>
-        Molly surgió en medio de momentos difíciles, con la idea de que nuestras hamburguesas demuestren que siempre de un mal momento puede surgir algo mejor <3
+        Molly surgió en medio de momentos difíciles, con la idea de que nuestras hamburguesas demuestren que siempre de
+        un mal momento puede surgir algo mejor <3
     </article>
 
     <br>
 
     <div class="menu">
+
         <br>
+
         <u><label for="molly1" class="option"> Big Veggie</label></u>
-        <input id="molly1" type="radio" name="mollyburger" value="bigveggie" >
+        <input id="molly1" type="checkbox" name="mollyburger" value="bigveggie">
+
         <br>
+
         <img class="hamburguesas" src="imagenes/mollybigveggie.png" width="170px" alt="Big Veggie">
         <p> Pan original, medallon de garbanzo, champiñones, rucula, tomates secos y emmental. Incluye papas.</p>
+
         <label for="bigveggie"> Tipo de Hamburguesa:</label>
         <select name="bigveggie" id="bigveggie" class="tipodeham">
             <option value="simple">Simple ($1150)</option>
@@ -58,13 +67,22 @@
             <option value="triple">Triple ($1600)</option>
         </select>
 
+        <br>
+
+        <label for="cantmolly1">Cuántas quiere?</label>
+        <input type="number" min="0" max="20" id="cantmolly1" class="cantidad" placeholder="Cantidad">
+
     </div>
 
     <div class="menu">
+
         <br>
+
         <u><label for="molly2" class="option"> Egg Bacon</label></u>
-        <input id="molly2" type="radio" name="mollyburger" value="eggbacon" >
+        <input id="molly2" type="checkbox" name="mollyburger" value="eggbacon">
+
         <br>
+
         <img class="hamburguesas" src="imagenes/mollyeggbacon.png" width="170px" alt="Egg Bacon">
         <p> Pan original, doble medallon 120 gr, cheddar, huevo frito, jamón y salsa Molly. Incluye papas.</p>
 
@@ -75,13 +93,24 @@
             <option value="triple">Triple ($1700)</option>
         </select>
 
+        <br><br>
+
+        <label for="cantmolly2">Cuántas quiere?</label>
+        <input type="number" min="0" max="20" id="cantmolly2" class="cantidad" placeholder="Cantidad">
+
     </div>
+
     <br>
+
     <div class="menu">
+
         <br>
+
         <u><label for="molly3" class="option"> Crispy Onion</label></u>
-        <input id="molly3" type="radio" name="mollyburger" value="crispyonion" >
+        <input id="molly3" type="checkbox" name="mollyburger" value="crispyonion">
+
         <br>
+
         <img class="hamburguesas" src="imagenes/mollycrispyonion.png" width="170px" alt="Egg Bacon">
         <p> Pan original, doble medallon 120 gr, cheddar, huevo frito, jamón y salsa Molly. Incluye papas.</p>
 
@@ -91,16 +120,20 @@
             <option value="doble">Doble ($1500)</option>
             <option value="triple">Triple ($1750)</option>
         </select>
+
+        <br><br>
+
+        <label for="cantmolly3">Cuántas quiere?</label>
+        <input type="number" min="0" max="20" id="cantmolly3" class="cantidad" placeholder="Cantidad">
+
     </div>
+
     <br>
+
     <a class="atras" href="restaurantes.html" target="_blank">ATRAS</a>
     <a class="pagar" href="formasdepago.html" target="_blank">PAGAR</a>
 
 </main>
-
-
-
-
 
 
 </body>

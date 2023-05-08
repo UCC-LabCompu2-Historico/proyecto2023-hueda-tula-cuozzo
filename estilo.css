@@ -32,7 +32,8 @@ main {
     margin-right: 50px;
 
 }
-.option{
+
+.option {
     font-size: 25px;
     font-weight: bolder;
     font-family: 'Poppins', cursive;
@@ -44,15 +45,16 @@ main {
 
 }
 
-.boton{
+.boton {
     font-size: 20px;
     line-height: 50px;
     text-align: center;
     width: 100px;
     height: 50px;
 }
+
 #ver-restaurantes {
-    margin-left: 575px ;
+    margin-left: 575px;
     background-color: #ff8000;
     font-size: large;
     padding: 20px;
@@ -60,7 +62,7 @@ main {
 
 }
 
-.atras{
+.atras {
     text-align: center;
     background-color: #ff8000;
     font-size: large;
@@ -69,7 +71,7 @@ main {
 
 }
 
-.pagar{
+.pagar {
     margin-left: 555px;
     font-weight: bolder;
     background-color: #ff8000;
@@ -84,54 +86,65 @@ a:link, a:visited {
     color: black;
 }
 
-#blackpan , #molly, #hoppiness, #wonder {
+#blackpan, #molly, #hoppiness, #wonder {
     text-align: left;
 }
 
-#imgblackpan, #imgmolly, #imghoppiness , #imgwonder {
+#imgblackpan, #imgmolly, #imghoppiness, #imgwonder {
     float: left;
     padding: 3px;
     border: black 1px solid;
 }
 
-.blackpan, .hoppiness, .moly , .wonder{
+.blackpan, .hoppiness, .moly, .wonder {
     display: flex;
 }
 
-.menu{
+.menu {
     text-align: left;
 
 }
-.hamburguesas{
+
+.hamburguesas {
     float: left;
     padding: 3px;
     border: black 1px solid;
 }
-.mapas{
+
+.mapas {
     float: right;
     margin-top: 30px;
     margin-right: 50px;
 
 }
 
-.fotoLocal{
+.fotoLocal {
     margin-right: 60px;
     display: flex;
     justify-content: space-between;
 }
 
-article{
+article {
     column-count: 1;
-    column-gap:100px;
+    column-gap: 100px;
     margin-right: 450px;
 }
 
-.tipodeham{
+.tipodeham {
     font-size: 18px;
     line-height: 15px;
-    width:150px;
+    width: 150px;
     height: 50px;
 }
+
+.cantidad {
+    font-size: 15px;
+    line-height: 15px;
+    width: 100px;
+    height: 20px;
+}
+
+
 #boton{
     text-align: center;
 }
