@@ -86,7 +86,7 @@ a:link, a:visited {
     color: black;
 }
 
-#blackpan, #molly, #hoppiness, #wonder {
+#blackpan, #molly, #hoppiness, #wonder, .menu  {
     text-align: left;
 }
 
@@ -100,10 +100,7 @@ a:link, a:visited {
     display: flex;
 }
 
-.menu {
-    text-align: left;
 
-}
 
 .hamburguesas {
     float: left;
@@ -142,6 +139,12 @@ article {
     line-height: 15px;
     width: 100px;
     height: 20px;
+}
+
+.fotoformasdepago{
+   float: left;
+    display: flex;
+
 }
 
 
