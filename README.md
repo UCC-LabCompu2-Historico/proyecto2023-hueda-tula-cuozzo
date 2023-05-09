@@ -2,7 +2,9 @@
 El objetivo de nuestra página es brindar posibles lugares para comer una rica hamburguesa.
 
 ## Autores
-Tula, Sofia - Hueda, Luciana - Cuozzo, Sofia
+- Tula, Sofia
+- Hueda, Luciana  
+- Cuozzo, Sofia
 
 ## Tecnologia usada
 HTML 5
