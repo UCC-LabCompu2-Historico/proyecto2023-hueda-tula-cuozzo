@@ -7,8 +7,8 @@ El objetivo de nuestra página es brindar posibles lugares para comer una rica h
 - Cuozzo, Sofia
 
 ## Tecnologia usada
-HTML 5
-CSS
+- HTML 5
+- CSS
 
 # Link al Sitio
 [Proyecto de Hamburgueserias](https://ucc-labcompu2.github.io/proyecto2023-hueda-tula-cuozzo/index.html)
