@@ -20,8 +20,13 @@
 <header>
     <h1 id="titulo_principal"><u><em>FORMAS DE PAGO</em></u></h1>
 </header>
+
 <p>
-    <label for="tipo">Tipo:</label>
+    <u><h3><label for="total">TOTAL:</label></h3></u>
+    <input type="number" name="vuelto" id="total" placeholder="Total" disabled>
+</p>
+<p>
+    <em><label for="tipo">¿Cómo desea abonar?</label></em>
     <select id="tipo">
         <option value="efectivo">Efectivo</option>
         <option value="tarjeta de debito">Tarjeta de Debito</option>
@@ -55,10 +60,13 @@
     </p>
     <p>
         <label for="cantidad">Cantidad:</label>
-        <input type="text" name="cantidad" id="cantidad" placeholder="¿Con cuanto paga?"> <input type="text"
-                                                                                                 name="vuelto"
-                                                                                                 id="cantidad2"
-                                                                                                 placeholder="Vuelto">
+        <input type="text" name="cantidad" id="cantidad" placeholder="¿Con cuanto paga?">
+
+    </p>
+    <p>
+        <label for="vuelto">Vuelto y Descuento:</label>
+        <input type="number" name="vuelto" id="vuelto" placeholder="Vuelto" disabled>
+        <input type="number" name="vuelto" id="descuento" placeholder="Descuento" disabled>
     </p>
 
 </div>
@@ -67,8 +75,13 @@
 <div id="tar">
 
     <u><strong><h3>Tarjetas</h3></strong></u>
+
     <p>
-        <br>
+        <label for="descuento2"> Descuento:</label>
+        <input type="number" name="vuelto" id="descuento2" placeholder="Descuento" disabled>
+    </p>
+
+    <p>
         <label for="dni2">Dni:</label>
         <input type="text" name="Dni" id="dni2" placeholder="Dni">
     </p>
@@ -89,9 +102,13 @@
         <input type="password" name="codigo de seguridad" id="Codigo de seguridad" placeholder="XXX">
     </p>
 
+
+
     <p>
         <label for="comentario">Agregue un comentario:</label> <textarea id="comentario"></textarea>
     </p>
+
+
     <canvas></canvas>
 
 
