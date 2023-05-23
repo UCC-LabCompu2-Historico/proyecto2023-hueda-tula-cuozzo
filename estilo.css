@@ -2,11 +2,6 @@
 #titulo_principal {
     font-weight: bold;
     font-family: 'Righteous', sans-serif;
-}
-
-#titulo_principal {
-    font-weight: bold;
-    font-family: 'Righteous', cursive;
     font-size: xxx-large;
 }
 
@@ -86,7 +81,7 @@ a:link, a:visited {
     color: black;
 }
 
-#blackpan, #molly, #hoppiness, #wonder, .menu  {
+#blackpan, #molly, #hoppiness, #wonder, .menu {
     text-align: left;
 }
 
@@ -99,7 +94,6 @@ a:link, a:visited {
 .blackpan, .hoppiness, .moly, .wonder {
     display: flex;
 }
-
 
 
 .hamburguesas {
@@ -141,13 +135,35 @@ article {
     height: 20px;
 }
 
-.fotoformasdepago{
-   float: left;
+.fotoformasdepago {
+    float: left;
     display: flex;
 
 }
 
 
-#boton{
+#boton {
     text-align: center;
+}
+
+.cantblack3, .fotoformasdepago {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.canthoppi2 {
+    margin-top: 45px;
+}
+
+.canthoppi1, .canthoppi3, .cantmolly2 {
+    margin-top: 20px;
+}
+
+.cantmolly3, .cantwonder1, .cantwonder2, .cantwonder3 {
+    margin-top: 15px;
+}
+
+
+.efectivo {
+    margin-top: 195px;
 }

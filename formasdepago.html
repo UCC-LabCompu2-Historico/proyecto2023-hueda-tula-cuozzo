@@ -13,6 +13,8 @@
 
     <link rel="shortcut icon" href="imagenes/icono.png">
 
+    <script type="text/javascript" src="java.js"></script>
+
     <link rel="stylesheet" href="estilo.css" type="text/css">
 
 </head>
@@ -21,7 +23,11 @@
     <h1 id="titulo_principal"><u><em>FORMAS DE PAGO</em></u></h1>
 </header>
 <p>
-    <label for="tipo">Tipo:</label>
+    <u><h3><label for="total">TOTAL:</label></h3></u>
+    <input type="number" name="vuelto" id="total" placeholder="Total" disabled>
+</p>
+<p>
+    <em><label for="tipo">¿Cómo desea abonar?</label></em>
     <select id="tipo">
         <option value="efectivo">Efectivo</option>
         <option value="tarjeta de debito">Tarjeta de Debito</option>
@@ -31,17 +37,14 @@
 
 <h6>Trabajamos con las siguientes tarjetas/medios</h6>
 <div class="fotoformasdepago">
-    <br><br>
+
     <img src="imagenes/formasdepago1.jpg" width="300px" alt="Foto de formas de pago">
     <br>
 </div>
-<br>
-<br>
-<br>
-<br>
 
 
-    <div id="efectivo">
+
+<div class="efectivo">
         <br>
         <u><strong><h3>Efectivo</h3></strong></u>
 
@@ -59,13 +62,7 @@
         </p>
         <p>
             <label for="cantidad">Cantidad:</label>
-            <input type="text" name="cantidad" id="cantidad" placeholder="¿Con cuanto paga?"> <input type="text"
-                                                                                                     name="vuelto"
-                                                                                                     id="cantidad2"
-                                                                                                     placeholder="Vuelto"> <input type="text"
-                                                                                                                                  name="descuento"
-                                                                                                                                  id="cantidad3"
-                                                                                                                                  placeholder="Descuento">
+            <input type="text" name="cantidad" id="cantidad" placeholder="¿Con cuanto paga?">
         </p>
 
     </div>
@@ -75,7 +72,10 @@
 
         <u><strong><h3>Tarjetas</h3></strong></u>
         <p>
-            <br>
+            <label for="descuento2">Decuento:</label>
+            <input type="number" name="vuelto" id="descuento2" placeholder="Descuento" disabled>
+        </p>
+        <p>
             <label for="dni2">Dni:</label>
             <input type="text" name="Dni" id="dni2" placeholder="Dni">
         </p>
