@@ -13,8 +13,6 @@
 
     <link rel="shortcut icon" href="imagenes/icono.png">
 
-    <script type="text/javascript" src="java.js"></script>
-
     <link rel="stylesheet" href="estilo.css" type="text/css">
 
 </head>
@@ -23,11 +21,7 @@
     <h1 id="titulo_principal"><u><em>FORMAS DE PAGO</em></u></h1>
 </header>
 <p>
-    <u><h3><label for="total">TOTAL:</label></h3></u>
-    <input type="number" name="vuelto" id="total" placeholder="Total" disabled>
-</p>
-<p>
-    <em><label for="tipo">¿Cómo desea abonar?</label></em>
+    <label for="tipo">Tipo:</label>
     <select id="tipo">
         <option value="efectivo">Efectivo</option>
         <option value="tarjeta de debito">Tarjeta de Debito</option>
@@ -36,74 +30,72 @@
 </p>
 
 <h6>Trabajamos con las siguientes tarjetas/medios</h6>
+
 <div class="fotoformasdepago">
 
     <img src="imagenes/formasdepago1.jpg" width="300px" alt="Foto de formas de pago">
     <br>
 </div>
 
-
-
 <div class="efectivo">
-        <br>
-        <u><strong><h3>Efectivo</h3></strong></u>
-
-        <p>
-            <label for="nombre">Nombre:</label>
-            <input type="text" name="nombre" id="nombre" placeholder="Nombre">
-        </p>
-        <p>
-            <label for="apellido">Apellido:</label>
-            <input type="text" name="apellido" id="apellido" placeholder="Apellido">
-        </p>
-        <p>
-            <label for="dni">Dni:</label>
-            <input type="text" name="Dni" id="dni" placeholder="Dni">
-        </p>
-        <p>
-            <label for="cantidad">Cantidad:</label>
-            <input type="text" name="cantidad" id="cantidad" placeholder="¿Con cuanto paga?">
-        </p>
-
-    </div>
-
     <br>
-    <div id="tar">
+    <u><strong><h3>Efectivo</h3></strong></u>
 
-        <u><strong><h3>Tarjetas</h3></strong></u>
-        <p>
-            <label for="descuento2">Decuento:</label>
-            <input type="number" name="vuelto" id="descuento2" placeholder="Descuento" disabled>
-        </p>
-        <p>
-            <label for="dni2">Dni:</label>
-            <input type="text" name="Dni" id="dni2" placeholder="Dni">
-        </p>
-        <p>
-            <label for="tarjeta">Numero de tarjeta:</label>
-            <input type="text" name="Numero de tarjeta" id="tarjeta" placeholder="XXXX XXXX XXXX XXXX ">
-        </p>
-        <p>
-            <label for="vencimiento">Vec:</label>
-            <input type="date" name="Vec" id="vencimiento" placeholder="MM/AA">
-        </p>
-        <p>
-            <label for="Titular">Titular:</label>
-            <input type="text" name="titular" id="Titular" placeholder="Titular">
-        </p>
-        <p>
-            <label for="Codigo de seguridad">Codigo de seguridad:</label>
-            <input type="password" name="codigo de seguridad" id="Codigo de seguridad" placeholder="XXX">
-        </p>
+    <p>
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+    </p>
+    <p>
+        <label for="apellido">Apellido:</label>
+        <input type="text" name="apellido" id="apellido" placeholder="Apellido">
+    </p>
+    <p>
+        <label for="dni">Dni:</label>
+        <input type="text" name="Dni" id="dni" placeholder="Dni">
+    </p>
+    <p>
+        <label for="cantidad">Cantidad:</label>
+        <input type="text" name="cantidad" id="cantidad" placeholder="¿Con cuanto paga?"> <input type="text"
+                                                                                                 name="vuelto"
+                                                                                                 id="cantidad2"
+                                                                                                 placeholder="Vuelto">
+    </p>
 
-        <p>
-            <label for="comentario">Agregue un comentario:</label> <textarea id="comentario"></textarea>
-        </p>
-        <canvas></canvas>
+</div>
+
+<br>
+<div id="tar">
+
+    <u><strong><h3>Tarjetas</h3></strong></u>
+    <p>
+        <br>
+        <label for="dni2">Dni:</label>
+        <input type="text" name="Dni" id="dni2" placeholder="Dni">
+    </p>
+    <p>
+        <label for="tarjeta">Numero de tarjeta:</label>
+        <input type="text" name="Numero de tarjeta" id="tarjeta" placeholder="XXXX XXXX XXXX XXXX ">
+    </p>
+    <p>
+        <label for="vencimiento">Vec:</label>
+        <input type="date" name="Vec" id="vencimiento" placeholder="MM/AA">
+    </p>
+    <p>
+        <label for="Titular">Titular:</label>
+        <input type="text" name="titular" id="Titular" placeholder="Titular">
+    </p>
+    <p>
+        <label for="Codigo de seguridad">Codigo de seguridad:</label>
+        <input type="password" name="codigo de seguridad" id="Codigo de seguridad" placeholder="XXX">
+    </p>
+
+    <p>
+        <label for="comentario">Agregue un comentario:</label> <textarea id="comentario"></textarea>
+    </p>
+    <canvas></canvas>
 
 
-    </div>
-
+</div>
 
 
 <div id="boton">
