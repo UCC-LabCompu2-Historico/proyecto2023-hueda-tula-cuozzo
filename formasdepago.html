@@ -13,6 +13,8 @@
 
     <link rel="shortcut icon" href="imagenes/icono.png">
 
+    <script type="text/javascript" src="java.js"></script>
+
     <link rel="stylesheet" href="estilo.css" type="text/css">
 
 </head>
@@ -60,12 +62,12 @@
     </p>
     <p>
         <label for="cantidad">Cantidad:</label>
-        <input type="text" name="cantidad" id="cantidad" placeholder="¿Con cuanto paga?">
+        <input type="text" name="cantidad" id="cantidad" placeholder="¿Con cuanto paga?" >
 
     </p>
     <p>
         <label for="vuelto">Vuelto y Descuento:</label>
-        <input type="number" name="vuelto" id="vuelto" placeholder="Vuelto" disabled>
+        <input type="number" name="vuelto" id="vuelto" placeholder="Vuelto"  onchange="vuelt(this.value)" >
         <input type="number" name="vuelto" id="descuento" placeholder="Descuento" disabled>
     </p>
 
