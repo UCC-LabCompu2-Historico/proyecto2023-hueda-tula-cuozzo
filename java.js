@@ -3,6 +3,7 @@
  * Firmar
  */
 
+
 var bandera;
 function dibujar(event){
     var canvas = document.getElementById("canvasAdibujar");

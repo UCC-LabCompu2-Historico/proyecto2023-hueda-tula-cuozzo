@@ -167,3 +167,8 @@ article {
 .efectivo {
     margin-top: 195px;
 }
+
+.ejer{
+    border:1px solid #000000;
+    background: rgba(240, 255, 105, 0.47);
+}
