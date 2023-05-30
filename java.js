@@ -12,9 +12,7 @@ function GuardarLSBP(){
     localStorage.setItem("canthamb", cant);
     localStorage.setItem("tipohamb", tipo);
 }
-function SumaHamb(){
 
-}
 var bandera;
 function dibujar(event){
     var canvas = document.getElementById("canvasAdibujar");
