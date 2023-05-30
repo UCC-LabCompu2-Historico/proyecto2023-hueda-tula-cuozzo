@@ -1,7 +1,15 @@
 /**
- * Firma del cliente cuando realiza el pago por medio de tarjeta.
- * Firmar
+ * Conversion de unidades, de metros, yardas, pies y pulgadas.
+ * @method
+ * @param
+ * @param
+ * @return
  */
+function GuardarLSBP(){
+    let cant, tipo;
+    cant = document.getElementById(cantblack1).value;
+    tipo=document.getElementsById(miss_america).value;
+}
 
 var bandera;
 function dibujar(event){
@@ -22,11 +30,9 @@ function dibujar(event){
 
 
 }
-
 function limpiarCanvas(){
     var canvas = document.getElementById("canvasAdibujar");
     var ctx =  canvas.getContext("2d");
-
     canvas.width = canvas.width;
 
 }
