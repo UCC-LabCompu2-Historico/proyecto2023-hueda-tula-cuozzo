@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formas de Pago</title>
+    <meta content="Cuozzo Sofía, Hueda Luciana y Tula Sofía" name="autores">
+    <meta content="Pagina web proyecto para Laboratorio de Computacion 2" name="descripcion">
+    <meta content="hamburguesas, donde, comida, descuento, molly, wonder, hoppiness, blackpan" name="palabras-claves">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Righteous&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="imagenes/icono.png">
+
+    <link rel="stylesheet" href="estilo.css" type="text/css">
+
+</head>
+<body>
+<header>
+    <h1 id="titulo_principal"><u><em>FORMAS DE PAGO</em></u></h1>
+</header>
+<p>
+    <u><h3><label for="total">TOTAL:</label></h3></u>
+    <input type="number" name="vuelto" id="total" placeholder="Total" disabled>
+</p>
+<p>
+    <em><label for="tipo">¿Como desea abonar?</label></em>
+    <select id="tipo">
+        <option value="efectivo">Efectivo</option>
+        <option value="tarjeta de debito">Tarjeta de Debito</option>
+        <option value="tarjeta de credito">Tarjeta de Credito</option>
+    </select>
+</p>
+
+<h6>Trabajamos con las siguientes tarjetas/medios</h6>
+
+<div class="fotoformasdepago">
+
+    <img src="imagenes/formasdepago1.jpg" width="300px" alt="Foto de formas de pago">
+    <br>
+</div>
+
+<div class="efectivo">
+    <br>
+    <u><strong><h3>Efectivo</h3></strong></u>
+
+    <p>
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+    </p>
+    <p>
+        <label for="apellido">Apellido:</label>
+        <input type="text" name="apellido" id="apellido" placeholder="Apellido">
+    </p>
+    <p>
+        <label for="dni">Dni:</label>
+        <input type="text" name="Dni" id="dni" placeholder="Dni">
+    </p>
+    <p>
+        <label for="cantidad">Cantidad:</label>
+        <input type="text" name="cantidad" id="cantidad" placeholder="¿Con cuanto paga?"> <input type="text"
+                                                                                                 name="vuelto"
+                                                                                                 id="cantidad2"
+                                                                                                 placeholder="Vuelto">
+    </p>
+    <p>
+        <label for="vuelto">Vuelto y Descuento:</label>
+        <input type="number" name="vuelto" id="vuelto" placeholder="Vuelto">
+        <input type="number" name="vuelto" id="descuento" placeholder="Descuento" disabled>
+    </p>
+
+</div>
+
+<br>
+<div id="tar">
+
+    <u><strong><h3>Tarjetas</h3></strong></u>
+    <p>
+        <label for="descuento2">Descuento:</label>
+        <input type="number" name="vuelto" id="descuento2" placeholder="Descuento" disabled>
+    </p>
+    <p>
+        <br>
+        <label for="dni2">Dni:</label>
+        <input type="text" name="Dni" id="dni2" placeholder="Dni">
+    </p>
+    <p>
+        <label for="tarjeta">Numero de tarjeta:</label>
+        <input type="text" name="Numero de tarjeta" id="tarjeta" placeholder="XXXX XXXX XXXX XXXX ">
+    </p>
+    <p>
+        <label for="vencimiento">Vec:</label>
+        <input type="date" name="Vec" id="vencimiento" placeholder="MM/AA">
+    </p>
+    <p>
+        <label for="Titular">Titular:</label>
+        <input type="text" name="titular" id="Titular" placeholder="Titular">
+    </p>
+    <p>
+        <label for="Codigo de seguridad">Codigo de seguridad:</label>
+        <input type="password" name="codigo de seguridad" id="Codigo de seguridad" placeholder="XXX">
+    </p>
+
+    <p>
+        <label for="comentario">Agregue un comentario:</label> <textarea id="comentario"></textarea>
+    </p>
+    <canvas></canvas>
+
+
+</div>
+
+
+<div id="boton">
+    <button type="button" class="boton">PAGAR</button>
+</div>
+
+</form>
+
+</body>
+</html>

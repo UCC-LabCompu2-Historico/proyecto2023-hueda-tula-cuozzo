@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hoppines</title>
+    <meta content="Cuozzo Sofia, Hueda Luciana, Tula Sofia" name="autores">
+    <meta content="Pagina web proyecto para Laboratorio de Computacion 2" name="descripcion">
+    <meta content="hamburguesas, happines, comida " name="palabras-claves">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Righteous&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="estilo.css" type="text/css">
+
+    <link rel="shortcut icon" href="imagenes/icono.png">
+
+</head>
+
+<body>
+
+<header>
+    <h1 id="titulo_principal"><u><em>HOPPINESS</em></u></h1>
+
+</header>
+
+<br>
+
+<main>
+    <br>
+    <div class="fotoLocal">
+        <img src="imagenes/hoppinesLocal.png" width="280px" alt="Foto local de hoppines">
+        <img src="imagenes/localHoppiDos.png" width="280px" alt="Foto local de hoppines">
+        <img src="imagenes/hoppiTres.png" width="280px" alt="Foto local de hoppines">
+
+
+    </div>
+
+    <iframe class="mapas"
+            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d42993.56375877348!2d-64.23250884266317!3d-31.43628724598254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sRestaurantes%20hoppiness!5e0!3m2!1ses-419!2sar!4v1683409394684!5m2!1ses-419!2sar"
+            width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+    <article>
+        <br>
+        Somos un restaurante familiar que brinda al publico las mejores hamburguesas, para que puedan pasar un buen
+        momento y con la panza contenta.
+        Hoppines tambien ofrece diferentes medios de pago <3
+    </article>
+
+    <br>
+
+    <div class="menu">
+        <br>
+        <u><label for="hoppi1" class="option"> Argenta Burger</label></u>
+        <input id="hoppi1" type="radio" name="hoppinesburger" value="argentaburger">
+        <br>
+        <img class="hamburguesas" src="imagenes/hamburHoppi1.png" width="170px" alt="Argenta Burger">
+        <p> Pan original, doble medallon 120 gr, cuadruple queso cheddar, provoleta asada,
+            repollo morado y mayonesa de chimicurri. Incluye papas.</p>
+        <label for="argentaburger"> Tipo de Hamburguesa:</label>
+        <select name="argentaburger" id="argentaburger" class="tipodeham">
+            <option value="simple">Simple ($1150)</option>
+            <option value="doble">Doble ($1350)</option>
+            <option value="triple">Triple ($1600)</option>
+        </select>
+
+        <div class="canthoppi1">
+            <label for="canthoppi1">Cuántas quiere?</label>
+            <input type="number" min="0" max="20" id="canthoppi1" class="cantidad" placeholder="Cantidad">
+        </div>
+    </div>
+
+    <div class="menu">
+        <br>
+        <u><label for="hoppi2" class="option"> Cheese Burger</label></u>
+        <input id="hoppi2" type="radio" name="hoppinesburger" value="cheeseburger">
+        <br>
+        <img class="hamburguesas" src="imagenes/hamburHoppi2.png" width="170px" alt="Cheese Burger">
+        <p> Pan original, doble medallon 120 gr y doble cheddar por medallon. Incluye papas.</p>
+        <label for="cheeseburger"> Tipo de Hamburguesa:</label>
+        <select name="cheeseburger" id="cheeseburger" class="tipodeham">
+            <option value="simple">Simple ($1150)</option>
+            <option value="doble">Doble ($1350)</option>
+            <option value="triple">Triple ($1600)</option>
+        </select>
+
+        <div class="canthoppi2">
+            <label for="canthoppi2">Cuántas quiere?</label>
+            <input type="number" min="0" max="20" id="canthoppi2" class="cantidad" placeholder="Cantidad">
+        </div>
+
+    </div>
+
+
+    <div class="menu">
+        <br>
+        <!--Hola-->
+        <u><label for="hoppi3" class="option"> Crispy Onion Burger Veggie </label></u>
+        <input id="hoppi3" type="radio" name="hoppinesburger" value="crispyonionburgerveggie">
+        <br>
+        <img class="hamburguesas" src="imagenes/hamburHoppi3.png" width="170px" alt="Crispy Onion">
+        <p> Pan original, medallon not burger, doble queso cheddar por medallon,
+
+            cebolla crispy y salsa hoppiness. Incluye papas. </p>
+
+
+
+        <label for="crispyonionburgerveggie"> Tipo de Hamburguesa:</label>
+        <select name="crispyonionburgerveggie" id="crispyonionburgerveggie" class="tipodeham">
+            <option value="simple">Simple ($1350)</option>
+            <option value="doble">Doble ($1500)</option>
+            <option value="triple">Triple ($1750)</option>
+        </select>
+
+        <div class="canthoppi3">
+            <label for="canthoppi3">Cuántas quiere?</label>
+            <input type="number" min="0" max="20" id="canthoppi3" class="cantidad" placeholder="Cantidad">
+        </div>
+
+    </div>
+
+    <br>
+
+    <a class="atras" href="restaurantes.html" target="_blank">ATRAS</a>
+
+    <a class="pagar" href="formasdepago.html" target="_blank">PAGAR</a>
+
+</main>
+
+</body>
+</html>
