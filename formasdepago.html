@@ -106,8 +106,13 @@
     <p>
         <label for="comentario">Agregue un comentario:</label> <textarea id="comentario"></textarea>
     </p>
-    <canvas></canvas>
+    <canvas> id="canvasAdibujar" class="ejer" onmousemove="dibujar(event)" width="800px" height="600px">
 
+    </canvas>
+
+    <button onclick="limpiarCanvas()">
+        Limpiar Canvas
+    </button>
 
 </div>
 
