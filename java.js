@@ -30,3 +30,5 @@ function limpiarCanvas(){
     canvas.width = canvas.width;
 
 }
+
+
