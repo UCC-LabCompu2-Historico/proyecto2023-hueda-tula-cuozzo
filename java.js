@@ -9,6 +9,8 @@ function GuardarLSBP(){
     let cant, tipo;
     cant = document.getElementById(cantblack1).value;
     tipo=document.getElementsById(miss_america).value;
+    localStorage.setItem("canthamb", cant);
+    localStorage.setItem("tipohamb", tipo);
 }
 
 var bandera;
