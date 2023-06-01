@@ -18,14 +18,14 @@ function dibujar(event){
     var ctx = canvas.getContext("2d");
 
     var posX = event.clientX;
-    var posY = event.clientY;
+    var posY = event.clientY ;
     console.log(posX, posY);
 
     canvas.onmousedown = function (){bandera = true};
     canvas.onmouseup = function (){bandera = false};
 
     if(bandera){
-        ctx.fillRect(posX, posY, 5, 5);
+        ctx.fillRect(posX - 12, posY - 587, 3, 3);
         ctx.fill;
     }
 
