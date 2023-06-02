@@ -34,20 +34,49 @@
         <label for="nombre">Nombre:</label>
         <input type="text" name="nombre" id="nombre" placeholder="Nombre">
     </p>
+
+    <dialog name="dialogo">
+        <h3>Error al ingresar el nombre.</h3>
+        <p>Por favor ingrese de nuevo su nombre</p>
+        <button type="button" onclick="cerrarDialogo()">Cerrar</button>
+    </dialog>
+
     <p>
         <label for="apellido">Apellido:</label>
         <input type="text" name="apellido" id="apellido" placeholder="Apellido">
     </p>
+
+    <dialog name="dialogo">
+        <h3>Error al ingresar el apellido.</h3>
+        <p>Por favor ingrese de nuevo su apellido</p>
+        <button type="button" onclick="cerrarDialogo()">Cerrar</button>
+    </dialog>
+
     <p>
-        <label for="dni">Dni:</label>
+        <label for="dni">DNI:</label>
         <input type="text" name="Dni" id="dni" placeholder="Dni">
     </p>
+
+    <dialog name="dialogo">
+        <h3>Error al ingresar el DNI.</h3>
+        <p>Por favor ingrese de nuevo su DNI</p>
+        <button type="button" onclick="cerrarDialogo()">Cerrar</button>
+    </dialog>
+
     <p>
         <label for="cantidad">Cantidad:</label>
 
         <input type="text" name="cantidad" id="cantidad" placeholder="¿Con cuanto paga?" >
 
     </p>
+
+    <dialog name="dialogo">
+        <h3>Error al ingresar el total.</h3>
+        <p>Por favor ingrese la cantidad de nuevo. Recuerde que debe ser mayor o igual al total.</p>
+        <button type="button" onclick="cerrarDialogo()">Cerrar</button>
+    </dialog>
+
+
     <p>
         <label for="vuelto">Vuelto y Descuento:</label>
         <input type="number" name="vuelto" id="vuelto" placeholder="Vuelto">
@@ -56,7 +85,7 @@
 
 </div>
 <div id="boton">
-    <button type="button" class="boton" >PAGAR</button>
+    <button type="button" class="boton"  onclick="validardatos(nombre.value , apellido.value , Dni.value, cantidad.value)" >PAGAR</button>
 </div>
 
 </form>

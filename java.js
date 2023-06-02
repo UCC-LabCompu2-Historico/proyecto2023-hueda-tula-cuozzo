@@ -96,6 +96,15 @@ function limpiarCanvas() {
     canvas.width = canvas.width;
 }
 
+
+
+let validardatos = (name, lastname, id, ammount) => {
+
+if( name )
+
+
+}
+
 /*
 let pagarMolly = () =>{
 
