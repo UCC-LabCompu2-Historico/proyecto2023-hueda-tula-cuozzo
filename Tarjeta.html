@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Formas de Pago</title>
+    <title>Tarjeta</title>
     <meta content="Cuozzo Sofía, Hueda Luciana y Tula Sofía" name="autores">
     <meta content="Pagina web proyecto para Laboratorio de Computacion 2" name="descripcion">
     <meta content="hamburguesas, donde, comida, descuento, molly, wonder, hoppiness, blackpan" name="palabras-claves">
@@ -20,19 +20,11 @@
 </head>
 <body>
 <header>
-    <h1 id="titulo_principal"><u><em>FORMAS DE PAGO</em></u></h1>
+    <h1 id="titulo_principal"><u><em>TARJETA</em></u></h1>
 </header>
 <p>
     <u><h3><label for="total">TOTAL:</label></h3></u>
     <input type="number" name="total" id="total" placeholder="Total" onload="CargarLS()" onload="cargarResultado()" disabled>
-</p>
-<p>
-    <em><label for="tipo">¿Como desea abonar?</label></em>
-    <select id="tipo">
-        <option value="efectivo">Efectivo</option>
-        <option value="tarjeta de debito">Tarjeta de Debito</option>
-        <option value="tarjeta de credito">Tarjeta de Credito</option>
-    </select>
 </p>
 
 <h6>Trabajamos con las siguientes tarjetas/medios</h6>
@@ -43,40 +35,10 @@
     <br>
 </div>
 
-<div class="efectivo">
-    <br>
-    <u><strong><h3>Efectivo</h3></strong></u>
-
-    <p>
-        <label for="nombre">Nombre:</label>
-        <input type="text" name="nombre" id="nombre" placeholder="Nombre">
-    </p>
-    <p>
-        <label for="apellido">Apellido:</label>
-        <input type="text" name="apellido" id="apellido" placeholder="Apellido">
-    </p>
-    <p>
-        <label for="dni">Dni:</label>
-        <input type="text" name="Dni" id="dni" placeholder="Dni">
-    </p>
-    <p>
-        <label for="cantidad">Cantidad:</label>
-
-        <input type="text" name="cantidad" id="cantidad" placeholder="¿Con cuanto paga?" >
-
-    </p>
-    <p>
-        <label for="vuelto">Vuelto y Descuento:</label>
-        <input type="number" name="vuelto" id="vuelto" placeholder="Vuelto">
-        <input type="number" name="vuelto" id="descuento" placeholder="Descuento" disabled>
-    </p>
-
-</div>
-
 <br>
 <div id="tar">
 
-    <u><strong><h3>Tarjetas</h3></strong></u>
+<u><strong><h3>Tarjetas</h3></strong></u>
     <p>
         <label for="descuento2">Descuento:</label>
         <input type="number" name="vuelto" id="descuento2" placeholder="Descuento" disabled>
