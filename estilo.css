@@ -172,3 +172,6 @@ article {
     border:1px solid #000000;
     background: rgba(240, 255, 105, 0.47);
 }
+h3{
+    text-decoration: underline;
+}
