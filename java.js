@@ -1,47 +1,46 @@
 /**
- * Conversion de unidades, de metros, yardas, pies y pulgadas.
- * @method
- * @param
- * @param
+ * Descripción
+ * @method cambiarUnidades
+ * @param {string} id - El id de los inputs de metros, yardas, pies o pulgadas
+ * @param {number} valor - El valor de los inputs de metros, yardas, pies o pulgadas
  * @return
  */
 
-function calculo() {
-    var cant = parseInt(document.getElementById("cantblack1").value)||0;
-    var tipo=parseInt(document.getElementsByName("").value) || 0;
-    var iva = parseInt(document.getElementById("cantIva").value)||0;
-    var subt = cant*pUnit;
-    var cantIva = (subt*iva)/100;
-    var total=subt+cantIva;
-
-    document.getElementById("IVA").value= cantIva;
-    document.getElementById("Total").value=total;
+// /*function calculo() {
+//     var cant = parseInt(document.getElementById("cantblack1").value)||0;
+//     var tipo=parseInt(document.getElementsByName("").value) || 0;
+//     var iva = parseInt(document.getElementById("cantIva").value)||0;
+//     var subt = cant*pUnit;
+//     var cantIva = (subt*iva)/100;
+//     var total=subt+cantIva;
+//
+//     document.getElementById("IVA").value= cantIva;
+//     document.getElementById("Total").value=total;*/
+// }
+let GuardarLSBP= () =>{
+    let cant, tipo;
+    cant = document.getElementById("cantblack1").value;
+    tipo=document.getElementsByName("miss_america")[0].value;
+    if(tipo=="simple"){
+        tipo=1450;
+    }
+    else if(tipo=="doble"){
+         tipo=1750;
+    }
+    else if(tipo=="triple"){
+         tipo=2000;
+    }
+    localStorage.setItem("canthambLS", cant);
+    localStorage.setItem("tipohambLS", tipo);
+    window.open("formasdepago.html");
+}
+let CargarLS = ()=>{
+    var cant1, tipo1;
+    cant1=localStorage.getItem("canthambLS");
+    tipo1=localStorage.getItem("tipohambLS");
+    document.getElementById("total").value=Number(cant1)*Number(tipo1);
 }
 
-// function GuardarLSBP(){
-//     let cant, tipo, i;
-//     cant = document.getElementById("cantblack1").value;
-//     tipo=document.getElementsByName("miss_america")[0].value;
-//     if(tipo=="simple"){
-//         tipo=1450;
-//     }
-//     else if(tipo=="doble"){
-//         tipo=1750;
-//     }
-//     else if(tipo=="triple"){
-//         tipo=2000;
-//     }
-//     localStorage.setItem("canthambLS", cant);
-//     localStorage.setItem("tipohambLS", tipo);
-//     window.open("formasdepago.html");
-// }
-// function CargarLS(){
-//     let cant1, tipo1;
-//     cant1=localStorage.getItem("canthambLS");
-//     tipo1=localStorage.getItem("tipohambLS");
-//     document.getElementById("total").value=Number(cant1)*Number(tipo1);
-//
-//     }
 function cargarWeb(){
     var cant, tipo, urlComp;
     cant=document.getElementById("cantblack1").value;
@@ -71,6 +70,7 @@ function cargarResultado(){
 
 
 
+
 var bandera;
 function dibujar(event){
     var canvas = document.getElementById("canvasAdibujar");
@@ -96,6 +96,7 @@ function limpiarCanvas() {
     canvas.width = canvas.width;
 }
 
+/*
 let pagarMolly = () =>{
 
     let totalmolly, cantmolly, preciomolly;
@@ -163,4 +164,5 @@ let Total = () =>{
 
     document.getElementById("total").value= tot   ;
 
-}
+
+*/
