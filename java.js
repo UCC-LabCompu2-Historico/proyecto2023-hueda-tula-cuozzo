@@ -42,6 +42,8 @@ function calculo() {
 //     document.getElementById("total").value=Number(cant1)*Number(tipo1);
 //
 //     }
+
+
 function cargarWeb(){
     var cant, tipo, urlComp;
     cant=document.getElementById("cantblack1").value;
@@ -60,6 +62,8 @@ function cargarWeb(){
     window.open(urlComp);
 
 }
+
+
 function cargarResultado(){
     var urlComp, can, tip;
 
