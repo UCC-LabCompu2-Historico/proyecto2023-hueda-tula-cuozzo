@@ -34,96 +34,13 @@
         <option value="tarjeta de credito">Tarjeta de Credito</option>
     </select>
 </p>
-
-<h6>Trabajamos con las siguientes tarjetas/medios</h6>
-
-<div class="fotoformasdepago">
-
-    <img src="imagenes/formasdepago1.jpg" width="300px" alt="Foto de formas de pago">
-    <br>
-</div>
-
 <div class="efectivo">
-    <br>
-    <u><strong><h3>Efectivo</h3></strong></u>
-
-    <p>
-        <label for="nombre">Nombre:</label>
-        <input type="text" name="nombre" id="nombre" placeholder="Nombre">
-    </p>
-    <p>
-        <label for="apellido">Apellido:</label>
-        <input type="text" name="apellido" id="apellido" placeholder="Apellido">
-    </p>
-    <p>
-        <label for="dni">Dni:</label>
-        <input type="text" name="Dni" id="dni" placeholder="Dni">
-    </p>
-    <p>
-        <label for="cantidad">Cantidad:</label>
-
-        <input type="text" name="cantidad" id="cantidad" placeholder="¿Con cuanto paga?" >
-
-    </p>
-    <p>
-        <label for="vuelto">Vuelto y Descuento:</label>
-        <input type="number" name="vuelto" id="vuelto" placeholder="Vuelto">
-        <input type="number" name="vuelto" id="descuento" placeholder="Descuento" disabled>
-    </p>
-
+    <a class="Efectivo" href="Efectivo.html" target="_blank">Efectivo</a>
 </div>
 
 <br>
 <div id="tar">
-
-    <u><strong><h3>Tarjetas</h3></strong></u>
-    <p>
-        <label for="descuento2">Descuento:</label>
-        <input type="number" name="vuelto" id="descuento2" placeholder="Descuento" disabled>
-    </p>
-    <p>
-        <br>
-        <label for="dni2">Dni:</label>
-        <input type="text" name="Dni" id="dni2" placeholder="Dni">
-    </p>
-    <p>
-        <label for="tarjeta">Numero de tarjeta:</label>
-        <input type="text" name="Numero de tarjeta" id="tarjeta" placeholder="XXXX XXXX XXXX XXXX ">
-    </p>
-    <p>
-        <label for="vencimiento">Vec:</label>
-        <input type="date" name="Vec" id="vencimiento" placeholder="MM/AA">
-    </p>
-    <p>
-        <label for="Titular">Titular:</label>
-        <input type="text" name="titular" id="Titular" placeholder="Titular">
-    </p>
-    <p>
-        <label for="Codigo de seguridad">Codigo de seguridad:</label>
-        <input type="password" name="codigo de seguridad" id="Codigo de seguridad" placeholder="XXX">
-    </p>
-
-    <p>
-        <label for="comentario">Agregue un comentario:</label> <textarea id="comentario"></textarea>
-    </p>
-
-
-
-</div>
-    <br>
-    <p>Firma: </p>
-
-    <canvas id="canvasAdibujar" class="ejer" onmousemove="dibujar(event)" width="200px" height="100px">
-
-    </canvas>
-
-
-    <button onclick="limpiarCanvas()">
-        Limpiar Firma
-    </button>
-
-<div id="boton">
-    <button type="button" class="boton" >PAGAR</button>
+    <a class="Tarjetas" href="Tarjeta.html" target="_blank">Tarjetas</a>
 </div>
 
 </form>
