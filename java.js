@@ -155,6 +155,55 @@ let GuardarLSWonder=() =>{
     window.open("Tajeta.html");
 }
 
+let GuardarLSMolly=()  =>{
+    let cant, tipo, cantt, canttt, tipoo, tipooo;;
+    cant = document.getElementById("cantmolly1").value;
+    cantt = document.getElementById("cantmolly2").value;
+    canttt = document.getElementById("cantmolly3").value;
+    tipo=document.getElementsByName("bigveggie")[0].value;
+    tipoo=document.getElementsByName("eggbacon")[0].value;
+    tipooo=document.getElementsByName("crispyonion")[0].value;
+
+    if (tipo == "simple"){
+        tipo = 1150 ;
+    }
+    if(tipo=="doble"){
+        tipo= 1350;
+    }
+    if(tipo=="triple"){
+        tipo= 1600;
+    }
+    if(tipoo=="simple"){
+        tipoo= 1250;
+    }
+    if(tipoo=="doble"){
+        tipoo=1450;
+    }
+    if(tipoo=="triple"){
+        tipoo= 1700;
+    }
+
+    if(tipooo == "simple"){
+        tipooo= 1350
+    }
+    if(tipooo=="doble"){
+        tipooo=1500;
+    }
+    if(tipooo=="triple"){
+        tipooo=1750;
+    }
+    localStorage.setItem("canthambLS", cant);
+    localStorage.setItem("canthambLS2", cantt);
+    localStorage.setItem("canthambLS3", canttt);
+    localStorage.setItem("tipohambLS", tipo);
+    localStorage.setItem("tipohambLS2", tipoo);
+    localStorage.setItem("tipohambLS3", tipooo);
+    window.open("formasdepago.html");
+    window.open("Efectivo.html");
+    window.open("Tajeta.html");
+}
+
+
 
 let Descuento = () => {
 
