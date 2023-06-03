@@ -100,9 +100,38 @@ function limpiarCanvas() {
 
 let validardatos = (name, lastname, id, ammount) => {
 
-if( name )
+    var letras = /^[a-zA-Z\s]*$/ ;
+    var numeros = /^[0-9]*$/ ;
+
+    if(name.search(letras) || name == ""){
+        const dialogonombre = document.getElementById("dialogonombre");
+        dialogonombre.showModal();
+    }
+    if(lastname.search(letras) || lastname == ""){
+        const dialogoapellido = document.getElementById("dialogoapellido");
+        dialogoapellido.showModal();
+    }
+    if(id.search(numeros) || id == "" || id.length!==8){
+        const dialogodni = document.getElementById("dialogodni");
+        dialogodni.showModal();
+    }
 
 
+}
+
+let cerrarDialogoNombre = () => {
+    let  dialogonombre = document.getElementById("dialogonombre");
+    dialogonombre.close();
+}
+
+let cerrarDialogoApellido = () => {
+    let  dialogoapellido = document.getElementById("dialogoapellido");
+    dialogoapellido.close();
+}
+
+let cerrarDialogoDNI = () => {
+    let  dialogodni = document.getElementById("dialogodni");
+    dialogodni.close();
 }
 
 /*
