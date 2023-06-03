@@ -114,6 +114,46 @@ let GuardarLSHoppi=() =>{
     window.open("Tajeta.html");
 }
 
+let GuardarLSWonder=() =>{
+    let cant, tipo, cantt, canttt, tipoo, tipooo;;
+    cant = document.getElementById("cantwonder1").value;
+    cantt = document.getElementById("cantwonder2").value;
+    canttt = document.getElementById("cantwonder3").value;
+    tipo=document.getElementsByName("wonderargentina")[0].value;
+    tipoo=document.getElementsByName("wonderveggie")[0].value;
+    tipooo=document.getElementsByName("wonderbomba")[0].value;
+    if(tipo=="doble"){
+        tipo=2090;
+    }
+    if(tipo=="triple"){
+        tipo=2450;
+    }
+    if(tipoo=="simple"){
+        tipoo=1690;
+    }
+    if(tipoo=="doble"){
+        tipoo=1890;
+    }
+    if(tipoo=="triple"){
+        tipoo=2190;
+    }
+
+    if(tipooo=="doble"){
+        tipooo=2090;
+    }
+    if(tipooo=="triple"){
+        tipooo=2400;
+    }
+    localStorage.setItem("canthambLS", cant);
+    localStorage.setItem("canthambLS2", cantt);
+    localStorage.setItem("canthambLS3", canttt);
+    localStorage.setItem("tipohambLS", tipo);
+    localStorage.setItem("tipohambLS2", tipoo);
+    localStorage.setItem("tipohambLS3", tipooo);
+    window.open("formasdepago.html");
+    window.open("Efectivo.html");
+    window.open("Tajeta.html");
+}
 
 
 let Descuento = () => {
