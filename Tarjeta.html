@@ -34,41 +34,50 @@
     <img src="imagenes/formasdepago1.jpg" width="300px" alt="Foto de formas de pago">
     <br>
 </div>
-
+<form name="tarjeta">
 <br>
 <div class="tar">
-    <strong><h3>Tarjetas</h3></strong>
+    <strong><h3>Datos</h3></strong>
     <p>
-        <label for="descuento2">Descuento:</label>
-        <input type="number" name="vuelto" id="descuento2" placeholder="Descuento" disabled>
+        <label for="titular">Titular:</label>
+        <input type="text" name="titular" id="titular" placeholder="Titular">
     </p>
+    <dialog id="dialogotitular">
+        <h3>Error!!</h3>
+        <p>Por favor ingrese el dato de nuevo.</p>
+        <button type="button" onclick="cerrarDialogoTitular()">Cerrar</button>
+    </dialog>
     <p>
-        <br>
         <label for="dni2">Dni:</label>
         <input type="text" name="Dni" id="dni2" placeholder="Dni">
     </p>
+    <dialog id="dialogodni2">
+        <h3>Error!!</h3>
+        <p>Por favor ingrese el DNI de nuevo.</p>
+        <button type="button" onclick="cerrarDialogoDNI2()">Cerrar</button>
+    </dialog>
     <p>
-        <label for="tarjeta">Número de tarjeta:</label>
-        <input type="text" name="Numero de tarjeta" id="tarjeta" placeholder="XXXX XXXX XXXX XXXX ">
+        <label for="NT">Número de tarjeta:</label>
+        <input type="text" name="NT" id="NT" placeholder="XXXX XXXX XXXX XXXX ">
     </p>
+    <dialog id="dialogoNT">
+        <h3>Error!!</h3>
+        <p>Por favor ingrese el numero de tarjeta de nuevo. </p>
+        <button type="button" onclick="cerrarDialogoNT()">Cerrar</button>
+    </dialog>
     <p>
         <label for="vencimiento">Vec:</label>
-        <input type="date" name="Vec" id="vencimiento" placeholder="MM/AA">
+        <input type="month" name="vencimiento" id="vencimiento" placeholder="MM/AA">
     </p>
     <p>
-        <label for="Titular">Titular:</label>
-        <input type="text" name="titular" id="Titular" placeholder="Titular">
+        <label for="CDS">Código de seguridad:</label>
+        <input type="password" name="CDS" id="CDS" placeholder="XXX">
     </p>
-    <p>
-        <label for="Codigo de seguridad">Código de seguridad:</label>
-        <input type="password" name="codigo de seguridad" id="Codigo de seguridad" placeholder="XXX">
-    </p>
-
-    <p>
-        <label for="comentario">Agregue un comentario:</label> <textarea id="comentario"></textarea>
-    </p>
-
-
+    <dialog id="dialogoCDS">
+        <h3>Error!!</h3>
+        <p>Por favor ingrese el código de seguridad de nuevo.</p>
+        <button type="button" onclick="cerrarDialogoCDS()">Cerrar</button>
+    </dialog>
 
 </div>
     <br>
@@ -84,7 +93,7 @@
     </button>
 
 <div id="boton">
-    <button type="button" class="boton" >PAGAR</button>
+    <button type="button" class="boton" onclick="validardatostarjeta(titular.value  , Dni.value, NT.value, vencimiento.value, CDS.value)" >PAGAR</button>
 </div>
 
 </form>

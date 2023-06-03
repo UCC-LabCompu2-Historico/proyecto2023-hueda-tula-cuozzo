@@ -121,7 +121,7 @@ function limpiarCanvas() {
 
 
 
-let validardatos = (name, lastname, id, ammount ) => {
+let validardatosefectivo = (name, lastname, id, ammount ) => {
 
     var letras = /^[a-zA-Z\s]*$/ ;
     var numeros = /^[0-9]*$/ ;
@@ -147,9 +147,7 @@ let validardatos = (name, lastname, id, ammount ) => {
         dialogocantidad.showModal();
     }
 
-
 }
-
 
 let cerrarDialogoNombre = () => {
     let nombre;
@@ -183,4 +181,57 @@ let cerrarDialogoCantidad = () => {
     dialogocantidad.close();
     cantidad = "";
     document.efectivo.cantidad.value = cantidad;
+}
+
+
+let validardatostarjeta = (titular2, id, NT2, vencimiento2, CDS2 ) => {
+
+    var letras = /^[a-zA-Z\s]*$/ ;
+    var numeros = /^[0-9]*$/ ;
+
+    if(titular2.search(letras) || titular2 == ""){
+        const dialogotitular = document.getElementById("dialogotitular");
+        dialogotitular.showModal();
+    }
+    if(id.search(numeros) || id == "" || id.length!==8){
+        const dialogodni2 = document.getElementById("dialogodni2");
+        dialogodni2.showModal();
+    }
+    if(NT2.search(numeros) || NT2 == ""){
+        const dialogoNT = document.getElementById("dialogoNT");
+        dialogoNT.showModal();
+    }
+    if(CDS2.search(numeros) || CDS2 == ""){
+        const dialogoCDS2 = document.getElementById("dialogoCDS");
+        dialogoCDS2.showModal();
+    }
+
+}
+let cerrarDialogoTitular = () => {
+    let titular;
+    let  dialogotitular = document.getElementById("dialogotitular");
+    dialogotitular.close();
+    titular = "";
+    document.tarjeta.titular.value = titular;
+}
+let cerrarDialogoDNI2 = () => {
+    let dni;
+    let  dialogodni2 = document.getElementById("dialogodni2");
+    dialogodni2.close();
+    dni = "";
+    document.tarjeta.Dni.value = dni;
+}
+let cerrarDialogoNT = () => {
+    let NT;
+    let  dialogoNT = document.getElementById("dialogoNT");
+    dialogoNT.close();
+    NT = "";
+    document.tarjeta.NT.value = NT;
+}
+let cerrarDialogoCDS = () => {
+    let CDS;
+    let  dialogoCDS = document.getElementById("dialogoCDS");
+    dialogoCDS.close();
+    CDS = "";
+    document.tarjeta.CDS.value = CDS;
 }
