@@ -65,6 +65,57 @@ let CargarLS = ()=> {
     document.getElementById("total").value = totalf;
 }
 
+
+
+
+let GuardarLSHoppi=() =>{
+    let cant, tipo, cantt, canttt, tipoo, tipooo;;
+    cant = document.getElementById("canthoppi1").value;
+    cantt = document.getElementById("canthoppi2").value;
+    canttt = document.getElementById("canthoppi3").value;
+    tipo=document.getElementsByName("argentaburger")[0].value;
+    tipoo=document.getElementsByName("cheeseburger")[0].value;
+    tipooo=document.getElementsByName("crispyonionburgerveggie")[0].value;
+    if(tipo=="simple"){
+        tipo=1150;
+    }
+    if(tipo=="doble"){
+        tipo=1350;
+    }
+    if(tipo=="triple"){
+        tipo=1600;
+    }
+    if(tipoo=="simple"){
+        tipoo=1150;
+    }
+    if(tipoo=="doble"){
+        tipoo=1350;
+    }
+    if(tipoo=="triple"){
+        tipoo=1600;
+    }
+    if(tipooo=="simple"){
+        tipooo=1350;
+    }
+    if(tipooo=="doble"){
+        tipooo=1500;
+    }
+    if(tipooo=="triple"){
+        tipooo=1750;
+    }
+    localStorage.setItem("canthambLS", cant);
+    localStorage.setItem("canthambLS2", cantt);
+    localStorage.setItem("canthambLS3", canttt);
+    localStorage.setItem("tipohambLS", tipo);
+    localStorage.setItem("tipohambLS2", tipoo);
+    localStorage.setItem("tipohambLS3", tipooo);
+    window.open("formasdepago.html");
+    window.open("Efectivo.html");
+    window.open("Tajeta.html");
+}
+
+
+
 let Descuento = () => {
 
     var descuento, totalFinal, totalf1;
