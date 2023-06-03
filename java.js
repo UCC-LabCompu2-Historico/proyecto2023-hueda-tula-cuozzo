@@ -51,27 +51,47 @@ let GuardarLSBP= () =>{
     window.open("Efectivo.html");
     window.open("Tajeta.html");
 }
-let CargarLS = ()=>{
-    var cant1,cant2,cant3,tipo1,tipo2,tipo3;
-    cant1=localStorage.getItem("canthambLS");
-    cant2=localStorage.getItem("canthambLS2");
-    cant3=localStorage.getItem("canthambLS3");
-    tipo1=localStorage.getItem("tipohambLS");
-    tipo2=localStorage.getItem("tipohambLS2");
-    tipo3=localStorage.getItem("tipohambLS3");
-    document.getElementById("total").value=((Number(cant1 )*Number(tipo1)) + (Number(cant2)*Number(tipo2))+ (Number(cant3)*Number(tipo3)));
+let CargarLS = ()=> {
+    var cant1, cant2, cant3, tipo1, tipo2, tipo3;
+    cant1 = localStorage.getItem("canthambLS");
+    cant2 = localStorage.getItem("canthambLS2");
+    cant3 = localStorage.getItem("canthambLS3");
+    tipo1 = localStorage.getItem("tipohambLS");
+    tipo2 = localStorage.getItem("tipohambLS2");
+    tipo3 = localStorage.getItem("tipohambLS3");
+
+    var totalf = Number(cant1) * Number(tipo1) + Number(cant2) * Number(tipo2) + Number(cant3) * Number(tipo3);
+    localStorage.setItem("totalf", totalf);
+    document.getElementById("total").value = totalf;
 }
 
-let CargarLSD = () =>{
-    var cant1,cant2,cant3,tipo1,tipo2,tipo3;
-    cant1=localStorage.getItem("canthambLS");
-    cant2=localStorage.getItem("canthambLS2");
-    cant3=localStorage.getItem("canthambLS3");
-    tipo1=localStorage.getItem("tipohambLS");
-    tipo2=localStorage.getItem("tipohambLS2");
-    tipo3=localStorage.getItem("tipohambLS3");
-    document.getElementById("descuento").value=((Number(cant1 )*Number(tipo1)) + (Number(cant2)*Number(tipo2))+ (Number(cant3)*Number(tipo3))*15/100);
+let Descuento = () => {
+
+    var descuento, totalFinal, totalf1;
+    totalf1= localStorage.getItem("totalf");
+
+    descuento =  Number(totalf1) * (20/100);
+
+    totalFinal = Number(totalf1) - Number(descuento);
+
+    localStorage.setItem("totalFinal", totalFinal);
+
+    document.getElementById("descuento").value = descuento;
+    document.getElementById("totalfinal").value = totalFinal;
+
+
 }
+
+let Vuelto = () => {
+    var vuelto, totalfv;
+    const cantidad =  document.getElementById("cantidad").value;
+
+    totalfv = localStorage.getItem("totalFinal");
+    vuelto = Number(cantidad) - Number(totalfv) ;
+
+    document.getElementById("vuelto").value = vuelto;
+}
+
 
 
 var bandera;
@@ -101,7 +121,7 @@ function limpiarCanvas() {
 
 
 
-/*let validardatos = (name, lastname, id, ammount) => {
+let validardatos = (name, lastname, id, ammount ) => {
 
     var letras = /^[a-zA-Z\s]*$/ ;
     var numeros = /^[0-9]*$/ ;
@@ -119,22 +139,50 @@ function limpiarCanvas() {
         dialogodni.showModal();
     }
 
+    var totalf2 ;
+    totalf2 = localStorage.getItem("totalFinal");
 
-}*/
+    if(ammount.search(numeros) || ammount < totalf2){
+        const dialogocantidad = document.getElementById("dialogocantidad");
+        dialogocantidad.showModal();
+    }
+
+
+}
+
 
 let cerrarDialogoNombre = () => {
+    let nombre;
     let  dialogonombre = document.getElementById("dialogonombre");
     dialogonombre.close();
+    nombre = " ";
+    document.efectivo.nombre.value = nombre;
+
+
 }
 
 let cerrarDialogoApellido = () => {
+    let apellido;
     let  dialogoapellido = document.getElementById("dialogoapellido");
     dialogoapellido.close();
+    apellido= "";
+    document.efectivo.apellido.value = apellido;
 }
 
 let cerrarDialogoDNI = () => {
+    let dni;
     let  dialogodni = document.getElementById("dialogodni");
     dialogodni.close();
+    dni = "";
+    document.efectivo.Dni.value = dni;
+}
+
+let cerrarDialogoCantidad = () => {
+    let cantidad;
+    let  dialogocantidad = document.getElementById("dialogocantidad");
+    dialogocantidad.close();
+    cantidad = "";
+    document.efectivo.cantidad.value = cantidad;
 }
 
 /*

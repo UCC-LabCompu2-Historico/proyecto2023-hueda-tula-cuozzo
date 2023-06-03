@@ -18,19 +18,37 @@
     <link rel="stylesheet" href="estilo.css" type="text/css">
 
 </head>
-<body onload="CargarLS()">
+<body onload="CargarLS(), Descuento()">
 <header>
     <h1 id="titulo_principal"><u><em>EFECTIVO</em></u></h1>
 </header>
-<p>
-    <u><h3><label for="total">TOTAL:</label></h3></u>
-    <input type="number" name="total" id="total" placeholder="Total" onload="CargarLS()" disabled>
-</p>
-<form>
 
-<div class="efectivo">
-    <br>
-    <strong><h3>Efectivo</h3></strong>
+<u><h3><label for="total">TOTAL:</label></h3></u>
+
+<p>
+    <label for="total">Total sin el descuento:</label>
+    <input type="number" name="total" id="total" placeholder="Total" onload="CargarLS()" disabled>
+
+</p>
+
+<p>
+
+    <label for="descuento">Descuento:</label>
+    <input type="number" name="descuento" id="descuento" placeholder="Descuento"  onload="Descuento()"  disabled>
+
+</p>
+
+<p>
+
+    <label for="totalfinal">Total Final:</label>
+    <input type="number" name="totalfinal" id="totalfinal" placeholder="TotalFinal" onload="Descuento()" disabled>
+
+</p>
+
+<form name="efectivo">
+
+<div class="efectivo" >
+    <u><h3>DATOS:</h3></u>
 
     <p>
         <label for="nombre">Nombre:</label>
@@ -66,13 +84,13 @@
     </dialog>
 
     <p>
-        <label for="cantidad">Cantidad:</label>
+        <label for="cantidad">¿Con cuánto desea abonar?  </label>
 
-        <input type="text" name="cantidad" id="cantidad" placeholder="¿Con cuanto paga?" >
+        <input type="text" name="cantidad" id="cantidad" placeholder="¿Con cuánto abona?" onchange="Vuelto()" >
 
     </p>
 
-    <dialog name="dialogo">
+    <dialog id="dialogocantidad">
         <h3>Error!!</h3>
         <p>Por favor ingrese la cantidad de nuevo. Recuerde que debe ser mayor o igual al total.</p>
         <button type="button" onclick="cerrarDialogoCantidad()">Cerrar</button>
@@ -80,9 +98,8 @@
 
 
     <p>
-        <label for="vuelto">Vuelto y Descuento:</label>
-        <input type="number" name="vuelto" id="vuelto" placeholder="Vuelto">
-        <input type="number" name="vuelto" id="descuento" placeholder="Descuento" disabled>
+        <label for="vuelto">Vuelto:</label>
+        <input type="number" name="vuelto" id="vuelto" placeholder="Vuelto"  disabled>
     </p>
 
 </div>
