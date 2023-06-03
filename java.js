@@ -65,6 +65,75 @@ let CargarLS = ()=> {
     document.getElementById("total").value = totalf;
 }
 
+
+
+
+let GuardarLSHoppi=() =>{
+    let cant, tipo, cantt, canttt, tipoo, tipooo;;
+    cant = document.getElementById("canthoppi1").value;
+    cantt = document.getElementById("canthoppi2").value;
+    canttt = document.getElementById("canthoppi3").value;
+    tipo=document.getElementsByName("argentaburger")[0].value;
+    tipoo=document.getElementsByName("cheeseburger")[0].value;
+    tipooo=document.getElementsByName("crispyonionburgerveggie")[0].value;
+    if(tipo=="simple"){
+        tipo=1150;
+    }
+    if(tipo=="doble"){
+        tipo=1350;
+    }
+    if(tipo=="triple"){
+        tipo=1600;
+    }
+    if(tipoo=="simple"){
+        tipoo=1150;
+    }
+    if(tipoo=="doble"){
+        tipoo=1350;
+    }
+    if(tipoo=="triple"){
+        tipoo=1600;
+    }
+    if(tipooo=="simple"){
+        tipooo=1350;
+    }
+    if(tipooo=="doble"){
+        tipooo=1500;
+    }
+    if(tipooo=="triple"){
+        tipooo=1750;
+    }
+    localStorage.setItem("canthambLS", cant);
+    localStorage.setItem("canthambLS2", cantt);
+    localStorage.setItem("canthambLS3", canttt);
+    localStorage.setItem("tipohambLS", tipo);
+    localStorage.setItem("tipohambLS2", tipoo);
+    localStorage.setItem("tipohambLS3", tipooo);
+    window.open("formasdepago.html");
+    window.open("Efectivo.html");
+    window.open("Tajeta.html");
+}
+let CargarLS = ()=> {
+    var cant1, cant2, cant3, tipo1, tipo2, tipo3;
+    cant1 = localStorage.getItem("canthambLS");
+    cant2 = localStorage.getItem("canthambLS2");
+    cant3 = localStorage.getItem("canthambLS3");
+    tipo1 = localStorage.getItem("tipohambLS");
+    tipo2 = localStorage.getItem("tipohambLS2");
+    tipo3 = localStorage.getItem("tipohambLS3");
+
+    var totalf = Number(cant1) * Number(tipo1) + Number(cant2) * Number(tipo2) + Number(cant3) * Number(tipo3);
+    localStorage.setItem("totalf", totalf);
+    document.getElementById("total").value = totalf;
+}
+
+
+
+
+
+
+
+
 let Descuento = () => {
 
     var descuento, totalFinal, totalf1;
@@ -184,3 +253,5 @@ let cerrarDialogoCantidad = () => {
     cantidad = "";
     document.efectivo.cantidad.value = cantidad;
 }
+
+
