@@ -62,6 +62,17 @@ let CargarLS = ()=>{
     document.getElementById("total").value=((Number(cant1 )*Number(tipo1)) + (Number(cant2)*Number(tipo2))+ (Number(cant3)*Number(tipo3)));
 }
 
+let CargarLSD = () =>{
+    var cant1,cant2,cant3,tipo1,tipo2,tipo3;
+    cant1=localStorage.getItem("canthambLS");
+    cant2=localStorage.getItem("canthambLS2");
+    cant3=localStorage.getItem("canthambLS3");
+    tipo1=localStorage.getItem("tipohambLS");
+    tipo2=localStorage.getItem("tipohambLS2");
+    tipo3=localStorage.getItem("tipohambLS3");
+    document.getElementById("descuento").value=((Number(cant1 )*Number(tipo1)) + (Number(cant2)*Number(tipo2))+ (Number(cant3)*Number(tipo3))*15/100);
+}
+
 
 var bandera;
 function dibujar(event){
