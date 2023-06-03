@@ -66,7 +66,7 @@ main {
 
 }
 
-.pagar, .Tarjetas, .Efectivo {
+.pagar{
     margin-left: 555px;
     font-weight: bolder;
     background-color: #ff8000;
@@ -74,6 +74,14 @@ main {
     padding: 5px;
     border: black 1px solid;
 
+}
+.Tarjetas, .Efectivo{
+    margin-left: 200px;
+    font-weight: bolder;
+    background-color: #ff8000;
+    font-size: x-large;
+    padding: 5px;
+    border: black 1px solid;
 }
 
 
@@ -140,6 +148,9 @@ article {
     display: flex;
 
 }
+.tar{
+    margin-top: 200px;
+}
 
 
 #boton {
@@ -165,10 +176,13 @@ article {
 
 
 .efectivo {
-    margin-top: 195px;
+    margin-top: 20px;
 }
 
 .ejer{
     border:1px solid #000000;
     background: rgba(240, 255, 105, 0.47);
+}
+h3{
+    text-decoration: underline;
 }

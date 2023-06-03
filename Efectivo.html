@@ -18,20 +18,20 @@
     <link rel="stylesheet" href="estilo.css" type="text/css">
 
 </head>
-<body>
+<body onload="CargarLS()">
 <header>
     <h1 id="titulo_principal"><u><em>EFECTIVO</em></u></h1>
 </header>
 <p>
     <u><h3><label for="total">TOTAL:</label></h3></u>
-    <input type="number" name="total" id="total" placeholder="Total" onload="CargarLS()" onload="cargarResultado()" disabled>
+    <input type="number" name="total" id="total" placeholder="Total" onload="CargarLS()" disabled>
 </p>
 <form>
 
 <div class="efectivo">
+    <br>
+    <strong><h3>Efectivo</h3></strong>
 
-
-    <u><strong><h3>Efectivo</h3></strong></u>
     <p>
         <label for="nombre">Nombre:</label>
         <input type="text" name="nombre" id="nombre" placeholder="Nombre">

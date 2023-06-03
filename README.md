@@ -6,7 +6,7 @@ El objetivo de nuestra página es brindar posibles lugares para comer una rica h
 - Hueda, Luciana  
 - Cuozzo, Sofia
 
-## Tecnologia usada
+## Tecnología usada
 - HTML 5
 - CSS
 

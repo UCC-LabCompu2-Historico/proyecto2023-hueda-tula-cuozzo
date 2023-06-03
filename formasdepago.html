@@ -18,21 +18,13 @@
     <link rel="stylesheet" href="estilo.css" type="text/css">
 
 </head>
-<body>
+<body  onload="CargarLS()">
 <header>
     <h1 id="titulo_principal"><u><em>FORMAS DE PAGO</em></u></h1>
 </header>
 <p>
-    <u><h3><label for="total">TOTAL:</label></h3></u>
-    <input type="number" name="total" id="total" placeholder="Total" onload="CargarLS()" onload="cargarResultado()" disabled>
-</p>
-<p>
-    <em><label for="tipo">¿Como desea abonar?</label></em>
-    <select id="tipo">
-        <option value="efectivo">Efectivo</option>
-        <option value="tarjeta de debito">Tarjeta de Debito</option>
-        <option value="tarjeta de credito">Tarjeta de Credito</option>
-    </select>
+    <h3><label for="total">TOTAL:</label></h3>
+    <input type="number" name="total" id="total" placeholder="Total" disabled>
 </p>
 <div class="efectivo">
     <a class="Efectivo" href="Efectivo.html" target="_blank">Efectivo</a>
@@ -44,8 +36,5 @@
 </div>
 
 </form>
-
 </body>
-
-
 </html>

@@ -1,74 +1,77 @@
 /**
  * Descripción
  * @method cambiarUnidades
- * @param {string} id - El id de los inputs de metros, yardas, pies o pulgadas
- * @param {number} valor - El valor de los inputs de metros, yardas, pies o pulgadas
+ * @param
+ * @param
  * @return
  */
 
-// /*function calculo() {
-//     var cant = parseInt(document.getElementById("cantblack1").value)||0;
-//     var tipo=parseInt(document.getElementsByName("").value) || 0;
-//     var iva = parseInt(document.getElementById("cantIva").value)||0;
-//     var subt = cant*pUnit;
-//     var cantIva = (subt*iva)/100;
-//     var total=subt+cantIva;
-//
-//     document.getElementById("IVA").value= cantIva;
-//     document.getElementById("Total").value=total;*/
-// }
 let GuardarLSBP= () =>{
-    let cant, tipo;
+    let cant, tipo, cantt, canttt, tipoo, tipooo;
     cant = document.getElementById("cantblack1").value;
+    cantt = document.getElementById("cantblack2").value;
+    canttt = document.getElementById("cantblack3").value;
     tipo=document.getElementsByName("miss_america")[0].value;
+    tipoo=document.getElementsByName("bacon_cheese")[0].value;
+    tipooo=document.getElementsByName("vegetariana")[0].value;
     if(tipo=="simple"){
         tipo=1450;
     }
-    else if(tipo=="doble"){
-         tipo=1750;
-    }
-    else if(tipo=="triple"){
-         tipo=2000;
-    }
-    localStorage.setItem("canthambLS", cant);
-    localStorage.setItem("tipohambLS", tipo);
-    window.open("formasdepago.html");
-}
-let CargarLS = ()=>{
-    var cant1, tipo1;
-    cant1=localStorage.getItem("canthambLS");
-    tipo1=localStorage.getItem("tipohambLS");
-    document.getElementById("total").value=Number(cant1)*Number(tipo1);
-}
-
-function cargarWeb(){
-    var cant, tipo, urlComp;
-    cant=document.getElementById("cantblack1").value;
-    tipo=document.getElementsByName("miss_america")[0].value;
-    if(tipo=="simple"){
-        tipo=1450;
-    }
-    else if(tipo=="doble"){
+    if(tipo=="doble"){
         tipo=1750;
     }
-    else if(tipo=="triple"){
+    if(tipo=="triple"){
         tipo=2000;
     }
-    urlComp="formasdepago.html#" + cant + "#" + tipo;
-    console.log(urlComp)
-    window.open(urlComp);
-
+    if(tipoo=="simple"){
+        tipoo=1650;
+    }
+    if(tipoo=="doble"){
+        tipoo=2000;
+    }
+    if(tipoo=="triple"){
+        tipoo=2300;
+    }
+    if(tipooo=="simple"){
+        tipooo=1350;
+    }
+    if(tipooo=="doble"){
+        tipooo=1500;
+    }
+    if(tipooo=="triple"){
+        tipooo=1750;
+    }
+    localStorage.setItem("canthambLS", cant);
+    localStorage.setItem("canthambLS2", cantt);
+    localStorage.setItem("canthambLS3", canttt);
+    localStorage.setItem("tipohambLS", tipo);
+    localStorage.setItem("tipohambLS2", tipoo);
+    localStorage.setItem("tipohambLS3", tipooo);
+    window.open("formasdepago.html");
+    window.open("Efectivo.html");
+    window.open("Tajeta.html");
 }
-function cargarResultado(){
-    var urlComp, can, tip;
-
-    urlComp=window.location.href.split("/")[5];
-    can=urlComp.split("#")[1];
-    tip=urlComp.split("#")[2];
-    document.getElementById("dist").value=can*tip;
+let CargarLS = ()=>{
+    var cant1,cant2,cant3,tipo1,tipo2,tipo3;
+    cant1=localStorage.getItem("canthambLS");
+    cant2=localStorage.getItem("canthambLS2");
+    cant3=localStorage.getItem("canthambLS3");
+    tipo1=localStorage.getItem("tipohambLS");
+    tipo2=localStorage.getItem("tipohambLS2");
+    tipo3=localStorage.getItem("tipohambLS3");
+    document.getElementById("total").value=((Number(cant1 )*Number(tipo1)) + (Number(cant2)*Number(tipo2))+ (Number(cant3)*Number(tipo3)));
 }
 
-
+let CargarLSD = () =>{
+    var cant1,cant2,cant3,tipo1,tipo2,tipo3;
+    cant1=localStorage.getItem("canthambLS");
+    cant2=localStorage.getItem("canthambLS2");
+    cant3=localStorage.getItem("canthambLS3");
+    tipo1=localStorage.getItem("tipohambLS");
+    tipo2=localStorage.getItem("tipohambLS2");
+    tipo3=localStorage.getItem("tipohambLS3");
+    document.getElementById("descuento").value=((Number(cant1 )*Number(tipo1)) + (Number(cant2)*Number(tipo2))+ (Number(cant3)*Number(tipo3))*15/100);
+}
 
 
 var bandera;
@@ -98,7 +101,7 @@ function limpiarCanvas() {
 
 
 
-let validardatos = (name, lastname, id, ammount) => {
+/*let validardatos = (name, lastname, id, ammount) => {
 
     var letras = /^[a-zA-Z\s]*$/ ;
     var numeros = /^[0-9]*$/ ;
@@ -117,7 +120,7 @@ let validardatos = (name, lastname, id, ammount) => {
     }
 
 
-}
+}*/
 
 let cerrarDialogoNombre = () => {
     let  dialogonombre = document.getElementById("dialogonombre");

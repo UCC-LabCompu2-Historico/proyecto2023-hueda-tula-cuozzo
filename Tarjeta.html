@@ -18,13 +18,13 @@
     <link rel="stylesheet" href="estilo.css" type="text/css">
 
 </head>
-<body>
+<body onload="CargarLS()">
 <header>
     <h1 id="titulo_principal"><u><em>TARJETA</em></u></h1>
 </header>
 <p>
     <u><h3><label for="total">TOTAL:</label></h3></u>
-    <input type="number" name="total" id="total" placeholder="Total" onload="CargarLS()" onload="cargarResultado()" disabled>
+    <input type="number" name="total" id="total" placeholder="Total" disabled>
 </p>
 
 <h6>Trabajamos con las siguientes tarjetas/medios</h6>
@@ -36,9 +36,8 @@
 </div>
 
 <br>
-<div id="tar">
-
-<u><strong><h3>Tarjetas</h3></strong></u>
+<div class="tar">
+    <strong><h3>Tarjetas</h3></strong>
     <p>
         <label for="descuento2">Descuento:</label>
         <input type="number" name="vuelto" id="descuento2" placeholder="Descuento" disabled>
@@ -49,7 +48,7 @@
         <input type="text" name="Dni" id="dni2" placeholder="Dni">
     </p>
     <p>
-        <label for="tarjeta">Numero de tarjeta:</label>
+        <label for="tarjeta">Número de tarjeta:</label>
         <input type="text" name="Numero de tarjeta" id="tarjeta" placeholder="XXXX XXXX XXXX XXXX ">
     </p>
     <p>
@@ -61,7 +60,7 @@
         <input type="text" name="titular" id="Titular" placeholder="Titular">
     </p>
     <p>
-        <label for="Codigo de seguridad">Codigo de seguridad:</label>
+        <label for="Codigo de seguridad">Código de seguridad:</label>
         <input type="password" name="codigo de seguridad" id="Codigo de seguridad" placeholder="XXX">
     </p>
 
