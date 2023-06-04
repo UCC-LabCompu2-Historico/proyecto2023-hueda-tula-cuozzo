@@ -247,7 +247,7 @@ function dibujar(event){
     canvas.onmouseup = function (){bandera = false};
 
     if(bandera){
-        ctx.fillRect(posX - 12, posY - 587, 3, 3);
+        ctx.fillRect(posX, posY, 3, 3);
         ctx.fill;
     }
 
