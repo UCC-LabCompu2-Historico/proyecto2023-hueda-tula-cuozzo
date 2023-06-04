@@ -235,7 +235,7 @@ let Vuelto = () => {
 
 
 var bandera;
-function dibujar(event){
+let  dibujar = (event)=>{
     var canvas = document.getElementById("canvasAdibujar");
     var ctx = canvas.getContext("2d");
 
@@ -248,7 +248,7 @@ function dibujar(event){
 
     if(bandera){
         ctx.fillRect(posX - 12, posY - 587, 3, 3);
-        ctx.fill;
+        ctx.fill();
     }
 
 
