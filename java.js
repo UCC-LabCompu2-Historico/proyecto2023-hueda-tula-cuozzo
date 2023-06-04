@@ -235,21 +235,34 @@ let Vuelto = () => {
 
 
 var bandera;
-let  dibujar = (event)=>{
+let initialX;
+let initialY;
+
+function dibujar(event){
+
     var canvas = document.getElementById("canvasAdibujar");
     var ctx = canvas.getContext("2d");
 
-    var posX = event.clientX;
-    var posY = event.clientY ;
-    console.log(posX, posY);
+    let xAnterior = 0, yAnterior = 0, xActual = 0, yActual = 0;
+    const obtenerXReal = (clientX) => clientX - canvas.getBoundingClientRect().left;
+    const obtenerYReal = (clientY) => clientY - canvas.getBoundingClientRect().top;
+
+    xAnterior = xActual;
+    yAnterior = yActual;
+    xActual = obtenerXReal(event.clientX);
+    yActual = obtenerYReal(event.clientY);
+    ctx.beginPath();
+    ctx.moveTo(xAnterior, yAnterior);
+    ctx.lineTo(xActual, yActual);
+    ctx.closePath();
+
 
     canvas.onmousedown = function (){bandera = true};
     canvas.onmouseup = function (){bandera = false};
 
     if(bandera){
 
-        ctx.fillRect(posX, posY, 3, 3);
-        ctx.fill();
+        ctx.fillRect(xActual, yActual   , 3, 3);
 
     }
 
