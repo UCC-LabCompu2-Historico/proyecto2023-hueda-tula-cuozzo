@@ -1,9 +1,6 @@
 /**
  * Descripción
- * @method cambiarUnidades
- * @param
- * @param
- * @return
+ * @method GuardarLSBP
  */
 
 let GuardarLSBP= () =>{
@@ -51,6 +48,10 @@ let GuardarLSBP= () =>{
     window.open("Efectivo.html");
     window.open("Tajeta.html");
 }
+/**
+ * Descripción
+ * @method CargarLS
+ */
 let CargarLS = ()=> {
     var cant1, cant2, cant3, tipo1, tipo2, tipo3;
     cant1 = localStorage.getItem("canthambLS");
@@ -64,10 +65,10 @@ let CargarLS = ()=> {
     localStorage.setItem("totalf", totalf);
     document.getElementById("total").value = totalf;
 }
-
-
-
-
+/**
+ * Descripción
+ * @method GuardarLSHoppi
+ */
 let GuardarLSHoppi=() =>{
     let cant, tipo, cantt, canttt, tipoo, tipooo;;
     cant = document.getElementById("canthoppi1").value;
@@ -113,7 +114,10 @@ let GuardarLSHoppi=() =>{
     window.open("Efectivo.html");
     window.open("Tajeta.html");
 }
-
+/**
+ * Descripción
+ * @method GuardarLSWonder
+ */
 let GuardarLSWonder=() =>{
     let cant, tipo, cantt, canttt, tipoo, tipooo;;
     cant = document.getElementById("cantwonder1").value;
@@ -154,7 +158,10 @@ let GuardarLSWonder=() =>{
     window.open("Efectivo.html");
     window.open("Tajeta.html");
 }
-
+/**
+ * Descripción
+ * @method GuardarLSMolly
+ */
 let GuardarLSMolly=()  =>{
     let cant, tipo, cantt, canttt, tipoo, tipooo;;
     cant = document.getElementById("cantmolly1").value;
@@ -202,9 +209,10 @@ let GuardarLSMolly=()  =>{
     window.open("Efectivo.html");
     window.open("Tajeta.html");
 }
-
-
-
+/**
+ * Descripción
+ * @method Descuento
+ */
 let Descuento = () => {
 
     var descuento, totalFinal, totalf1;
@@ -218,10 +226,11 @@ let Descuento = () => {
 
     document.getElementById("descuento").value = descuento;
     document.getElementById("totalfinal").value = totalFinal;
-
-
 }
-
+/**
+ * Descripción
+ * @method Vuelto
+ */
 let Vuelto = () => {
     var vuelto, totalfv;
     const cantidad =  document.getElementById("cantidad").value;
@@ -231,9 +240,12 @@ let Vuelto = () => {
 
     document.getElementById("vuelto").value = vuelto;
 }
-
-
-
+/**
+ * Descripción
+ * @method Dibujar
+ * @param event
+ * @return
+ */
 var bandera;
 let initialX;
 let initialY;
@@ -265,17 +277,24 @@ function dibujar(event){
         ctx.fillRect(xActual, yActual   , 3, 3);
 
     }
-
-
 }
+/**
+ * Descripción
+ * @method limpiarCanvas
+ */
 function limpiarCanvas() {
     var canvas = document.getElementById("canvasAdibujar");
     var ctx = canvas.getContext("2d");
     canvas.width = canvas.width;
 }
-
-
-
+/**
+ * Descripción
+ * @method validardatosefectivo
+ * @param name
+ * @param lastname
+ * @param id
+ * @param ammount
+ */
 let validardatosefectivo = (name, lastname, id, ammount ) => {
 
     var letras = /^[a-zA-Z\s]*$/ ;
@@ -303,17 +322,21 @@ let validardatosefectivo = (name, lastname, id, ammount ) => {
     }
 
 }
-
+/**
+ * Descripción
+ * @method cerrarDialogoNombre
+ */
 let cerrarDialogoNombre = () => {
     let nombre;
     let  dialogonombre = document.getElementById("dialogonombre");
     dialogonombre.close();
     nombre = " ";
     document.efectivo.nombre.value = nombre;
-
-
 }
-
+/**
+ * Descripción
+ * @method cerrarDialogoApellido
+ */
 let cerrarDialogoApellido = () => {
     let apellido;
     let  dialogoapellido = document.getElementById("dialogoapellido");
@@ -321,7 +344,10 @@ let cerrarDialogoApellido = () => {
     apellido= "";
     document.efectivo.apellido.value = apellido;
 }
-
+/**
+ * Descripción
+ * @method cerrarDialogoDNI
+ */
 let cerrarDialogoDNI = () => {
     let dni;
     let  dialogodni = document.getElementById("dialogodni");
@@ -329,7 +355,10 @@ let cerrarDialogoDNI = () => {
     dni = "";
     document.efectivo.Dni.value = dni;
 }
-
+/**
+ * Descripción
+ * @method cerrarDialogoCantidad
+ */
 let cerrarDialogoCantidad = () => {
     let cantidad;
     let  dialogocantidad = document.getElementById("dialogocantidad");
@@ -337,8 +366,16 @@ let cerrarDialogoCantidad = () => {
     cantidad = "";
     document.efectivo.cantidad.value = cantidad;
 }
-
-
+/**
+ * Descripción
+ * @method validardatostarjeta
+ * @param titular2
+ * @param id
+ * @param NT2
+ * @param vencimiento2
+ * @param CDS2
+ * @return
+ */
 let validardatostarjeta = (titular2, id, NT2, vencimiento2, CDS2 ) => {
 
     var letras = /^[a-zA-Z\s]*$/ ;
@@ -360,8 +397,11 @@ let validardatostarjeta = (titular2, id, NT2, vencimiento2, CDS2 ) => {
         const dialogoCDS2 = document.getElementById("dialogoCDS");
         dialogoCDS2.showModal();
     }
-
 }
+/**
+ * Descripción
+ * @method cerrarDialogoTitular
+ */
 let cerrarDialogoTitular = () => {
     let titular;
     let  dialogotitular = document.getElementById("dialogotitular");
@@ -369,6 +409,10 @@ let cerrarDialogoTitular = () => {
     titular = "";
     document.tarjeta.titular.value = titular;
 }
+/**
+ * Descripción
+ * @method cerrarDialogoDNI2
+ */
 let cerrarDialogoDNI2 = () => {
     let dni;
     let  dialogodni2 = document.getElementById("dialogodni2");
@@ -376,6 +420,10 @@ let cerrarDialogoDNI2 = () => {
     dni = "";
     document.tarjeta.Dni.value = dni;
 }
+/**
+ * Descripción
+ * @method cerrarDialogoNT
+ */
 let cerrarDialogoNT = () => {
     let NT;
     let  dialogoNT = document.getElementById("dialogoNT");
@@ -383,10 +431,32 @@ let cerrarDialogoNT = () => {
     NT = "";
     document.tarjeta.NT.value = NT;
 }
+/**
+ * Descripción
+ * @method cerrarDialogoCDS
+ */
 let cerrarDialogoCDS = () => {
     let CDS;
     let  dialogoCDS = document.getElementById("dialogoCDS");
     dialogoCDS.close();
     CDS = "";
     document.tarjeta.CDS.value = CDS;
+}
+/**
+ * Descripción
+ * @method animarhamb
+ */
+x=0;
+dx=2;
+let animarhamb = () =>{
+    var canvas = document.getElementById("animarhamburguesas");
+    var ctx = canvas.getContext("2d");
+    canvas.width = canvas.width;
+
+    var img = new Image();
+    img.src = "imagenes/hamburguesami.jpg";
+    img.onload = function (){
+        ctx.drawImage(img, x, 100)
+    }
+    x+=dx;
 }

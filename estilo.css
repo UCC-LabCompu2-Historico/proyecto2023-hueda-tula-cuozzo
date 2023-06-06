@@ -75,8 +75,20 @@ main {
     border: black 1px solid;
 
 }
-.Tarjetas, .Efectivo{
-    margin-left: 200px;
+.Tarjetas{
+    margin-left: 130px;
+    width: 100px;
+    float: left;
+    font-weight: bolder;
+    background-color: #ff8000;
+    font-size: x-large;
+    padding: 5px;
+    border: black 1px solid;
+}
+.Efectivo{
+    margin-left: 900px;
+    float: left;
+    width: 100px;
     font-weight: bolder;
     background-color: #ff8000;
     font-size: x-large;
@@ -185,4 +197,17 @@ article {
 }
 h3{
     text-decoration: underline;
+}
+.hamb{
+    border:1px solid #000000;
+    background: rgb(229, 182, 137);
+    margin-top: 150px;
+}
+#total{
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+}
+.texto_total{
+    text-align: center;
 }
