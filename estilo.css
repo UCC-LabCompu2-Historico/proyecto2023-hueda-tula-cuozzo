@@ -179,10 +179,30 @@ article {
     margin-top: 20px;
 }
 
+.tar-efec{
+    text-align: center;
+    margin-right: 150px;
+}
+
+.totalfp{
+    font-weight: bold;
+    text-align: center;
+
+    margin-top:50px;
+}
+
+#atrasfp{
+    margin-top: 100px;
+    float: left;
+}
+
+
+
 .ejer{
     border:1px solid #000000;
     background: rgba(240, 255, 105, 0.47);
 }
+
 h3{
     text-decoration: underline;
 }
