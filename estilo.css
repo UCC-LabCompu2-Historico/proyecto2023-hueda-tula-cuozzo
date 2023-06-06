@@ -43,9 +43,12 @@ main {
 .boton {
     font-size: 20px;
     line-height: 50px;
-    text-align: center;
     width: 100px;
     height: 50px;
+}
+
+#boton{
+    text-align: center;
 }
 
 #ver-restaurantes {
@@ -163,9 +166,7 @@ article {
 }
 
 
-#boton {
-    text-align: center;
-}
+
 
 .cantblack3, .fotoformasdepago {
     margin-top: 40px;
