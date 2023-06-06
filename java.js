@@ -457,7 +457,7 @@ let animarhamburguesa= () => {
 
     let img;
     img = new Image();
-    img.src = "imagenes/wonderveggie2.png";
+    img.src = "imagenes/hamburAnimada.png";
 
     img.onload = function (){
         canvas.width = canvas.width;
