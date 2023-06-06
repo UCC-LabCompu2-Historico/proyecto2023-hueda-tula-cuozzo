@@ -75,8 +75,18 @@ main {
     border: black 1px solid;
 
 }
-.Tarjetas, .Efectivo{
-    margin-left: 200px;
+.Tarjetas{
+
+    margin-left: 100px;
+    width: 100px;
+    font-weight: bolder;
+    background-color: #ff8000;
+    font-size: x-large;
+    padding: 5px;
+    border: black 1px solid;
+}
+.Efectivo{
+    width: 100px;
     font-weight: bolder;
     background-color: #ff8000;
     font-size: x-large;
@@ -181,7 +191,7 @@ article {
 
 .tar-efec{
     text-align: center;
-    margin-right: 150px;
+    margin-left: 70px;
 }
 
 .totalfp{
@@ -196,8 +206,6 @@ article {
     float: left;
 }
 
-
-
 .ejer{
     border:1px solid #000000;
     background: rgba(240, 255, 105, 0.47);
@@ -206,3 +214,9 @@ article {
 h3{
     text-decoration: underline;
 }
+.hamb{
+    border:1px solid #000000;
+    background: rgb(229, 182, 137);
+    margin-top: 150px;
+}
+
