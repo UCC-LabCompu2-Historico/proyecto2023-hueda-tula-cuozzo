@@ -18,26 +18,28 @@
     <link rel="stylesheet" href="estilo.css" type="text/css">
 
 </head>
-<body onload="setInterval(animarAuto, 10); CargarLS()">
+
+<body onload="setInterval(animarhamburguesa, 10); CargarLS()">
+<form>
+
 <header>
     <h1 id="titulo_principal"><u><em>FORMAS DE PAGO</em></u></h1>
 </header>
-<p>
-<div class="texto_total">
-    <h3><label for="total">TOTAL:</label></h3>
+
+<div class="totalfp">
+    <label  for="total">TOTAL:</label>
     <input type="number" name="total" id="total" placeholder="Total" disabled>
-</div>
-</p>
-<div class="efectivo">
-    <a class="Efectivo" href="Efectivo.html" target="_blank">Efectivo</a>
 </div>
 
 <br>
-<div id="tar">
-    <a class="Tarjetas" href="Tarjeta.html" target="_blank">Tarjetas</a>
+
+<div class="tar-efec" >
+    <a  class="Efectivo" href="Efectivo.html" target="_blank">Efectivo</a>
+
+    <a  class="Tarjetas" href="Tarjeta.html" target="_blank">Tarjeta</a>
 </div>
 
-<br><br>
+
 
 <canvas id="myCanvas" class="ejer2" width="1510px" height="375px">
     Tu navegador no soporta el tag de HTML5 canvas.
@@ -45,6 +47,12 @@
 
 
 <a class="atras" href="restaurantes.html" target="_blank">ATRAS</a>
+
+
+<a class="atras" id="atrasfp" href="restaurantes.html" target="_blank">VOLVER A LOS RESTAURANES</a>
+
+
+
 </form>
 </body>
 </html>

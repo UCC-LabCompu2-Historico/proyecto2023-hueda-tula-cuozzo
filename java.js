@@ -448,7 +448,7 @@ let cerrarDialogoCDS = () => {
  */
 var x = 0;
 var dx = 2;
-let animarAuto= () => {
+let animarhamburguesa= () => {
     const canvas = document.getElementById("myCanvas");
     const ctx = canvas.getContext("2d");
 
