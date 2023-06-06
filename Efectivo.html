@@ -23,7 +23,7 @@
     <h1 id="titulo_principal"><u><em>EFECTIVO</em></u></h1>
 </header>
 
-<u><h3><label for="total">TOTAL:</label></h3></u>
+<h3><label for="total">TOTAL:</label></h3>
 
 <p>
     <label for="total">Total sin el descuento:</label>
@@ -34,7 +34,7 @@
 <p>
 
     <label for="descuento">Descuento:</label>
-    <input type="number" name="descuento" id="descuento" placeholder="Descuento"  onload="Descuento()"  disabled>
+    <input type="number" name="descuento" id="descuento" placeholder="Descuento" onload="Descuento()" disabled>
 
 </p>
 
@@ -47,80 +47,78 @@
 
 <form name="efectivo">
 
-<div class="efectivo" >
-    <u><h3>DATOS:</h3></u>
+    <div class="efectivo">
+        <h3>DATOS:</h3>
 
-    <p>
-        <label for="nombre">Nombre:</label>
-        <input type="text" name="nombre" id="nombre" placeholder="Nombre">
-    </p>
+        <p>
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+        </p>
 
-    <dialog id="dialogonombre" name="dialogo">
-        <h3>Error!!</h3>
-        <p>Por favor ingrese de nuevo su nombre</p>
-        <button type="button" onclick="cerrarDialogoNombre()">Cerrar</button>
-    </dialog>
+        <dialog id="dialogonombre" name="dialogo">
+            <h3>Error!!</h3>
+            <p>Por favor ingrese de nuevo su nombre</p>
+            <button type="button" onclick="cerrarDialogoNombre()">Cerrar</button>
+        </dialog>
 
-    <p>
-        <label for="apellido">Apellido:</label>
-        <input type="text" name="apellido" id="apellido" placeholder="Apellido">
-    </p>
+        <p>
+            <label for="apellido">Apellido:</label>
+            <input type="text" name="apellido" id="apellido" placeholder="Apellido">
+        </p>
 
-    <dialog  id="dialogoapellido">
-        <h3>Error!!</h3>
-        <p>Por favor ingrese de nuevo su apellido.</p>
-        <button type="button" onclick="cerrarDialogoApellido()">Cerrar</button>
-    </dialog>
+        <dialog id="dialogoapellido">
+            <h3>Error!!</h3>
+            <p>Por favor ingrese de nuevo su apellido.</p>
+            <button type="button" onclick="cerrarDialogoApellido()">Cerrar</button>
+        </dialog>
 
-    <p>
-        <label for="dni">DNI:</label>
-        <input type="text" name="Dni" id="dni" placeholder="Dni">
-    </p>
+        <p>
+            <label for="dni">DNI:</label>
+            <input type="text" name="Dni" id="dni" placeholder="Dni">
+        </p>
 
-    <dialog id="dialogodni">
-        <h3>Error!!</h3>
-        <p>Por favor ingrese de nuevo su DNI.</p>
-        <button type="button" onclick="cerrarDialogoDNI()">Cerrar</button>
-    </dialog>
+        <dialog id="dialogodni">
+            <h3>Error!!</h3>
+            <p>Por favor ingrese de nuevo su DNI.</p>
+            <button type="button" onclick="cerrarDialogoDNI()">Cerrar</button>
+        </dialog>
 
-    <p>
-        <label for="cantidad">¿Con cuánto desea abonar?  </label>
+        <p>
+            <label for="cantidad">¿Con cuánto desea abonar? </label>
 
-        <input type="text" name="cantidad" id="cantidad" placeholder="¿Con cuánto abona?"  >
+            <input type="text" name="cantidad" id="cantidad" placeholder="¿Con cuánto abona?">
 
-    </p>
+        </p>
 
-    <dialog id="dialogocantidad">
-        <h3>Error!!</h3>
-        <p>Por favor ingrese la cantidad de nuevo. Recuerde que debe ser mayor o igual al total.</p>
-        <button type="button" onclick="cerrarDialogoCantidad()">Cerrar</button>
-    </dialog>
+        <dialog id="dialogocantidad">
+            <h3>Error!!</h3>
+            <p>Por favor ingrese la cantidad de nuevo. Recuerde que debe ser mayor o igual al total.</p>
+            <button type="button" onclick="cerrarDialogoCantidad()">Cerrar</button>
+        </dialog>
 
 
-    <p>
-        <label for="vuelto">Vuelto:</label>
-        <input type="number" name="vuelto" id="vuelto" placeholder="Vuelto"  disabled>
-        <button type="button"   onclick="Vuelto()" >
-            Calcular
-        </button>
-    </p>
+        <p>
+            <label for="vuelto">Vuelto:</label>
+            <input type="number" name="vuelto" id="vuelto" placeholder="Vuelto" disabled>
+            <button type="button" onclick="Vuelto()">
+                Calcular
+            </button>
+        </p>
 
-</div>
-
+    </div>
 
 
     <div id="boton">
-    <button type="button" class="boton"  onclick="validardatosefectivo(nombre.value , apellido.value , Dni.value, cantidad.value)" >
-        PAGAR
-    </button>
+        <button type="button" class="boton"
+                onclick="validardatosefectivo(nombre.value , apellido.value , Dni.value, cantidad.value)">
+            PAGAR
+        </button>
     </div>
 
     <a class="atras" id="atrasfp" href="restaurantes.html" target="_blank">VOLVER A LOS RESTAURANTES</a>
 
 
 </form>
-
-
 
 
 </body>

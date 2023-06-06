@@ -3,6 +3,8 @@
     font-weight: bold;
     font-family: 'Righteous', sans-serif;
     font-size: xxx-large;
+    text-decoration: underline;
+    font-style: italic;
 }
 
 body {
@@ -32,6 +34,13 @@ main {
     font-size: 25px;
     font-weight: bolder;
     font-family: 'Poppins', cursive;
+    text-decoration: underline;
+
+}
+
+h3 {
+    text-decoration: underline;
+    font-style: italic;
 }
 
 #pareja-comiendo {
@@ -47,7 +56,7 @@ main {
     height: 50px;
 }
 
-#boton{
+#boton {
     text-align: center;
 }
 
@@ -69,7 +78,7 @@ main {
 
 }
 
-.pagar{
+.pagar {
     margin-left: 555px;
     font-weight: bolder;
     background-color: #ff8000;
@@ -78,7 +87,8 @@ main {
     border: black 1px solid;
 
 }
-.Tarjetas{
+
+.Tarjetas {
 
     margin-left: 100px;
     width: 100px;
@@ -88,7 +98,8 @@ main {
     padding: 5px;
     border: black 1px solid;
 }
-.Efectivo{
+
+.Efectivo {
     width: 100px;
     font-weight: bolder;
     background-color: #ff8000;
@@ -161,11 +172,10 @@ article {
     display: flex;
 
 }
-.tar{
+
+.tar {
     margin-top: 200px;
 }
-
-
 
 
 .cantblack3, .fotoformasdepago {
@@ -190,35 +200,31 @@ article {
     margin-top: 20px;
 }
 
-.tar-efec{
+.tar-efec {
     text-align: center;
     margin-left: 70px;
 }
 
-.totalfp{
+.totalfp {
     font-weight: bold;
     text-align: center;
 
-    margin-top:50px;
+    margin-top: 50px;
 }
 
-#atrasfp{
+#atrasfp {
     margin-top: 100px;
     float: left;
 }
 
-.ejer{
-    border:1px solid #000000;
+.ejer {
+    border: 1px solid #000000;
     background: rgba(240, 255, 105, 0.47);
 }
 
 
-
-h3{
-    text-decoration: underline;
-}
-.hamb{
-    border:1px solid #000000;
+.hamb {
+    border: 1px solid #000000;
     background: rgb(229, 182, 137);
     margin-top: 150px;
 }

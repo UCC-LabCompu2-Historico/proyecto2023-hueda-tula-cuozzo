@@ -3,40 +3,40 @@
  * @method GuardarLSBP
  */
 
-let GuardarLSBP= () =>{
+let GuardarLSBP = () => {
     let cant, tipo, cantt, canttt, tipoo, tipooo;
     cant = document.getElementById("cantblack1").value;
     cantt = document.getElementById("cantblack2").value;
     canttt = document.getElementById("cantblack3").value;
-    tipo= document.getElementsByName("miss_america")[0].value;
-    tipoo= document.getElementsByName("bacon_cheese")[0].value;
-    tipooo= document.getElementsByName("vegetariana")[0].value;
-    if(tipo=="simple"){
-        tipo=1450;
+    tipo = document.getElementsByName("miss_america")[0].value;
+    tipoo = document.getElementsByName("bacon_cheese")[0].value;
+    tipooo = document.getElementsByName("vegetariana")[0].value;
+    if (tipo == "simple") {
+        tipo = 1450;
     }
-    if(tipo=="doble"){
-        tipo=1750;
+    if (tipo == "doble") {
+        tipo = 1750;
     }
-    if(tipo=="triple"){
-        tipo=2000;
+    if (tipo == "triple") {
+        tipo = 2000;
     }
-    if(tipoo=="simple"){
-        tipoo=1650;
+    if (tipoo == "simple") {
+        tipoo = 1650;
     }
-    if(tipoo=="doble"){
-        tipoo=2000;
+    if (tipoo == "doble") {
+        tipoo = 2000;
     }
-    if(tipoo=="triple"){
-        tipoo=2300;
+    if (tipoo == "triple") {
+        tipoo = 2300;
     }
-    if(tipooo=="simple"){
-        tipooo=1350;
+    if (tipooo == "simple") {
+        tipooo = 1350;
     }
-    if(tipooo=="doble"){
-        tipooo=1500;
+    if (tipooo == "doble") {
+        tipooo = 1500;
     }
-    if(tipooo=="triple"){
-        tipooo=1750;
+    if (tipooo == "triple") {
+        tipooo = 1750;
     }
     localStorage.setItem("canthambLS", cant);
     localStorage.setItem("canthambLS2", cantt);
@@ -52,7 +52,7 @@ let GuardarLSBP= () =>{
  * Descripción
  * @method CargarLS
  */
-let CargarLS = ()=> {
+let CargarLS = () => {
     var cant1, cant2, cant3, tipo1, tipo2, tipo3;
     cant1 = localStorage.getItem("canthambLS");
     cant2 = localStorage.getItem("canthambLS2");
@@ -69,40 +69,41 @@ let CargarLS = ()=> {
  * Descripción
  * @method GuardarLSHoppi
  */
-let GuardarLSHoppi=() =>{
-    let cant, tipo, cantt, canttt, tipoo, tipooo;;
+let GuardarLSHoppi = () => {
+    let cant, tipo, cantt, canttt, tipoo, tipooo;
+    ;
     cant = document.getElementById("canthoppi1").value;
     cantt = document.getElementById("canthoppi2").value;
     canttt = document.getElementById("canthoppi3").value;
-    tipo=document.getElementsByName("argentaburger")[0].value;
-    tipoo=document.getElementsByName("cheeseburger")[0].value;
-    tipooo=document.getElementsByName("crispyonionburgerveggie")[0].value;
-    if(tipo=="simple"){
-        tipo=1150;
+    tipo = document.getElementsByName("argentaburger")[0].value;
+    tipoo = document.getElementsByName("cheeseburger")[0].value;
+    tipooo = document.getElementsByName("crispyonionburgerveggie")[0].value;
+    if (tipo == "simple") {
+        tipo = 1150;
     }
-    if(tipo=="doble"){
-        tipo=1350;
+    if (tipo == "doble") {
+        tipo = 1350;
     }
-    if(tipo=="triple"){
-        tipo=1600;
+    if (tipo == "triple") {
+        tipo = 1600;
     }
-    if(tipoo=="simple"){
-        tipoo=1150;
+    if (tipoo == "simple") {
+        tipoo = 1150;
     }
-    if(tipoo=="doble"){
-        tipoo=1350;
+    if (tipoo == "doble") {
+        tipoo = 1350;
     }
-    if(tipoo=="triple"){
-        tipoo=1600;
+    if (tipoo == "triple") {
+        tipoo = 1600;
     }
-    if(tipooo=="simple"){
-        tipooo=1350;
+    if (tipooo == "simple") {
+        tipooo = 1350;
     }
-    if(tipooo=="doble"){
-        tipooo=1500;
+    if (tipooo == "doble") {
+        tipooo = 1500;
     }
-    if(tipooo=="triple"){
-        tipooo=1750;
+    if (tipooo == "triple") {
+        tipooo = 1750;
     }
     localStorage.setItem("canthambLS", cant);
     localStorage.setItem("canthambLS2", cantt);
@@ -118,35 +119,36 @@ let GuardarLSHoppi=() =>{
  * Descripción
  * @method GuardarLSWonder
  */
-let GuardarLSWonder=() =>{
-    let cant, tipo, cantt, canttt, tipoo, tipooo;;
+let GuardarLSWonder = () => {
+    let cant, tipo, cantt, canttt, tipoo, tipooo;
+    ;
     cant = document.getElementById("cantwonder1").value;
     cantt = document.getElementById("cantwonder2").value;
     canttt = document.getElementById("cantwonder3").value;
-    tipo=document.getElementsByName("wonderargentina")[0].value;
-    tipoo=document.getElementsByName("wonderveggie")[0].value;
-    tipooo=document.getElementsByName("wonderbomba")[0].value;
-    if(tipo=="doble"){
-        tipo=2090;
+    tipo = document.getElementsByName("wonderargentina")[0].value;
+    tipoo = document.getElementsByName("wonderveggie")[0].value;
+    tipooo = document.getElementsByName("wonderbomba")[0].value;
+    if (tipo == "doble") {
+        tipo = 2090;
     }
-    if(tipo=="triple"){
-        tipo=2450;
+    if (tipo == "triple") {
+        tipo = 2450;
     }
-    if(tipoo=="simple"){
-        tipoo=1690;
+    if (tipoo == "simple") {
+        tipoo = 1690;
     }
-    if(tipoo=="doble"){
-        tipoo=1890;
+    if (tipoo == "doble") {
+        tipoo = 1890;
     }
-    if(tipoo=="triple"){
-        tipoo=2190;
+    if (tipoo == "triple") {
+        tipoo = 2190;
     }
 
-    if(tipooo=="doble"){
-        tipooo=2090;
+    if (tipooo == "doble") {
+        tipooo = 2090;
     }
-    if(tipooo=="triple"){
-        tipooo=2400;
+    if (tipooo == "triple") {
+        tipooo = 2400;
     }
     localStorage.setItem("canthambLS", cant);
     localStorage.setItem("canthambLS2", cantt);
@@ -162,42 +164,43 @@ let GuardarLSWonder=() =>{
  * Descripción
  * @method GuardarLSMolly
  */
-let GuardarLSMolly=()  =>{
-    let cant, tipo, cantt, canttt, tipoo, tipooo;;
+let GuardarLSMolly = () => {
+    let cant, tipo, cantt, canttt, tipoo, tipooo;
+    ;
     cant = document.getElementById("cantmolly1").value;
     cantt = document.getElementById("cantmolly2").value;
     canttt = document.getElementById("cantmolly3").value;
-    tipo=document.getElementsByName("bigveggie")[0].value;
-    tipoo=document.getElementsByName("eggbacon")[0].value;
-    tipooo=document.getElementsByName("crispyonion")[0].value;
+    tipo = document.getElementsByName("bigveggie")[0].value;
+    tipoo = document.getElementsByName("eggbacon")[0].value;
+    tipooo = document.getElementsByName("crispyonion")[0].value;
 
-    if (tipo == "simple"){
-        tipo = 1150 ;
+    if (tipo == "simple") {
+        tipo = 1150;
     }
-    if(tipo=="doble"){
-        tipo= 1350;
+    if (tipo == "doble") {
+        tipo = 1350;
     }
-    if(tipo=="triple"){
-        tipo= 1600;
+    if (tipo == "triple") {
+        tipo = 1600;
     }
-    if(tipoo=="simple"){
-        tipoo= 1250;
+    if (tipoo == "simple") {
+        tipoo = 1250;
     }
-    if(tipoo=="doble"){
-        tipoo=1450;
+    if (tipoo == "doble") {
+        tipoo = 1450;
     }
-    if(tipoo=="triple"){
-        tipoo= 1700;
+    if (tipoo == "triple") {
+        tipoo = 1700;
     }
 
-    if(tipooo == "simple"){
-        tipooo= 1350
+    if (tipooo == "simple") {
+        tipooo = 1350
     }
-    if(tipooo=="doble"){
-        tipooo=1500;
+    if (tipooo == "doble") {
+        tipooo = 1500;
     }
-    if(tipooo=="triple"){
-        tipooo=1750;
+    if (tipooo == "triple") {
+        tipooo = 1750;
     }
     localStorage.setItem("canthambLS", cant);
     localStorage.setItem("canthambLS2", cantt);
@@ -216,9 +219,9 @@ let GuardarLSMolly=()  =>{
 let Descuento = () => {
 
     var descuento, totalFinal, totalf1;
-    totalf1= localStorage.getItem("totalf");
+    totalf1 = localStorage.getItem("totalf");
 
-    descuento =  Number(totalf1) * (20/100);
+    descuento = Number(totalf1) * (20 / 100);
 
     totalFinal = Number(totalf1) - Number(descuento);
 
@@ -233,18 +236,18 @@ let Descuento = () => {
  */
 let Vuelto = () => {
     var vuelto, totalfv;
-    const cantidad =  document.getElementById("cantidad").value;
+    const cantidad = document.getElementById("cantidad").value;
     totalfv = localStorage.getItem("totalFinal");
-    var numeros = /^[0-9]*$/ ;
+    var numeros = /^[0-9]*$/;
 
-   if(cantidad.search(numeros) || Number(cantidad) < Number(totalfv) || cantidad === "" ){
-       const dialogocantidad = document.getElementById("dialogocantidad");
-       dialogocantidad.showModal();
-       let v;
-       v="";
-       document.efectivo.vuelto.value = v;
+    if (cantidad.search(numeros) || Number(cantidad) < Number(totalfv) || cantidad === "") {
+        const dialogocantidad = document.getElementById("dialogocantidad");
+        dialogocantidad.showModal();
+        let v;
+        v = "";
+        document.efectivo.vuelto.value = v;
 
-   }else if(Number(cantidad)>=Number(totalfv)) {
+    } else if (Number(cantidad) >= Number(totalfv)) {
 
         vuelto = Number(cantidad) - Number(totalfv);
         document.getElementById("vuelto").value = vuelto;
@@ -264,7 +267,7 @@ var bandera;
 let initialX;
 let initialY;
 
-function dibujar(event){
+function dibujar(event) {
 
     var canvas = document.getElementById("canvasAdibujar");
     var ctx = canvas.getContext("2d");
@@ -283,15 +286,20 @@ function dibujar(event){
     ctx.closePath();
 
 
-    canvas.onmousedown = function (){bandera = true};
-    canvas.onmouseup = function (){bandera = false};
+    canvas.onmousedown = function () {
+        bandera = true
+    };
+    canvas.onmouseup = function () {
+        bandera = false
+    };
 
-    if(bandera){
+    if (bandera) {
 
-        ctx.fillRect(xActual, yActual   , 3, 3);
+        ctx.fillRect(xActual, yActual, 3, 3);
 
     }
 }
+
 /**
  * Descripción
  * @method limpiarCanvas
@@ -301,6 +309,7 @@ function limpiarCanvas() {
     var ctx = canvas.getContext("2d");
     canvas.width = canvas.width;
 }
+
 /**
  * Descripción
  * @method validardatosefectivo
@@ -309,32 +318,32 @@ function limpiarCanvas() {
  * @param id
  * @param ammount
  */
-let validardatosefectivo = (name, lastname, id, ammount ) => {
+let validardatosefectivo = (name, lastname, id, ammount) => {
 
-    var letras = /^[a-zA-Z\s]*$/ ;
-    var numeros = /^[0-9]*$/ ;
-    var totalf2 ;
+    var letras = /^[a-zA-Z\s]*$/;
+    var numeros = /^[0-9]*$/;
+    var totalf2;
     totalf2 = localStorage.getItem("totalFinal");
 
-    if(name.search(letras) || name == ""){
+    if (name.search(letras) || name == "") {
         const dialogonombre = document.getElementById("dialogonombre");
         dialogonombre.showModal();
     }
 
-    if(lastname.search(letras) || lastname == ""){
+    if (lastname.search(letras) || lastname == "") {
         const dialogoapellido = document.getElementById("dialogoapellido");
         dialogoapellido.showModal();
     }
 
-    if(id.search(numeros) || id == "" || id.length!==8){
+    if (id.search(numeros) || id == "" || id.length !== 8) {
         const dialogodni = document.getElementById("dialogodni");
         dialogodni.showModal();
     }
 
-    if(ammount.search(numeros) || Number(ammount) < Number(totalf2) || ammount == ""){
+    if (ammount.search(numeros) || Number(ammount) < Number(totalf2) || ammount == "") {
         const dialogocantidad = document.getElementById("dialogocantidad");
         dialogocantidad.showModal();
-    }else {
+    } else {
         alert("Se realizó la compra con éxito. Gracias por su compra! :D")
     }
 
@@ -345,7 +354,7 @@ let validardatosefectivo = (name, lastname, id, ammount ) => {
  */
 let cerrarDialogoNombre = () => {
     let nombre;
-    let  dialogonombre = document.getElementById("dialogonombre");
+    let dialogonombre = document.getElementById("dialogonombre");
     dialogonombre.close();
     nombre = " ";
     document.efectivo.nombre.value = nombre;
@@ -356,9 +365,9 @@ let cerrarDialogoNombre = () => {
  */
 let cerrarDialogoApellido = () => {
     let apellido;
-    let  dialogoapellido = document.getElementById("dialogoapellido");
+    let dialogoapellido = document.getElementById("dialogoapellido");
     dialogoapellido.close();
-    apellido= "";
+    apellido = "";
     document.efectivo.apellido.value = apellido;
 }
 /**
@@ -367,7 +376,7 @@ let cerrarDialogoApellido = () => {
  */
 let cerrarDialogoDNI = () => {
     let dni;
-    let  dialogodni = document.getElementById("dialogodni");
+    let dialogodni = document.getElementById("dialogodni");
     dialogodni.close();
     dni = "";
     document.efectivo.Dni.value = dni;
@@ -378,7 +387,7 @@ let cerrarDialogoDNI = () => {
  */
 let cerrarDialogoCantidad = () => {
     let cantidad;
-    let  dialogocantidad = document.getElementById("dialogocantidad");
+    let dialogocantidad = document.getElementById("dialogocantidad");
     dialogocantidad.close();
     cantidad = "";
     document.efectivo.cantidad.value = cantidad;
@@ -393,30 +402,30 @@ let cerrarDialogoCantidad = () => {
  * @param CDS2
  * @return
  */
-let validardatostarjeta = (titular2, id, NT2, vencimiento2, CDS2 ) => {
+let validardatostarjeta = (titular2, id, NT2, vencimiento2, CDS2) => {
 
-    var letras = /^[a-zA-Z\s]*$/ ;
-    var numeros = /^[0-9]*$/ ;
+    var letras = /^[a-zA-Z\s]*$/;
+    var numeros = /^[0-9]*$/;
 
-    if(titular2.search(letras) || titular2 == ""){
+    if (titular2.search(letras) || titular2 == "") {
         const dialogotitular = document.getElementById("dialogotitular");
         dialogotitular.showModal();
     }
 
-    if(id.search(numeros) || id == "" || id.length!==8){
+    if (id.search(numeros) || id == "" || id.length !== 8) {
         const dialogodni2 = document.getElementById("dialogodni2");
         dialogodni2.showModal();
     }
 
-    if(NT2.search(numeros) || NT2 == ""){
+    if (NT2.search(numeros) || NT2 == "") {
         const dialogoNT = document.getElementById("dialogoNT");
         dialogoNT.showModal();
     }
 
-    if(CDS2.search(numeros) || CDS2 == ""){
+    if (CDS2.search(numeros) || CDS2 == "") {
         const dialogoCDS2 = document.getElementById("dialogoCDS");
         dialogoCDS2.showModal();
-    }else{
+    } else {
         alert("Se realizó la compra con éxito. Gracias por su compra! :D")
     }
 
@@ -428,7 +437,7 @@ let validardatostarjeta = (titular2, id, NT2, vencimiento2, CDS2 ) => {
  */
 let cerrarDialogoTitular = () => {
     let titular;
-    let  dialogotitular = document.getElementById("dialogotitular");
+    let dialogotitular = document.getElementById("dialogotitular");
     dialogotitular.close();
     titular = "";
     document.tarjeta.titular.value = titular;
@@ -439,7 +448,7 @@ let cerrarDialogoTitular = () => {
  */
 let cerrarDialogoDNI2 = () => {
     let dni;
-    let  dialogodni2 = document.getElementById("dialogodni2");
+    let dialogodni2 = document.getElementById("dialogodni2");
     dialogodni2.close();
     dni = "";
     document.tarjeta.Dni.value = dni;
@@ -450,7 +459,7 @@ let cerrarDialogoDNI2 = () => {
  */
 let cerrarDialogoNT = () => {
     let NT;
-    let  dialogoNT = document.getElementById("dialogoNT");
+    let dialogoNT = document.getElementById("dialogoNT");
     dialogoNT.close();
     NT = "";
     document.tarjeta.NT.value = NT;
@@ -461,7 +470,7 @@ let cerrarDialogoNT = () => {
  */
 let cerrarDialogoCDS = () => {
     let CDS;
-    let  dialogoCDS = document.getElementById("dialogoCDS");
+    let dialogoCDS = document.getElementById("dialogoCDS");
     dialogoCDS.close();
     CDS = "";
     document.tarjeta.CDS.value = CDS;
@@ -472,7 +481,7 @@ let cerrarDialogoCDS = () => {
  */
 var x = 0;
 var dx = 2;
-let animarhamburguesa= () => {
+let animarhamburguesa = () => {
     const canvas = document.getElementById("myCanvas");
     const ctx = canvas.getContext("2d");
 
@@ -480,13 +489,13 @@ let animarhamburguesa= () => {
     img = new Image();
     img.src = "imagenes/hamburAnimada.png";
 
-    img.onload = function (){
+    img.onload = function () {
         canvas.width = canvas.width;
         ctx.drawImage(img, x, 100);
 
     }
 
-    if (x>= canvas.width){
+    if (x >= canvas.width) {
         x = 0;
     }
 

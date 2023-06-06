@@ -18,13 +18,13 @@
     <link rel="stylesheet" href="estilo.css" type="text/css">
 
 </head>
-<body onload="CargarLS(), CargarLS2()">
+<body onload="CargarLS(); CargarLS2()">
 <header>
-    <h1 id="titulo_principal"><u><em>TARJETA</em></u></h1>
+    <h1 id="titulo_principal">TARJETA</h1>
 </header>
 <p>
-    <u><h3><label for="total">TOTAL:</label></h3></u>
-    <input type="number" name="total" id="total" placeholder="Total" disabled>
+<h3><label for="total">TOTAL:</label></h3>
+<input type="number" name="total" id="total" placeholder="Total" disabled>
 </p>
 
 <h6>Trabajamos con las siguientes tarjetas/medios</h6>
@@ -35,51 +35,51 @@
     <br>
 </div>
 <form name="tarjeta">
-<br>
-<div class="tar">
-    <strong><h3>Datos</h3></strong>
-    <p>
-        <label for="titular">Titular:</label>
-        <input type="text" name="titular" id="titular" placeholder="Titular">
-    </p>
-    <dialog id="dialogotitular">
-        <h3>Error!!</h3>
-        <p>Por favor ingrese el dato de nuevo.</p>
-        <button type="button" onclick="cerrarDialogoTitular()">Cerrar</button>
-    </dialog>
-    <p>
-        <label for="dni2">Dni:</label>
-        <input type="text" name="Dni" id="dni2" placeholder="Dni">
-    </p>
-    <dialog id="dialogodni2">
-        <h3>Error!!</h3>
-        <p>Por favor ingrese el DNI de nuevo.</p>
-        <button type="button" onclick="cerrarDialogoDNI2()">Cerrar</button>
-    </dialog>
-    <p>
-        <label for="NT">Número de tarjeta:</label>
-        <input type="text" name="NT" id="NT" placeholder="XXXX XXXX XXXX XXXX ">
-    </p>
-    <dialog id="dialogoNT">
-        <h3>Error!!</h3>
-        <p>Por favor ingrese el numero de tarjeta de nuevo. </p>
-        <button type="button" onclick="cerrarDialogoNT()">Cerrar</button>
-    </dialog>
-    <p>
-        <label for="vencimiento">Vec:</label>
-        <input type="month" name="vencimiento" id="vencimiento" placeholder="MM/AA">
-    </p>
-    <p>
-        <label for="CDS">Código de seguridad:</label>
-        <input type="password" name="CDS" id="CDS" placeholder="XXX">
-    </p>
-    <dialog id="dialogoCDS">
-        <h3>Error!!</h3>
-        <p>Por favor ingrese el código de seguridad de nuevo.</p>
-        <button type="button" onclick="cerrarDialogoCDS()">Cerrar</button>
-    </dialog>
+    <br>
+    <div class="tar">
+        <strong><h3>Datos</h3></strong>
+        <p>
+            <label for="titular">Titular:</label>
+            <input type="text" name="titular" id="titular" placeholder="Titular">
+        </p>
+        <dialog id="dialogotitular">
+            <h3>Error!!</h3>
+            <p>Por favor ingrese el dato de nuevo.</p>
+            <button type="button" onclick="cerrarDialogoTitular()">Cerrar</button>
+        </dialog>
+        <p>
+            <label for="dni2">Dni:</label>
+            <input type="text" name="Dni" id="dni2" placeholder="Dni">
+        </p>
+        <dialog id="dialogodni2">
+            <h3>Error!!</h3>
+            <p>Por favor ingrese el DNI de nuevo.</p>
+            <button type="button" onclick="cerrarDialogoDNI2()">Cerrar</button>
+        </dialog>
+        <p>
+            <label for="NT">Número de tarjeta:</label>
+            <input type="text" name="NT" id="NT" placeholder="XXXX XXXX XXXX XXXX ">
+        </p>
+        <dialog id="dialogoNT">
+            <h3>Error!!</h3>
+            <p>Por favor ingrese el numero de tarjeta de nuevo. </p>
+            <button type="button" onclick="cerrarDialogoNT()">Cerrar</button>
+        </dialog>
+        <p>
+            <label for="vencimiento">Vec:</label>
+            <input type="month" name="vencimiento" id="vencimiento" placeholder="MM/AA">
+        </p>
+        <p>
+            <label for="CDS">Código de seguridad:</label>
+            <input type="password" name="CDS" id="CDS" placeholder="XXX">
+        </p>
+        <dialog id="dialogoCDS">
+            <h3>Error!!</h3>
+            <p>Por favor ingrese el código de seguridad de nuevo.</p>
+            <button type="button" onclick="cerrarDialogoCDS()">Cerrar</button>
+        </dialog>
 
-</div>
+    </div>
     <br>
     <p>Firma: </p>
 
@@ -91,9 +91,11 @@
         Limpiar Firma
     </button>
 
-<div id="boton">
-    <button type="button" class="boton" onclick="validardatostarjeta(titular.value  , Dni.value, NT.value, vencimiento.value, CDS.value)" >PAGAR</button>
-</div>
+    <div id="boton">
+        <button type="button" class="boton"
+                onclick="validardatostarjeta(titular.value  , Dni.value, NT.value, vencimiento.value, CDS.value)">PAGAR
+        </button>
+    </div>
 
 </form>
 
