@@ -234,11 +234,14 @@ let Descuento = () => {
 let Vuelto = () => {
     var vuelto, totalfv;
     const cantidad =  document.getElementById("cantidad").value;
+    totalfv = localStorage.getItem("totalFinal").value;
 
-    totalfv = localStorage.getItem("totalFinal");
-    vuelto = Number(cantidad) - Number(totalfv) ;
+   if(cantidad>totalfv) {
 
-    document.getElementById("vuelto").value = vuelto;
+        vuelto = Number(cantidad) - Number(totalfv);
+
+        document.getElementById("vuelto").value = vuelto;
+    }
 }
 /**
  * Descripción
