@@ -234,15 +234,26 @@ let Descuento = () => {
 let Vuelto = () => {
     var vuelto, totalfv;
     const cantidad =  document.getElementById("cantidad").value;
-    totalfv = localStorage.getItem("totalFinal").value;
+    totalfv = localStorage.getItem("totalFinal");
+    var numeros = /^[0-9]*$/ ;
 
-   if(cantidad>totalfv) {
+   if(cantidad.search(numeros) || Number(cantidad) < Number(totalfv) || cantidad === "" ){
+       const dialogocantidad = document.getElementById("dialogocantidad");
+       dialogocantidad.showModal();
+       let v;
+       v="";
+       document.efectivo.vuelto.value = v;
+
+   }else if(Number(cantidad)>=Number(totalfv)) {
 
         vuelto = Number(cantidad) - Number(totalfv);
-
         document.getElementById("vuelto").value = vuelto;
+
     }
+
 }
+
+
 /**
  * Descripción
  * @method Dibujar
@@ -302,26 +313,29 @@ let validardatosefectivo = (name, lastname, id, ammount ) => {
 
     var letras = /^[a-zA-Z\s]*$/ ;
     var numeros = /^[0-9]*$/ ;
+    var totalf2 ;
+    totalf2 = localStorage.getItem("totalFinal");
 
     if(name.search(letras) || name == ""){
         const dialogonombre = document.getElementById("dialogonombre");
         dialogonombre.showModal();
     }
+
     if(lastname.search(letras) || lastname == ""){
         const dialogoapellido = document.getElementById("dialogoapellido");
         dialogoapellido.showModal();
     }
+
     if(id.search(numeros) || id == "" || id.length!==8){
         const dialogodni = document.getElementById("dialogodni");
         dialogodni.showModal();
     }
 
-    var totalf2 ;
-    totalf2 = localStorage.getItem("totalFinal");
-
-    if(ammount.search(numeros) || ammount < totalf2){
+    if(ammount.search(numeros) || Number(ammount) < Number(totalf2) || ammount == ""){
         const dialogocantidad = document.getElementById("dialogocantidad");
         dialogocantidad.showModal();
+    }else {
+        alert("Se realizó la compra con éxito. Gracias por su compra! :D")
     }
 
 }
@@ -388,18 +402,25 @@ let validardatostarjeta = (titular2, id, NT2, vencimiento2, CDS2 ) => {
         const dialogotitular = document.getElementById("dialogotitular");
         dialogotitular.showModal();
     }
+
     if(id.search(numeros) || id == "" || id.length!==8){
         const dialogodni2 = document.getElementById("dialogodni2");
         dialogodni2.showModal();
     }
+
     if(NT2.search(numeros) || NT2 == ""){
         const dialogoNT = document.getElementById("dialogoNT");
         dialogoNT.showModal();
     }
+
     if(CDS2.search(numeros) || CDS2 == ""){
         const dialogoCDS2 = document.getElementById("dialogoCDS");
         dialogoCDS2.showModal();
+    }else{
+        alert("Se realizó la compra con éxito. Gracias por su compra! :D")
     }
+
+
 }
 /**
  * Descripción
