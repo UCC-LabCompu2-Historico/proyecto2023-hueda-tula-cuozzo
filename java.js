@@ -8,9 +8,9 @@ let GuardarLSBP= () =>{
     cant = document.getElementById("cantblack1").value;
     cantt = document.getElementById("cantblack2").value;
     canttt = document.getElementById("cantblack3").value;
-    tipo=document.getElementsByName("miss_america")[0].value;
-    tipoo=document.getElementsByName("bacon_cheese")[0].value;
-    tipooo=document.getElementsByName("vegetariana")[0].value;
+    tipo= document.getElementsByName("miss_america")[0].value;
+    tipoo= document.getElementsByName("bacon_cheese")[0].value;
+    tipooo= document.getElementsByName("vegetariana")[0].value;
     if(tipo=="simple"){
         tipo=1450;
     }
@@ -446,17 +446,25 @@ let cerrarDialogoCDS = () => {
  * Descripción
  * @method animarhamb
  */
-x=0;
-dx=2;
-let animarhamb = () =>{
-    var canvas = document.getElementById("animarhamburguesas");
-    var ctx = canvas.getContext("2d");
-    canvas.width = canvas.width;
+var x = 0;
+var dx = 2;
+let animarhamburguesa= () => {
+    const canvas = document.getElementById("myCanvas");
+    const ctx = canvas.getContext("2d");
 
-    var img = new Image();
-    img.src = "imagenes/hamburguesami.jpg";
+    let img;
+    img = new Image();
+    img.src = "imagenes/wonderveggie2.png";
+
     img.onload = function (){
-        ctx.drawImage(img, x, 100)
+        canvas.width = canvas.width;
+        ctx.drawImage(img, x, 100);
+
     }
-    x+=dx;
+
+    if (x>= canvas.width){
+        x = 0;
+    }
+
+    x += dx;
 }

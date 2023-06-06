@@ -212,6 +212,11 @@ article {
     background: rgba(240, 255, 105, 0.47);
 }
 
+.ejer2{
+    border:1px solid #000000;
+    background: rgb(225, 152, 123);
+}
+
 h3{
     text-decoration: underline;
 }
