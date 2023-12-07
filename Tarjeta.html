@@ -73,6 +73,11 @@
             <label for="vencimiento">Vec:</label>
             <input type="month" min="2023-12" name="vencimiento" id="vencimiento" placeholder="MM/AA">
         </p>
+        <dialog id="dialogoVen">
+            <h3>Error!!</h3>
+            <p>Por favor ingrese el vencimiento.</p>
+            <button type="button" onclick="cerrarDialogoVen()">Cerrar</button>
+        </dialog>
         <p>
             <label for="CDS">Código de seguridad:</label>
             <input type="password" name="CDS" id="CDS" placeholder="XXX">
