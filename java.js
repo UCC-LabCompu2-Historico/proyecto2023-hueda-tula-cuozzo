@@ -238,9 +238,9 @@ let Vuelto = () => {
     var vuelto, totalfv;
     const cantidad = document.getElementById("cantidad").value;
     totalfv = localStorage.getItem("totalFinal");
-    var números = /^[0-9]*$/;
+    var numeros = /^[0-9]*$/;
 
-    if (cantidad.search(números) || Number(cantidad) < Number(totalfv) || cantidad === "") {
+    if (cantidad.search(numeros) || Number(cantidad) < Number(totalfv) || cantidad === "") {
         const dialogocantidad = document.getElementById("dialogocantidad");
         dialogocantidad.showModal();
         let v;
@@ -321,7 +321,7 @@ function limpiarCanvas() {
 let validardatosefectivo = (name, lastname, id, ammount) => {
 
     var letras = /^[a-zA-Z\s]*$/;
-    var números = /^[0-9]*$/;
+    var numeros = /^[0-9]*$/;
     var totalf2;
     let validar = true;
     totalf2 = localStorage.getItem("totalFinal");
@@ -339,22 +339,23 @@ let validardatosefectivo = (name, lastname, id, ammount) => {
 
     }
 
-    if (id.search(números) || id == "" || id.length !== 8) {
+    if (id.search(numeros) || id == "" || id.length !== 8) {
         const dialogodni = document.getElementById("dialogodni");
         dialogodni.showModal();
         validar = false;
 
     }
 
-    if (ammount.search(números) || Number(ammount) < Number(totalf2) || ammount == "") {
+    if (ammount.search(numeros) || Number(ammount) < Number(totalf2) || ammount == "") {
         const dialogocantidad = document.getElementById("dialogocantidad");
         dialogocantidad.showModal();
         validar = false;
-
     }
+
     if(validar != false){
         alert("Se realizó la compra con éxito. Gracias por su compra! :D")
     }
+
     window.location.href = "Ticket.html";
 
 }
@@ -415,7 +416,7 @@ let cerrarDialogoCantidad = () => {
 let validardatostarjeta = (titular2, id, NT2, vencimiento2, CDS2) => {
 
     var letras = /^[a-zA-Z\s]*$/;
-    var números = /^[0-9]*$/;
+    var numeros = /^[0-9]*$/;
     let validar = true;
 
     if (titular2.search(letras) || titular2 == "") {
@@ -425,25 +426,31 @@ let validardatostarjeta = (titular2, id, NT2, vencimiento2, CDS2) => {
 
     }
 
-    if (id.search(números) || id == "" || id.length !== 8) {
+    if (id.search(numeros) || id == "" || id.length !== 8) {
         const dialogodni2 = document.getElementById("dialogodni2");
         dialogodni2.showModal();
         validar = false;
 
     }
 
-    if (NT2.search(números) || NT2 == "") {
+    if (NT2.search(numeros) || NT2 == "") {
         const dialogoNT = document.getElementById("dialogoNT");
         dialogoNT.showModal();
         validar = false;
 
     }
 
-    if (CDS2.search(números) || CDS2 == "") {
+    if (CDS2.search(numeros) || CDS2 == "") {
         const dialogoCDS2 = document.getElementById("dialogoCDS");
         dialogoCDS2.showModal();
         validar = false;
 
+    }
+
+    if( vencimiento2 == ""){
+        const dialogoVen2 = document.getElementById("dialogoVen");
+        dialogoVen2.showModal();
+        validar = false;
     }
 
     if(validar != false){
@@ -495,6 +502,21 @@ let cerrarDialogoCDS = () => {
     CDS = "";
     document.tarjeta.CDS.value = CDS;
 }
+
+/**
+ * Descripción
+ * @method cerrarDialogoVen
+ */
+let cerrarDialogoVen = () => {
+    let Ven;
+    let dialogoVen = document.getElementById("dialogoVen");
+    dialogoVen.close();
+    Ven = "";
+    document.tarjeta.vencimiento.value = Ven;
+}
+
+
+
 /**
  * Descripción
  * @method animarhamb
