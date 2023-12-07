@@ -18,6 +18,10 @@
     <link rel="stylesheet" href="estilo.css" type="text/css">
 
 </head>
+
+
+
+
 <body onload="CargarLS(); CargarLS2()">
 <header>
     <h1 id="titulo_principal">TARJETA</h1>
@@ -67,7 +71,7 @@
         </dialog>
         <p>
             <label for="vencimiento">Vec:</label>
-            <input type="month" name="vencimiento" id="vencimiento" placeholder="MM/AA">
+            <input type="date" [min]="fechaStrminima" name="vencimiento" id="vencimiento" placeholder="MM/AA">
         </p>
         <p>
             <label for="CDS">Código de seguridad:</label>
