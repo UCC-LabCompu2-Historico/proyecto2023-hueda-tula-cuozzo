@@ -253,7 +253,6 @@ let Vuelto = () => {
         document.getElementById("vuelto").value = vuelto;
 
     }
-
 }
 
 
@@ -542,5 +541,26 @@ let animarhamburguesa = () => {
     }
 
     x += dx;
+}
+let ticketbl = () => {
+    var vuelto, totalfv;
+    const cantidad = document.getElementById("cantidad").value;
+    const nombre = document.getElementById("miss_america").value;
+    totalfv = localStorage.getItem("totalFinal");
+    var numeros = /^[0-9]*$/;
+
+    if (cantidad.search(numeros) || Number(cantidad) < Number(totalfv) || cantidad === "") {
+        const dialogocantidad = document.getElementById("dialogocantidad");
+        dialogocantidad.showModal();
+        let v;
+        v = "";
+        document.efectivo.vuelto.value = v;
+
+    } else if (Number(cantidad) >= Number(totalfv)) {
+
+        vuelto = Number(cantidad) - Number(totalfv);
+        document.getElementById("vuelto").value = vuelto;
+
+    }
 }
 
