@@ -18,6 +18,10 @@
     <link rel="stylesheet" href="estilo.css" type="text/css">
 
 </head>
+
+
+
+
 <body onload="CargarLS(); CargarLS2()">
 <header>
     <h1 id="titulo_principal">TARJETA</h1>
@@ -62,12 +66,12 @@
         </p>
         <dialog id="dialogoNT">
             <h3>Error!!</h3>
-            <p>Por favor ingrese el numero de tarjeta de nuevo. </p>
+            <p>Por favor ingrese el número de tarjeta de nuevo. </p>
             <button type="button" onclick="cerrarDialogoNT()">Cerrar</button>
         </dialog>
         <p>
             <label for="vencimiento">Vec:</label>
-            <input type="month" name="vencimiento" id="vencimiento" placeholder="MM/AA">
+            <input type="month" min="2023-12" name="vencimiento" id="vencimiento" placeholder="MM/AA">
         </p>
         <p>
             <label for="CDS">Código de seguridad:</label>
@@ -92,7 +96,7 @@
     </button>
 
     <div id="boton">
-        <button type="button" class="boton" onclick="validardatostarjeta(titular.value  , Dni.value, NT.value, vencimiento.value, CDS.value)">PAGAR
+        <button type="button" class="boton" onclick="validardatostarjeta( titular.value, Dni.value, NT.value, vencimiento.value, CDS.value)">PAGAR
         </button>
     </div>
 
