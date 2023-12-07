@@ -355,6 +355,7 @@ let validardatosefectivo = (name, lastname, id, ammount) => {
     if(validar != false){
         alert("Se realizó la compra con éxito. Gracias por su compra! :D")
     }
+    window.location.href = "Ticket.html";
 
 }
 /**
