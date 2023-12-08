@@ -542,25 +542,22 @@ let animarhamburguesa = () => {
 
     x += dx;
 }
-let ticketbl = () => {
-    var vuelto, totalfv;
-    const cantidad = document.getElementById("cantidad").value;
-    const nombre = document.getElementById("miss_america").value;
-    totalfv = localStorage.getItem("totalFinal");
-    var numeros = /^[0-9]*$/;
 
-    if (cantidad.search(numeros) || Number(cantidad) < Number(totalfv) || cantidad === "") {
-        const dialogocantidad = document.getElementById("dialogocantidad");
-        dialogocantidad.showModal();
-        let v;
-        v = "";
-        document.efectivo.vuelto.value = v;
+let GuardarLSBP = () => {
+    let cantidades = [
+        document.getElementById("cantblack1").value,
+        document.getElementById("cantblack2").value,
+        document.getElementById("cantblack3").value
+    ];
 
-    } else if (Number(cantidad) >= Number(totalfv)) {
+    let tipos = [
+        document.getElementsByName("miss_america").value,
+        document.getElementsByName("bacon_cheese").value,
+        document.getElementsByName("vegetariana").value,
+    ];
 
-        vuelto = Number(cantidad) - Number(totalfv);
-        document.getElementById("vuelto").value = vuelto;
+    console.log("Cantidades:", cantidades);
+    console.log("Tipos:", tipos);
+};
 
-    }
-}
 
