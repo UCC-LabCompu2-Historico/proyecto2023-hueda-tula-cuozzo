@@ -18,13 +18,26 @@
 
     <link rel="stylesheet" href="estilo.css" type="text/css">
 
+    <style>
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+    </style>
+
 </head>
 <body>
 <header>
     <h1 id="titulo_principal"><u><em>Ticket</em></u></h1>
 </header>
 <form name="ticket">
-
+    <div id="ticketContainer">
+        <canvas id="ticketCanvas" width="400"  height="500"></canvas>
+    </div>
 </form>
 
 
