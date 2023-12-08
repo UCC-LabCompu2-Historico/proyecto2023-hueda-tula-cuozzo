@@ -229,3 +229,9 @@ article {
     margin-top: 150px;
 }
 
+#ticketContainer {
+    border: 2px solid #000;
+    background: rgba(230, 230, 230);
+}
+
+
