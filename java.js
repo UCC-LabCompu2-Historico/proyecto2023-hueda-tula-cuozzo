@@ -2,69 +2,173 @@
  * Descripción
  * @method GuardarLSBP
  */
+// let GuardarLSBP = () => {
+   // let cant, tipo, cantt, canttt, tipoo, tipooo;
+    //cant = document.getElementById("cantblack1").value;
+    //cantt = document.getElementById("cantblack2").value;
+//canttt = document.getElementById("cantblack3").value;
+//tipo = document.getElementsByName("miss_america")[0].value;
+//tipoo = document.getElementsByName("bacon_cheese")[0].value;
+//tipooo = document.getElementsByName("vegetariana")[0].value;
+//if (tipo == "simple") {
+//tipo = 1450;
+//}
+//if (tipo == "doble") {
+//tipo = 1750;
+//}
+//if (tipo == "triple") {
+//tipo = 2000;
+//}
+//if (tipoo == "simple") {
+//tipoo = 1650;
+//}
+//if (tipoo == "doble") {
+//tipoo = 2000;
+//}
+//if (tipoo == "triple") {
+//tipoo = 2300;
+//}
+//if (tipooo == "simple") {
+//tipooo = 1350;
+//}
+//if (tipooo == "doble") {
+//tipooo = 1500;
+//}
+//if (tipooo == "triple") {
+//tipooo = 1750;
+//}
+//localStorage.setItem("canthambLS", cant);
+    //localStorage.setItem("canthambLS2", cantt);
+    //localStorage.setItem("canthambLS3", canttt);
+    //localStorage.setItem("tipohambLS", tipo);
+    //localStorage.setItem("tipohambLS2", tipoo);
+    //localStorage.setItem("tipohambLS3", tipooo);
+    //window.open("formasdepago.html");
+    //window.open("Efectivo.html");
+    //window.open("Tajeta.html");
+//}
+let GuardarLSBP2 = () => {
+        let cantidades = [
+            parseFloat(document.getElementById("cantblack1").value) || 0,
+            parseFloat(document.getElementById("cantblack2").value) || 0,
+            parseFloat(document.getElementById("cantblack3").value) || 0
+        ];
 
-let GuardarLSBP = () => {
-    let cant, tipo, cantt, canttt, tipoo, tipooo;
-    cant = document.getElementById("cantblack1").value;
-    cantt = document.getElementById("cantblack2").value;
-    canttt = document.getElementById("cantblack3").value;
-    tipo = document.getElementsByName("miss_america")[0].value;
-    tipoo = document.getElementsByName("bacon_cheese")[0].value;
-    tipooo = document.getElementsByName("vegetariana")[0].value;
-    if (tipo == "simple") {
-        tipo = 1450;
+        let tipos = [
+            document.getElementsByName("miss_america")[0].value,
+            document.getElementsByName("bacon_cheese")[0].value,
+            document.getElementsByName("vegetariana")[0].value
+        ];
+
+        let unirTipos = {
+            simple: [1450, 1650, 1350],
+            doble: [1750, 2000, 1500],
+            triple: [2000, 2300, 1750]
+        };
+
+        let costos = [];
+        let totalf = 0;
+
+        for (let i = 0; i < cantidades.length; i++) {
+            let tipo = tipos[i];
+
+            if (unirTipos[tipo]) {
+                let costoTipo = unirTipos[tipo][i] || 0;
+                let costo = cantidades[i] * costoTipo;
+                costos.push(costo);
+                totalf += costo;
+            } else {
+                costos.push(0);
+            }
+        }
+
+    // Almacenar en localStorage
+    for (let i = 0; i < cantidades.length; i++) {
+        localStorage.setItem(`canthambLS${i + 1}`, cantidades[i]);
+        localStorage.setItem(`tipohambLS${i + 1}`, tipos[i]);
     }
-    if (tipo == "doble") {
-        tipo = 1750;
-    }
-    if (tipo == "triple") {
-        tipo = 2000;
-    }
-    if (tipoo == "simple") {
-        tipoo = 1650;
-    }
-    if (tipoo == "doble") {
-        tipoo = 2000;
-    }
-    if (tipoo == "triple") {
-        tipoo = 2300;
-    }
-    if (tipooo == "simple") {
-        tipooo = 1350;
-    }
-    if (tipooo == "doble") {
-        tipooo = 1500;
-    }
-    if (tipooo == "triple") {
-        tipooo = 1750;
-    }
-    localStorage.setItem("canthambLS", cant);
-    localStorage.setItem("canthambLS2", cantt);
-    localStorage.setItem("canthambLS3", canttt);
-    localStorage.setItem("tipohambLS", tipo);
-    localStorage.setItem("tipohambLS2", tipoo);
-    localStorage.setItem("tipohambLS3", tipooo);
+
+    localStorage.setItem("totalf", totalf);
+
+    // Abrir las páginas
     window.open("formasdepago.html");
     window.open("Efectivo.html");
     window.open("Tajeta.html");
+};
+
+let CargarLS2 = () => {
+    let cantidades = [];
+    let tipos = [];
+
+    for (let i = 1; i <= 3; i++) {
+        cantidades.push(localStorage.getItem(`canthambLS${i}`));
+        tipos.push(localStorage.getItem(`tipohambLS${i}`));
+    }
+
+    let unirTipos = {
+        simple: [1450, 1650, 1350],
+        doble: [1750, 2000, 1500],
+        triple: [2000, 2300, 1750]
+    };
+
+    let costos = [];
+
+    for (let i = 0; i < cantidades.length; i++) {
+        let tipo = tipos[i];
+
+        if (unirTipos[tipo]) {
+            let costo = unirTipos[tipo][i] * cantidades[i];
+            costos.push(costo);
+        } else {
+            costos.push(0);
+        }
+    }
+
+    let totalf = 0;
+
+    for (let i = 0; i < costos.length; i++) {
+        totalf += costos[i];
+    }
+
+    localStorage.setItem("totalf", totalf);
+    document.getElementById("total").value = totalf;
+};
+function escribirencanvas(cantidades, tipos, totalf) {
+    var canvas = document.getElementById("ticketCanvas");
+    var ctx = canvas.getContext("2d");
+
+    ctx.font = "10pt Verdana";
+    ctx.fillStyle = "black";
+    let alturarenglon = 10;
+
+
+    cantidades.forEach((cantidad, i) => {
+        ctx.fillText(`Cantidad ${i + 1}: ${cantidad}`, 10, 30 + i * 20);
+        ctx.fillText(`Tipo ${i + 1}: ${tipos[i]}`, 5, 50 + i * 20);
+    });
+    ctx.fillText(`Total: $${totalf}`, 10, 30 + (cantidades.length + 1) * 20);
 }
+
 /**
  * Descripción
  * @method CargarLS
  */
-let CargarLS = () => {
-    var cant1, cant2, cant3, tipo1, tipo2, tipo3;
-    cant1 = localStorage.getItem("canthambLS");
-    cant2 = localStorage.getItem("canthambLS2");
-    cant3 = localStorage.getItem("canthambLS3");
-    tipo1 = localStorage.getItem("tipohambLS");
-    tipo2 = localStorage.getItem("tipohambLS2");
-    tipo3 = localStorage.getItem("tipohambLS3");
+//let CargarLS = () => {
+    //var cant1, cant2, cant3, tipo1, tipo2, tipo3;
+    //cant1 = localStorage.getItem("canthambLS");
+    //cant2 = localStorage.getItem("canthambLS2");
+    //cant3 = localStorage.getItem("canthambLS3");
+    //tipo1 = localStorage.getItem("tipohambLS");
+    //tipo2 = localStorage.getItem("tipohambLS2");
+    //tipo3 = localStorage.getItem("tipohambLS3");
 
-    var totalf = Number(cant1) * Number(tipo1) + Number(cant2) * Number(tipo2) + Number(cant3) * Number(tipo3);
-    localStorage.setItem("totalf", totalf);
-    document.getElementById("total").value = totalf;
-}
+    //var totalf = Number(cant1) * Number(tipo1) + Number(cant2) * Number(tipo2) + Number(cant3) * Number(tipo3);
+    //localStorage.setItem("totalf", totalf);
+    //document.getElementById("total").value = totalf;
+
+//}
+
+
 /**
  * Descripción
  * @method GuardarLSHoppi
@@ -166,7 +270,7 @@ let GuardarLSWonder = () => {
  */
 let GuardarLSMolly = () => {
     let cant, tipo, cantt, canttt, tipoo, tipooo;
-    ;
+
     cant = document.getElementById("cantmolly1").value;
     cantt = document.getElementById("cantmolly2").value;
     canttt = document.getElementById("cantmolly3").value;
@@ -219,7 +323,7 @@ let GuardarLSMolly = () => {
 let Descuento = () => {
 
     var descuento, totalFinal, totalf1;
-    totalf1 = localStorage.getItem("totalf");
+    totalf1 = parseFloat(localStorage.getItem("totalf"));
 
     descuento = Number(totalf1) * (20 / 100);
 
@@ -455,6 +559,7 @@ let validardatostarjeta = (titular2, id, NT2, vencimiento2, CDS2) => {
     if(validar != false){
         alert("Se realizó la compra con éxito. Gracias por su compra! :D")
     }
+    window.location.href = "Ticket.html";
 
 }
 /**
@@ -543,22 +648,7 @@ let animarhamburguesa = () => {
     x += dx;
 }
 
-let GuardarLSBP = () => {
-    let cantidades = [
-        document.getElementById("cantblack1").value,
-        document.getElementById("cantblack2").value,
-        document.getElementById("cantblack3").value
-    ];
 
-    let tipos = [
-        document.getElementsByName("miss_america").value,
-        document.getElementsByName("bacon_cheese").value,
-        document.getElementsByName("vegetariana").value,
-    ];
-
-    console.log("Cantidades:", cantidades);
-    console.log("Tipos:", tipos);
-};
 
 
 
