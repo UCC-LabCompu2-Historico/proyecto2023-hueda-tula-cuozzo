@@ -1,183 +1,86 @@
-/**
- * Descripción
- * @method GuardarLSBP
- */
-// let GuardarLSBP = () => {
-   // let cant, tipo, cantt, canttt, tipoo, tipooo;
-    //cant = document.getElementById("cantblack1").value;
-    //cantt = document.getElementById("cantblack2").value;
-//canttt = document.getElementById("cantblack3").value;
-//tipo = document.getElementsByName("miss_america")[0].value;
-//tipoo = document.getElementsByName("bacon_cheese")[0].value;
-//tipooo = document.getElementsByName("vegetariana")[0].value;
-//if (tipo == "simple") {
-//tipo = 1450;
-//}
-//if (tipo == "doble") {
-//tipo = 1750;
-//}
-//if (tipo == "triple") {
-//tipo = 2000;
-//}
-//if (tipoo == "simple") {
-//tipoo = 1650;
-//}
-//if (tipoo == "doble") {
-//tipoo = 2000;
-//}
-//if (tipoo == "triple") {
-//tipoo = 2300;
-//}
-//if (tipooo == "simple") {
-//tipooo = 1350;
-//}
-//if (tipooo == "doble") {
-//tipooo = 1500;
-//}
-//if (tipooo == "triple") {
-//tipooo = 1750;
-//}
-//localStorage.setItem("canthambLS", cant);
-    //localStorage.setItem("canthambLS2", cantt);
-    //localStorage.setItem("canthambLS3", canttt);
-    //localStorage.setItem("tipohambLS", tipo);
-    //localStorage.setItem("tipohambLS2", tipoo);
-    //localStorage.setItem("tipohambLS3", tipooo);
-    //window.open("formasdepago.html");
-    //window.open("Efectivo.html");
-    //window.open("Tajeta.html");
-//}
-
-function escribirencanvas(){
-        let cantidades = [];
-        let tipos = [];
-        let totalf = 0;
-
-        for (let i = 1; i <= 3; i++) {
-            cantidades.push(parseFloat(localStorage.getItem(`canthambLS${i}`)) || 0);
-            tipos.push(localStorage.getItem(`tipohambLS${i}`));
-        }
-        totalf = parseFloat(localStorage.getItem("totalf")) || 0;
-
-    var canvas = document.getElementById("ticketContainer");
-    var ctx= canvas.getContext("2d");
-    ctx.font = "12pt Verdana";
-    ctx.fillStyle = "black";
-    let alturarenglon = 15;
-
-    cantidades.forEach((cantidad, i) =>
-    {
-        ctx.fillText(`Cantidad ${i + 1}: ${cantidad}`, 10, 50 + i * alturarenglon);
-        ctx.fillText(`Tipo ${i + 1}: ${tipos[i]}`, 10, 70 + i * alturarenglon);
-    });
-    ctx.fillText(`Total: ${totalf}`, 10, 50 + (cantidades.length + 1) * alturarenglon);
-}
-
-
-let GuardarLSBP2 = () => {
-        let cantidades = [
-            parseFloat(document.getElementById("cantblack1").value) || 0,
-            parseFloat(document.getElementById("cantblack2").value) || 0,
-            parseFloat(document.getElementById("cantblack3").value) || 0
-        ];
-
-        let tipos = [
-            document.getElementsByName("miss_america")[0].value,
-            document.getElementsByName("bacon_cheese")[0].value,
-            document.getElementsByName("vegetariana")[0].value
-        ];
-
-        let unirTipos = {
-            simple: [1450, 1650, 1350],
-            doble: [1750, 2000, 1500],
-            triple: [2000, 2300, 1750]
-        };
-
-        let costos = [];
-        let totalf = 0;
-
-        for (let i = 0; i < cantidades.length; i++) {
-            let tipo = tipos[i];
-
-            if (unirTipos[tipo]) {
-                let costoTipo = unirTipos[tipo][i] || 0;
-                let costo = cantidades[i] * costoTipo;
-                costos.push(costo);
-                totalf += costo;
-            } else {
-                costos.push(0);
-            }
-        }
-
-    for (let i = 0; i < cantidades.length; i++) {
-        localStorage.setItem(`canthambLS${i + 1}`, cantidades[i]);
-        localStorage.setItem(`tipohambLS${i + 1}`, tipos[i]);
-    }
-
-    localStorage.setItem("totalf", totalf);
-
-    window.open("formasdepago.html");
-    window.open("Efectivo.html");
-    window.open("Tajeta.html");
-};
-
-let CargarLS2 = () => {
-    let cantidades = [];
-    let tipos = [];
-
-    for (let i = 1; i <= 3; i++) {
-        cantidades.push(localStorage.getItem(`canthambLS${i}`));
-        tipos.push(localStorage.getItem(`tipohambLS${i}`));
-    }
-
-    let unirTipos = {
-        simple: [1450, 1650, 1350],
-        doble: [1750, 2000, 1500],
-        triple: [2000, 2300, 1750]
-    };
-
-    let costos = [];
-
-    for (let i = 0; i < cantidades.length; i++) {
-        let tipo = tipos[i];
-
-        if (unirTipos[tipo]) {
-            let costo = unirTipos[tipo][i] * cantidades[i];
-            costos.push(costo);
-        } else {
-            costos.push(0);
-        }
-    }
-
-    let totalf = 0;
-
-    for (let i = 0; i < costos.length; i++) {
-        totalf += costos[i];
-    }
-
-    localStorage.setItem("totalf", totalf);
-    document.getElementById("total").value = totalf;
-};
 
 
 /**
  * Descripción
  * @method CargarLS
  */
-//let CargarLS = () => {
-    //var cant1, cant2, cant3, tipo1, tipo2, tipo3;
-    //cant1 = localStorage.getItem("canthambLS");
-    //cant2 = localStorage.getItem("canthambLS2");
-    //cant3 = localStorage.getItem("canthambLS3");
-    //tipo1 = localStorage.getItem("tipohambLS");
-    //tipo2 = localStorage.getItem("tipohambLS2");
-    //tipo3 = localStorage.getItem("tipohambLS3");
+let CargarLS = () => {
+    var cant1, cant2, cant3, tipo1, tipo2, tipo3;
+    cant1 = localStorage.getItem("canthambLS");
+    cant2 = localStorage.getItem("canthambLS2");
+    cant3 = localStorage.getItem("canthambLS3");
+    tipo1 = localStorage.getItem("tipohambLS");
+    tipo2 = localStorage.getItem("tipohambLS2");
+    tipo3 = localStorage.getItem("tipohambLS3");
 
-    //var totalf = Number(cant1) * Number(tipo1) + Number(cant2) * Number(tipo2) + Number(cant3) * Number(tipo3);
-    //localStorage.setItem("totalf", totalf);
-    //document.getElementById("total").value = totalf;
 
-//}
+
+    var totalf = Number(cant1) * Number(tipo1) + Number(cant2) * Number(tipo2) + Number(cant3) * Number(tipo3);
+    localStorage.setItem("totalf", totalf);
+    document.getElementById("total").value = totalf;
+    document.getElementById("descuento").value = 0;
+
+
+}
+
+
+/**
+ * Descripción
+ * @method GuardarLSBP
+ */
+let GuardarLSBP = () => {
+    let cant, tipo, cantt, canttt, tipoo, tipooo, rest;
+    rest = "blackpan";
+
+
+    cant = document.getElementById("cantblack1").value;
+    cantt = document.getElementById("cantblack2").value;
+    canttt = document.getElementById("cantblack3").value;
+    tipo = document.getElementsByName("miss_america")[0].value;
+    tipoo = document.getElementsByName("bacon_cheese")[0].value;
+    tipooo = document.getElementsByName("vegetariana")[0].value;
+
+    if (tipo == "simple") {
+        tipo = 1450;
+    }
+    if (tipo == "doble") {
+        tipo = 1750;
+    }
+    if (tipo == "triple") {
+        tipo = 2000;
+    }
+    if (tipoo == "simple") {
+        tipoo = 1650;
+    }
+    if (tipoo == "doble") {
+        tipoo = 2000;
+    }
+    if (tipoo == "triple") {
+        tipoo = 2300;
+    }
+    if (tipooo == "simple") {
+        tipooo = 1350;
+    }
+    if (tipooo == "doble") {
+        tipooo = 1500;
+    }
+    if (tipooo == "triple") {
+        tipooo = 1750;
+    }
+
+    localStorage.setItem("canthambLS", cant);
+    localStorage.setItem("canthambLS2", cantt);
+    localStorage.setItem("canthambLS3", canttt);
+    localStorage.setItem("tipohambLS", tipo);
+    localStorage.setItem("tipohambLS2", tipoo);
+    localStorage.setItem("tipohambLS3", tipooo);
+    localStorage.setItem("restaurante", rest);
+
+
+    window.open("formasdepago.html");
+    window.open("Efectivo.html");
+    window.open("Tajeta.html");
+}
 
 
 /**
@@ -185,14 +88,16 @@ let CargarLS2 = () => {
  * @method GuardarLSHoppi
  */
 let GuardarLSHoppi = () => {
-    let cant, tipo, cantt, canttt, tipoo, tipooo;
-    ;
+    let cant, tipo, cantt, canttt, tipoo, tipooo, rest;
+    rest = "hopiness";
+
     cant = document.getElementById("canthoppi1").value;
     cantt = document.getElementById("canthoppi2").value;
     canttt = document.getElementById("canthoppi3").value;
     tipo = document.getElementsByName("argentaburger")[0].value;
     tipoo = document.getElementsByName("cheeseburger")[0].value;
     tipooo = document.getElementsByName("crispyonionburgerveggie")[0].value;
+
     if (tipo == "simple") {
         tipo = 1150;
     }
@@ -220,12 +125,19 @@ let GuardarLSHoppi = () => {
     if (tipooo == "triple") {
         tipooo = 1750;
     }
+
+
+    console.log(arrayBurger);
+
     localStorage.setItem("canthambLS", cant);
     localStorage.setItem("canthambLS2", cantt);
     localStorage.setItem("canthambLS3", canttt);
     localStorage.setItem("tipohambLS", tipo);
     localStorage.setItem("tipohambLS2", tipoo);
     localStorage.setItem("tipohambLS3", tipooo);
+    localStorage.setItem("restaurante", rest);
+
+
     window.open("formasdepago.html");
     window.open("Efectivo.html");
     window.open("Tajeta.html");
@@ -235,8 +147,9 @@ let GuardarLSHoppi = () => {
  * @method GuardarLSWonder
  */
 let GuardarLSWonder = () => {
-    let cant, tipo, cantt, canttt, tipoo, tipooo;
-    ;
+    let cant, tipo, cantt, canttt, tipoo, tipooo, rest;
+    rest = "wonder";
+
     cant = document.getElementById("cantwonder1").value;
     cantt = document.getElementById("cantwonder2").value;
     canttt = document.getElementById("cantwonder3").value;
@@ -271,6 +184,9 @@ let GuardarLSWonder = () => {
     localStorage.setItem("tipohambLS", tipo);
     localStorage.setItem("tipohambLS2", tipoo);
     localStorage.setItem("tipohambLS3", tipooo);
+    localStorage.setItem("restaurante", rest);
+
+
     window.open("formasdepago.html");
     window.open("Efectivo.html");
     window.open("Tajeta.html");
@@ -280,7 +196,8 @@ let GuardarLSWonder = () => {
  * @method GuardarLSMolly
  */
 let GuardarLSMolly = () => {
-    let cant, tipo, cantt, canttt, tipoo, tipooo;
+    let cant, tipo, cantt, canttt, tipoo, tipooo, rest;
+    rest = "molly";
 
     cant = document.getElementById("cantmolly1").value;
     cantt = document.getElementById("cantmolly2").value;
@@ -323,6 +240,9 @@ let GuardarLSMolly = () => {
     localStorage.setItem("tipohambLS", tipo);
     localStorage.setItem("tipohambLS2", tipoo);
     localStorage.setItem("tipohambLS3", tipooo);
+    localStorage.setItem("restaurante", rest);
+
+
     window.open("formasdepago.html");
     window.open("Efectivo.html");
     window.open("Tajeta.html");
@@ -334,13 +254,14 @@ let GuardarLSMolly = () => {
 let Descuento = () => {
 
     var descuento, totalFinal, totalf1;
-    totalf1 = parseFloat(localStorage.getItem("totalf"));
+    totalf1 =localStorage.getItem("totalf");
 
     descuento = Number(totalf1) * (20 / 100);
 
     totalFinal = Number(totalf1) - Number(descuento);
 
     localStorage.setItem("totalFinal", totalFinal);
+    localStorage.setItem("descuento", descuento)
 
     document.getElementById("descuento").value = descuento;
     document.getElementById("totalfinal").value = totalFinal;
@@ -355,6 +276,7 @@ let Vuelto = () => {
     totalfv = localStorage.getItem("totalFinal");
     var numeros = /^[0-9]*$/;
 
+
     if (cantidad.search(numeros) || Number(cantidad) < Number(totalfv) || cantidad === "") {
         const dialogocantidad = document.getElementById("dialogocantidad");
         dialogocantidad.showModal();
@@ -365,6 +287,7 @@ let Vuelto = () => {
     } else if (Number(cantidad) >= Number(totalfv)) {
 
         vuelto = Number(cantidad) - Number(totalfv);
+        localStorage.setItem("vuelto", vuelto);
         document.getElementById("vuelto").value = vuelto;
 
     }
@@ -438,6 +361,7 @@ let validardatosefectivo = (name, lastname, id, ammount) => {
     var numeros = /^[0-9]*$/;
     var totalf2;
     let validar = true;
+    let medio;
     totalf2 = localStorage.getItem("totalFinal");
 
     if (name.search(letras) || name == "") {
@@ -468,9 +392,12 @@ let validardatosefectivo = (name, lastname, id, ammount) => {
 
     if(validar != false){
         alert("Se realizó la compra con éxito. Gracias por su compra! :D")
+        medio = "efectivo";
+        localStorage.setItem("medio", medio);
+        window.location.href = "Ticket.html";
+
     }
 
-    window.location.href = "Ticket.html";
 
 }
 /**
@@ -532,6 +459,7 @@ let validardatostarjeta = (titular2, id, NT2, vencimiento2, CDS2) => {
     var letras = /^[a-zA-Z\s]*$/;
     var numeros = /^[0-9]*$/;
     let validar = true;
+    let medio;
 
     if (titular2.search(letras) || titular2 == "") {
         const dialogotitular = document.getElementById("dialogotitular");
@@ -569,8 +497,11 @@ let validardatostarjeta = (titular2, id, NT2, vencimiento2, CDS2) => {
 
     if(validar != false){
         alert("Se realizó la compra con éxito. Gracias por su compra! :D")
+        medio = "tarjeta";
+        localStorage.setItem("medio", medio);
+        window.location.href = "Ticket.html";
+
     }
-    window.location.href = "Ticket.html";
 
 }
 /**
@@ -661,5 +592,174 @@ let animarhamburguesa = () => {
 
 
 
+
+
+
+var arrayBurger = [];
+let arrayPrices = [];
+let arrayCant = [];
+
+let cargararray = () =>{
+
+    var cant1, cant2, cant3, tipo1, tipo2, tipo3;
+    cant1 = localStorage.getItem("canthambLS");
+    cant2 = localStorage.getItem("canthambLS2");
+    cant3 = localStorage.getItem("canthambLS3");
+    tipo1 = localStorage.getItem("tipohambLS");
+    tipo2 = localStorage.getItem("tipohambLS2");
+    tipo3 = localStorage.getItem("tipohambLS3");
+
+    if( (localStorage.getItem("restaurante")) === "hopiness"){
+        if(cant1 != 0 ){
+            arrayPrices.push(Number(cant1) * Number(tipo1));
+            arrayBurger.push("Argenta Burger");
+            arrayCant.push(cant1)
+
+        }
+        if(cant2 != 0){
+            arrayPrices.push(Number(cant2) * Number(tipo2));
+            arrayBurger.push("Cheese Burger");
+            arrayCant.push(cant2)
+
+
+        }
+        if(cant3 != 0){
+            arrayPrices.push(Number(cant3) * Number(tipo3));
+            arrayBurger.push("Crispy Onion ");
+            arrayCant.push(cant3)
+
+
+        }
+    }
+
+    if( (localStorage.getItem("restaurante")) === "blackpan"){
+        if(cant1 != 0 ){
+            arrayPrices.push(Number(cant1) * Number(tipo1));
+            arrayBurger.push("Miss America");
+            arrayCant.push(cant1)
+
+        }
+        if(cant2 != 0){
+            arrayPrices.push(Number(cant2) * Number(tipo2));
+            arrayBurger.push("Bacon Cheese");
+            arrayCant.push(cant2)
+
+
+        }
+        if(cant3 != 0){
+            arrayPrices.push(Number(cant3) * Number(tipo3));
+            arrayBurger.push("Vegetariana ");
+            arrayCant.push(cant3)
+
+
+        }
+    }
+
+    if( (localStorage.getItem("restaurante")) === "molly"){
+        if(cant1 != 0 ){
+            arrayPrices.push(Number(cant1) * Number(tipo1));
+            arrayBurger.push("Big Veggie");
+            arrayCant.push(cant1)
+
+        }
+        if(cant2 != 0){
+            arrayPrices.push(Number(cant2) * Number(tipo2));
+            arrayBurger.push("Egg Bacon");
+            arrayCant.push(cant2)
+
+
+        }
+        if(cant3 != 0){
+            arrayPrices.push(Number(cant3) * Number(tipo3));
+            arrayBurger.push("Crispy Onion ");
+            arrayCant.push(cant3)
+
+
+        }
+    }
+
+    if( (localStorage.getItem("restaurante")) === "wonder"){
+        if(cant1 != 0 ){
+            arrayPrices.push(Number(cant1) * Number(tipo1));
+            arrayBurger.push("Wonder Argentina");
+            arrayCant.push(cant1)
+
+        }
+        if(cant2 != 0){
+            arrayPrices.push(Number(cant2) * Number(tipo2));
+            arrayBurger.push("Wonder Vegetariana");
+            arrayCant.push(cant2)
+
+
+        }
+        if(cant3 != 0){
+            arrayPrices.push(Number(cant3) * Number(tipo3));
+            arrayBurger.push("Wonder BBQ ");
+            arrayCant.push(cant3)
+
+
+        }
+    }
+
+
+
+}
+
+function ticket(){
+
+    var descuento, vuelto, totalfinal, fpago;
+    cargararray();
+
+    descuento = localStorage.getItem("descuento");
+    vuelto = localStorage.getItem("vuelto");
+    fpago = localStorage.getItem("medio");
+
+    if(fpago === "tarjeta"){
+        totalfinal = localStorage.getItem("totalf");
+    }else{
+        totalfinal = localStorage.getItem("totalFinal");
+    }
+
+    var canvas = document.getElementById("ticketCanvas");
+    var ctx= canvas.getContext("2d");
+    ctx.font = "12pt Verdana";
+    ctx.fillStyle = "black";
+    let alturarenglon = 57;
+
+    ctx.fillText("-----------------TICKET-----------------",3, 15);
+    ctx.fillText("PRODUCTOS ",7, 30);
+    ctx.fillText("PRECIO",225, 30);
+    ctx.fillText("----------------------------------------",3, 44);
+
+
+    arrayBurger.forEach((hamburguesa, id) => {
+
+        ctx.fillText(hamburguesa, 7, alturarenglon);
+        ctx.fillText("x",135, alturarenglon);
+        ctx.fillText(arrayCant[id], 143, alturarenglon);
+        ctx.fillText(arrayPrices[id], 233, alturarenglon);
+
+        alturarenglon += 20;
+    });
+
+    ctx.fillText("----------------------------------------",3, alturarenglon+20);
+    ctx.fillText("TOTAL: ",3, alturarenglon+40);
+    ctx.fillText( totalfinal, 89, alturarenglon+40);
+
+    if(fpago === "efectivo")
+    {
+        ctx.fillText("Descuento: ", 3, alturarenglon + 60);
+        ctx.fillText(descuento, 100, alturarenglon + 60);
+        ctx.fillText("Vuelto: ", 3, alturarenglon + 80);
+        ctx.fillText(vuelto, 100, alturarenglon + 80);
+    }
+
+    ctx.fillText("Muchas Gracias por su compra 🤍 ",3, alturarenglon+ 100);
+
+
+
+
+
+}
 
 

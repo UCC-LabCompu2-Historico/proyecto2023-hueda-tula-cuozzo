@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="estilo.css" type="text/css">
 
 </head>
-<body onload="CargarLS2(); Descuento()">
+<body onload="CargarLS(); Descuento()">
 <header>
     <h1 id="titulo_principal"><u><em>EFECTIVO</em></u></h1>
 </header>
@@ -27,7 +27,7 @@
 
 <p>
     <label for="total">Total sin el descuento:</label>
-    <input type="number" name="total" id="total" placeholder="Total" onload="CargarLS2()" disabled>
+    <input type="number" name="total" id="total" placeholder="Total" onload="CargarLS()" disabled>
 
 </p>
 
@@ -105,13 +105,17 @@
             </button>
         </p>
 
+
     </div>
 
     <div id="boton">
             <button type="button" class="boton" onclick="validardatosefectivo(nombre.value , apellido.value , Dni.value, cantidad.value)">PAGAR
             </button>
     </div>
-    <a class="atrás" id="atrásfp" href="restaurantes.html" >VOLVER A LOS RESTAURANES</a>
+
+
+    <a class="atras" id="atrasfp" href="formasdepago.html" >ATRÁS</a>
+
 
 
 
