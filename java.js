@@ -48,15 +48,23 @@
     //window.open("Tajeta.html");
 //}
 
-function escribirencanvas(cantidades, tipos, totalf){
+function escribirencanvas(){
+        let cantidades = [];
+        let tipos = [];
+        let totalf = 0;
+
+        for (let i = 1; i <= 3; i++) {
+            cantidades.push(parseFloat(localStorage.getItem(`canthambLS${i}`)) || 0);
+            tipos.push(localStorage.getItem(`tipohambLS${i}`));
+        }
+        totalf = parseFloat(localStorage.getItem("totalf")) || 0;
+
     var canvas = document.getElementById("ticketContainer");
     var ctx= canvas.getContext("2d");
     ctx.font = "12pt Verdana";
     ctx.fillStyle = "black";
     let alturarenglon = 15;
-    console.log("Cantidades:", cantidades);
-    console.log("Tipos:", tipos);
-    console.log("Total:", totalf);
+
     cantidades.forEach((cantidad, i) =>
     {
         ctx.fillText(`Cantidad ${i + 1}: ${cantidad}`, 10, 50 + i * alturarenglon);
@@ -107,7 +115,6 @@ let GuardarLSBP2 = () => {
     }
 
     localStorage.setItem("totalf", totalf);
-    escribirencanvas(cantidades, tipos, totalf);
 
     window.open("formasdepago.html");
     window.open("Efectivo.html");
