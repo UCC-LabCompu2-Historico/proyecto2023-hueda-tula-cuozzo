@@ -49,17 +49,20 @@
 //}
 
 function escribirencanvas(cantidades, tipos, totalf){
-    var canvas = document.getElementById("ticketCanvas");
+    var canvas = document.getElementById("ticketContainer");
     var ctx= canvas.getContext("2d");
     ctx.font = "12pt Verdana";
     ctx.fillStyle = "black";
     let alturarenglon = 15;
+    console.log("Cantidades:", cantidades);
+    console.log("Tipos:", tipos);
+    console.log("Total:", totalf);
     cantidades.forEach((cantidad, i) =>
     {
         ctx.fillText(`Cantidad ${i + 1}: ${cantidad}`, 10, 50 + i * alturarenglon);
         ctx.fillText(`Tipo ${i + 1}: ${tipos[i]}`, 10, 70 + i * alturarenglon);
     });
-    ctx.fillText(`Total: $${totalf}`, 10, 50 + (cantidades.length + 1) * alturarenglon);
+    ctx.fillText(`Total: ${totalf}`, 10, 50 + (cantidades.length + 1) * alturarenglon);
 }
 
 
@@ -98,7 +101,6 @@ let GuardarLSBP2 = () => {
             }
         }
 
-    // Almacenar en localStorage
     for (let i = 0; i < cantidades.length; i++) {
         localStorage.setItem(`canthambLS${i + 1}`, cantidades[i]);
         localStorage.setItem(`tipohambLS${i + 1}`, tipos[i]);
