@@ -1,11 +1,10 @@
-
-
 /**
  * Carga los datos guardados en el local storage, para que que se calcula el total,
  * el descuento de lo seleccionado por el usuario
  * @method CargarLS
  */
 let CargarLS = () => {
+
     let cant1, cant2, cant3, tipo1, tipo2, tipo3;
     cant1 = localStorage.getItem("canthambLS");
     cant2 = localStorage.getItem("canthambLS2");
@@ -15,12 +14,10 @@ let CargarLS = () => {
     tipo3 = localStorage.getItem("tipohambLS3");
 
 
-
     const totalf = Number(cant1) * Number(tipo1) + Number(cant2) * Number(tipo2) + Number(cant3) * Number(tipo3);
     localStorage.setItem("totalf", totalf);
     document.getElementById("total").value = totalf;
     document.getElementById("descuento").value = 0;
-
 
 }
 
@@ -30,6 +27,7 @@ let CargarLS = () => {
  * @method GuardarLSBP
  */
 let GuardarLSBP = () => {
+
     let cant, tipo, cantt, canttt, tipoo, tipooo, rest;
     rest = "blackpan";
 
@@ -78,9 +76,8 @@ let GuardarLSBP = () => {
     localStorage.setItem("restaurante", rest);
 
 
-    window.open("formasdepago.html");
-    window.open("Efectivo.html");
-    window.open("Tarjeta.html");
+
+
 }
 
 
@@ -89,6 +86,7 @@ let GuardarLSBP = () => {
  * @method GuardarLSHoppi
  */
 let GuardarLSHoppi = () => {
+
     let cant, tipo, cantt, canttt, tipoo, tipooo, rest;
     rest = "hopiness";
 
@@ -138,15 +136,17 @@ let GuardarLSHoppi = () => {
     localStorage.setItem("restaurante", rest);
 
 
-    window.open("formasdepago.html");
-    window.open("Efectivo.html");
-    window.open("Tarjeta.html");
+
+
 }
+
+
 /**
  * Almacena la cantidad,el tipo y el precio de hamburguesa seleccionada por el usurio en Wonder.
  * @method GuardarLSWonder
  */
 let GuardarLSWonder = () => {
+
     let cant, tipo, cantt, canttt, tipoo, tipooo, rest;
     rest = "wonder";
 
@@ -187,15 +187,17 @@ let GuardarLSWonder = () => {
     localStorage.setItem("restaurante", rest);
 
 
-    window.open("formasdepago.html");
-    window.open("Efectivo.html");
-    window.open("Tarjeta.html");
+
+
 }
+
+
 /**
  * Almacena la cantidad,el tipo y el precio de hamburguesa seleccionada por el usurio en molly.
  * @method GuardarLSMolly
  */
 let GuardarLSMolly = () => {
+
     let cant, tipo, cantt, canttt, tipoo, tipooo, rest;
     rest = "molly";
 
@@ -243,10 +245,12 @@ let GuardarLSMolly = () => {
     localStorage.setItem("restaurante", rest);
 
 
-    window.open("formasdepago.html");
-    window.open("Efectivo.html");
-    window.open("Tarjeta.html");
+
+
+
 }
+
+
 /**
  * En base a lo almacenado en el local storage, calcula el descuento de un 20% en base al total a cobrar. Lo almacena en
  * local storage
@@ -256,7 +260,7 @@ let GuardarLSMolly = () => {
 let Descuento = () => {
 
     let descuento, totalFinal, totalf1;
-    totalf1 =localStorage.getItem("totalf");
+    totalf1 = localStorage.getItem("totalf");
 
     descuento = Number(totalf1) * (20 / 100);
 
@@ -267,7 +271,10 @@ let Descuento = () => {
 
     document.getElementById("descuento").value = descuento;
     document.getElementById("totalfinal").value = totalFinal;
+
 }
+
+
 /**
  * Recupera lo almacenado en el local storage como total final y en base a la cantidad con la que va a pagar el usuario
  * calcula el vuelto que debe recibir el mismo. Ademas verifica que la cantidad ingresada sean numeros y que no sea menor
@@ -275,6 +282,7 @@ let Descuento = () => {
  * @method Vuelto
  */
 let Vuelto = () => {
+
     let vuelto, totalfv;
     const cantidad = document.getElementById("cantidad").value;
     totalfv = localStorage.getItem("totalFinal");
@@ -341,15 +349,19 @@ function dibujar(event) {
     }
 }
 
+
 /**
  * Permite limpiar el recuadro de la firma cuando el usuario apreta el boton limpiar firma
  * @method limpiarCanvas
  */
 function limpiarCanvas() {
+
     let canvas = document.getElementById("canvasAdibujar");
     var ctx = canvas.getContext("2d");
     canvas.width = canvas.width;
+
 }
+
 
 /**
  * Valida que los datos esten cargados de forma correcta. En caso contrario muestra mensajes de error.
@@ -395,7 +407,7 @@ let validardatosefectivo = (name, lastname, id, ammount) => {
         validar = false;
     }
 
-    if(validar != false){
+    if (validar != false) {
         alert("Se realizó la compra con éxito. Gracias por su compra! :D")
         medio = "efectivo";
         localStorage.setItem("medio", medio);
@@ -405,51 +417,69 @@ let validardatosefectivo = (name, lastname, id, ammount) => {
 
 
 }
+
+
 /**
  * Permite que al aparecer el alert sobre el error en la carga del nombre, el usuario al apretar aceptar pueda volver a cargar
  * @method cerrarDialogoNombre
  */
 let cerrarDialogoNombre = () => {
+
     let nombre;
     let dialogonombre = document.getElementById("dialogonombre");
     dialogonombre.close();
     nombre = " ";
     document.efectivo.nombre.value = nombre;
+
 }
+
+
 /**
  * Permite que al aparecer el alert sobre el error en la carga del apellido, el usuario al apretar aceptar pueda volver a cargar
  * @method cerrarDialogoApellido
  */
 let cerrarDialogoApellido = () => {
+
     let apellido;
     let dialogoapellido = document.getElementById("dialogoapellido");
     dialogoapellido.close();
     apellido = "";
     document.efectivo.apellido.value = apellido;
+
 }
+
+
 /**
  * Permite que al aparecer el alert sobre el error en la carga del dni, el usuario al apretar aceptar pueda volver a cargar
  * @method cerrarDialogoDNI
  */
 let cerrarDialogoDNI = () => {
+
     let dni;
     let dialogodni = document.getElementById("dialogodni");
     dialogodni.close();
     dni = "";
     document.efectivo.Dni.value = dni;
+
 }
+
+
 /**
  * Permite que al aparecer el alert sobre el error en la carga de la cantidad con la que va a pagar,
  * el usuario al apretar aceptar pueda volver a cargar
  * @method cerrarDialogoCantidad
  */
 let cerrarDialogoCantidad = () => {
+
     let cantidad;
     let dialogocantidad = document.getElementById("dialogocantidad");
     dialogocantidad.close();
     cantidad = "";
     document.efectivo.cantidad.value = cantidad;
+
 }
+
+
 /**
  * Recibe los datos de la tarjeta del consumidor y valida que sean correctos.
  * Ademas de que ningun campo quede vacio, muestra un alert. Si todo es correcto confirma la compra y redirige al ticket.
@@ -496,13 +526,13 @@ let validardatostarjeta = (titular2, id, NT2, vencimiento2, CDS2) => {
 
     }
 
-    if( vencimiento2 == ""){
+    if (vencimiento2 == "") {
         const dialogoVen2 = document.getElementById("dialogoVen");
         dialogoVen2.showModal();
         validar = false;
     }
 
-    if(validar != false){
+    if (validar != false) {
         alert("Se realizó la compra con éxito. Gracias por su compra! :D")
         medio = "tarjeta";
         localStorage.setItem("medio", medio);
@@ -511,17 +541,23 @@ let validardatostarjeta = (titular2, id, NT2, vencimiento2, CDS2) => {
     }
 
 }
+
+
 /**
  * Permite que al aparecer el alert sobre el error en la carga del titular de la tarjeta, el usuario al apretar aceptar pueda volver a cargar
  * @method cerrarDialogoTitular
  */
 let cerrarDialogoTitular = () => {
+
     let titular;
     let dialogotitular = document.getElementById("dialogotitular");
     dialogotitular.close();
     titular = "";
     document.tarjeta.titular.value = titular;
+
 }
+
+
 /**
  * Permite que al aparecer el alert sobre el error en la carga del dni, el usuario al apretar aceptar pueda volver a cargar
  * @method cerrarDialogoDNI2
@@ -533,29 +569,38 @@ let cerrarDialogoDNI2 = () => {
     dni = "";
     document.tarjeta.Dni.value = dni;
 }
+
+
 /**
  * Permite que al aparecer el alert sobre el error en la carga del numero de tarjeta
  * , el usuario al apretar aceptar pueda volver a cargar
  * @method cerrarDialogoNT
  */
 let cerrarDialogoNT = () => {
+
     let NT;
     let dialogoNT = document.getElementById("dialogoNT");
     dialogoNT.close();
     NT = "";
     document.tarjeta.NT.value = NT;
+
 }
+
+
 /**
  * Permite que al aparecer el alert sobre el error en la carga del codigo de seguridad, el usuario al apretar aceptar pueda volver a cargar
  * @method cerrarDialogoCDS
  */
 let cerrarDialogoCDS = () => {
+
     let CDS;
     let dialogoCDS = document.getElementById("dialogoCDS");
     dialogoCDS.close();
     CDS = "";
     document.tarjeta.CDS.value = CDS;
+
 }
+
 
 /**
  * Permite que al aparecer el alert sobre el error en la carga del vencimiento de la tarjeta,
@@ -563,13 +608,14 @@ let cerrarDialogoCDS = () => {
  * @method cerrarDialogoVen
  */
 let cerrarDialogoVen = () => {
+
     let Ven;
     let dialogoVen = document.getElementById("dialogoVen");
     dialogoVen.close();
     Ven = "";
     document.tarjeta.vencimiento.value = Ven;
-}
 
+}
 
 
 /**
@@ -579,6 +625,7 @@ let cerrarDialogoVen = () => {
 var x = 0;
 var dx = 2;
 let animarhamburguesa = () => {
+
     const canvas = document.getElementById("myCanvas");
     const ctx = canvas.getContext("2d");
 
@@ -599,16 +646,18 @@ let animarhamburguesa = () => {
     x += dx;
 }
 
+
 /**
  * Crea tres arrays distintos con lo guardado en el localstorage: hamburguesas, precios y cantidad.
  * Verifica el nombre del restaurante y en funcion de eso combina el tipo, con el precio y la cantidad de hamburguesas
  * @method animarhamb
  */
+
 var arrayBurger = [];
 let arrayPrices = [];
 let arrayCant = [];
 
-let cargararray = () =>{
+let cargararray = () => {
 
     var cant1, cant2, cant3, tipo1, tipo2, tipo3;
     cant1 = localStorage.getItem("canthambLS");
@@ -618,21 +667,21 @@ let cargararray = () =>{
     tipo2 = localStorage.getItem("tipohambLS2");
     tipo3 = localStorage.getItem("tipohambLS3");
 
-    if( (localStorage.getItem("restaurante")) === "hopiness"){
-        if(cant1 != 0 ){
+    if ((localStorage.getItem("restaurante")) === "hopiness") {
+        if (cant1 != 0) {
             arrayPrices.push(Number(cant1) * Number(tipo1));
             arrayBurger.push("Argenta Burger");
             arrayCant.push(cant1)
 
         }
-        if(cant2 != 0){
+        if (cant2 != 0) {
             arrayPrices.push(Number(cant2) * Number(tipo2));
             arrayBurger.push("Cheese Burger");
             arrayCant.push(cant2)
 
 
         }
-        if(cant3 != 0){
+        if (cant3 != 0) {
             arrayPrices.push(Number(cant3) * Number(tipo3));
             arrayBurger.push("Crispy Onion ");
             arrayCant.push(cant3)
@@ -641,21 +690,21 @@ let cargararray = () =>{
         }
     }
 
-    if( (localStorage.getItem("restaurante")) === "blackpan"){
-        if(cant1 != 0 ){
+    if ((localStorage.getItem("restaurante")) === "blackpan") {
+        if (cant1 != 0) {
             arrayPrices.push(Number(cant1) * Number(tipo1));
             arrayBurger.push("Miss America");
             arrayCant.push(cant1)
 
         }
-        if(cant2 != 0){
+        if (cant2 != 0) {
             arrayPrices.push(Number(cant2) * Number(tipo2));
             arrayBurger.push("Bacon Cheese");
             arrayCant.push(cant2)
 
 
         }
-        if(cant3 != 0){
+        if (cant3 != 0) {
             arrayPrices.push(Number(cant3) * Number(tipo3));
             arrayBurger.push("Vegetariana ");
             arrayCant.push(cant3)
@@ -664,21 +713,21 @@ let cargararray = () =>{
         }
     }
 
-    if( (localStorage.getItem("restaurante")) === "molly"){
-        if(cant1 != 0 ){
+    if ((localStorage.getItem("restaurante")) === "molly") {
+        if (cant1 != 0) {
             arrayPrices.push(Number(cant1) * Number(tipo1));
             arrayBurger.push("Big Veggie");
             arrayCant.push(cant1)
 
         }
-        if(cant2 != 0){
+        if (cant2 != 0) {
             arrayPrices.push(Number(cant2) * Number(tipo2));
             arrayBurger.push("Egg Bacon");
             arrayCant.push(cant2)
 
 
         }
-        if(cant3 != 0){
+        if (cant3 != 0) {
             arrayPrices.push(Number(cant3) * Number(tipo3));
             arrayBurger.push("Crispy Onion ");
             arrayCant.push(cant3)
@@ -687,21 +736,21 @@ let cargararray = () =>{
         }
     }
 
-    if( (localStorage.getItem("restaurante")) === "wonder"){
-        if(cant1 != 0 ){
+    if ((localStorage.getItem("restaurante")) === "wonder") {
+        if (cant1 != 0) {
             arrayPrices.push(Number(cant1) * Number(tipo1));
             arrayBurger.push(" Argentina");
             arrayCant.push(cant1)
 
         }
-        if(cant2 != 0){
+        if (cant2 != 0) {
             arrayPrices.push(Number(cant2) * Number(tipo2));
             arrayBurger.push(" Vegetariana");
             arrayCant.push(cant2)
 
 
         }
-        if(cant3 != 0){
+        if (cant3 != 0) {
             arrayPrices.push(Number(cant3) * Number(tipo3));
             arrayBurger.push(" BBQ ");
             arrayCant.push(cant3)
@@ -712,12 +761,13 @@ let cargararray = () =>{
 
 }
 
+
 /**
  * Invoca al array burguer y junto con la forma de pago, el total, decuento y cantidad construye el ticket.
  * Utiliza forEach para recorrer el array
  * @method animarhamb
  */
-function ticket(){
+function ticket() {
 
     var descuento, vuelto, totalfinal, fpago;
     cargararray();
@@ -726,47 +776,46 @@ function ticket(){
     vuelto = localStorage.getItem("vuelto");
     fpago = localStorage.getItem("medio");
 
-    if(fpago === "tarjeta"){
+    if (fpago === "tarjeta") {
         totalfinal = localStorage.getItem("totalf");
-    }else{
+    } else {
         totalfinal = localStorage.getItem("totalFinal");
     }
 
     var canvas = document.getElementById("ticketCanvas");
-    var ctx= canvas.getContext("2d");
+    var ctx = canvas.getContext("2d");
     ctx.font = "12pt Verdana";
     ctx.fillStyle = "black";
     let alturarenglon = 57;
 
-    ctx.fillText("-----------------TICKET-----------------",3, 15);
-    ctx.fillText("PRODUCTOS ",7, 30);
-    ctx.fillText("PRECIO",225, 30);
-    ctx.fillText("----------------------------------------",3, 44);
+    ctx.fillText("-----------------TICKET-----------------", 3, 15);
+    ctx.fillText("PRODUCTOS ", 7, 30);
+    ctx.fillText("PRECIO", 225, 30);
+    ctx.fillText("----------------------------------------", 3, 44);
 
 
     arrayBurger.forEach((hamburguesa, id) => {
 
         ctx.fillText(hamburguesa, 7, alturarenglon);
-        ctx.fillText("x",135, alturarenglon);
+        ctx.fillText("x", 135, alturarenglon);
         ctx.fillText(arrayCant[id], 143, alturarenglon);
         ctx.fillText(arrayPrices[id], 233, alturarenglon);
 
         alturarenglon += 20;
     });
 
-    ctx.fillText("----------------------------------------",3, alturarenglon+20);
-    ctx.fillText("TOTAL: ",3, alturarenglon+40);
-    ctx.fillText( totalfinal, 89, alturarenglon+40);
+    ctx.fillText("----------------------------------------", 3, alturarenglon + 20);
+    ctx.fillText("TOTAL: ", 3, alturarenglon + 40);
+    ctx.fillText(totalfinal, 89, alturarenglon + 40);
 
-    if(fpago === "efectivo")
-    {
+    if (fpago === "efectivo") {
         ctx.fillText("Descuento: ", 3, alturarenglon + 60);
         ctx.fillText(descuento, 100, alturarenglon + 60);
         ctx.fillText("Vuelto: ", 3, alturarenglon + 80);
         ctx.fillText(vuelto, 100, alturarenglon + 80);
     }
 
-    ctx.fillText("Muchas Gracias por su compra 🤍 ",3, alturarenglon+ 100);
+    ctx.fillText("Muchas Gracias por su compra 🤍 ", 3, alturarenglon + 100);
 
 }
 
