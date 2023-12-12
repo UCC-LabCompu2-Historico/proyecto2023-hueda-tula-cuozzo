@@ -1,7 +1,8 @@
 
 
 /**
- * Descripción
+ * Carga los datos guardados en el local storage, para que que se calcula el total,
+ * el descuento de lo seleccionado por el usuario
  * @method CargarLS
  */
 let CargarLS = () => {
@@ -25,7 +26,7 @@ let CargarLS = () => {
 
 
 /**
- * Descripción
+ * Almacena la cantidad,el tipo y el precio de hamburguesa seleccionada por el usurio en black pan.
  * @method GuardarLSBP
  */
 let GuardarLSBP = () => {
@@ -79,12 +80,12 @@ let GuardarLSBP = () => {
 
     window.open("formasdepago.html");
     window.open("Efectivo.html");
-    window.open("Tajeta.html");
+    window.open("Tarjeta.html");
 }
 
 
 /**
- * Descripción
+ * Almacena la cantidad,el tipo y el precio de hamburguesa seleccionada por el usurio en Hoppinnes.
  * @method GuardarLSHoppi
  */
 let GuardarLSHoppi = () => {
@@ -140,10 +141,10 @@ let GuardarLSHoppi = () => {
 
     window.open("formasdepago.html");
     window.open("Efectivo.html");
-    window.open("Tajeta.html");
+    window.open("Tarjeta.html");
 }
 /**
- * Descripción
+ * Almacena la cantidad,el tipo y el precio de hamburguesa seleccionada por el usurio en Wonder.
  * @method GuardarLSWonder
  */
 let GuardarLSWonder = () => {
@@ -189,10 +190,10 @@ let GuardarLSWonder = () => {
 
     window.open("formasdepago.html");
     window.open("Efectivo.html");
-    window.open("Tajeta.html");
+    window.open("Tarjeta.html");
 }
 /**
- * Descripción
+ * Almacena la cantidad,el tipo y el precio de hamburguesa seleccionada por el usurio en molly.
  * @method GuardarLSMolly
  */
 let GuardarLSMolly = () => {
@@ -245,10 +246,11 @@ let GuardarLSMolly = () => {
 
     window.open("formasdepago.html");
     window.open("Efectivo.html");
-    window.open("Tajeta.html");
+    window.open("Tarjeta.html");
 }
 /**
- * Descripción
+ * En base a lo almacenado en el local storage, calcula el descuento de un 20% en base al total a cobrar.
+ * Luego actualiza el total final
  * @method Descuento
  */
 let Descuento = () => {
@@ -267,7 +269,9 @@ let Descuento = () => {
     document.getElementById("totalfinal").value = totalFinal;
 }
 /**
- * Descripción
+ * Recupera lo almacenado en el local storage como total final y en base a la cantidad con la que va a pagar el usuario
+ * calcula el vuelto que debe recibir el mismo. Ademas verifica que la cantidad ingresada sean numeros y que no sea menor
+ * que el total.
  * @method Vuelto
  */
 let Vuelto = () => {
@@ -295,9 +299,9 @@ let Vuelto = () => {
 
 
 /**
- * Descripción
+ * Realizar la firma dentro del recuadro canvas
  * @method Dibujar
- * @param event
+ * @param {MouseEvent}-event
  * @return
  */
 var bandera;
@@ -338,7 +342,7 @@ function dibujar(event) {
 }
 
 /**
- * Descripción
+ * Permite limpiar el recuadro de la firma cuando el usuario apreta el boton limpiar firma
  * @method limpiarCanvas
  */
 function limpiarCanvas() {
@@ -348,12 +352,13 @@ function limpiarCanvas() {
 }
 
 /**
- * Descripción
+ * Valida que los datos esten cargados de forma correcta. En caso contrario muestra mensajes de error.
+ * Confirma la compra y redirige a la pagina de ticket
  * @method validardatosefectivo
- * @param name
- * @param lastname
- * @param id
- * @param ammount
+ * @param {string} name - Nombre del comprador
+ * @param {string} lastname - Apellido del comprador
+ * @param {number} id -Dni del comprador
+ * @param {number}ammount - Cantidad con la que va a pagar
  */
 let validardatosefectivo = (name, lastname, id, ammount) => {
 
@@ -401,7 +406,7 @@ let validardatosefectivo = (name, lastname, id, ammount) => {
 
 }
 /**
- * Descripción
+ * Permite que al aparecer el alert sobre el error en la carga del nombre, el usuario al apretar aceptar pueda volver a cargar
  * @method cerrarDialogoNombre
  */
 let cerrarDialogoNombre = () => {
@@ -412,7 +417,7 @@ let cerrarDialogoNombre = () => {
     document.efectivo.nombre.value = nombre;
 }
 /**
- * Descripción
+ * Permite que al aparecer el alert sobre el error en la carga del apellido, el usuario al apretar aceptar pueda volver a cargar
  * @method cerrarDialogoApellido
  */
 let cerrarDialogoApellido = () => {
@@ -423,7 +428,7 @@ let cerrarDialogoApellido = () => {
     document.efectivo.apellido.value = apellido;
 }
 /**
- * Descripción
+ * Permite que al aparecer el alert sobre el error en la carga del dni, el usuario al apretar aceptar pueda volver a cargar
  * @method cerrarDialogoDNI
  */
 let cerrarDialogoDNI = () => {
@@ -434,7 +439,8 @@ let cerrarDialogoDNI = () => {
     document.efectivo.Dni.value = dni;
 }
 /**
- * Descripción
+ * Permite que al aparecer el alert sobre el error en la carga de la cantidad con la que va a pagar,
+ * el usuario al apretar aceptar pueda volver a cargar
  * @method cerrarDialogoCantidad
  */
 let cerrarDialogoCantidad = () => {
@@ -445,13 +451,14 @@ let cerrarDialogoCantidad = () => {
     document.efectivo.cantidad.value = cantidad;
 }
 /**
- * Descripción
+ * Recibe los datos de la tarjeta del consumidor y valida que sean correctos.
+ * Ademas de que ningun campo quede vacio, muestra un alert. Si todo es correcto confirma la compra y redirige al ticket.
  * @method validardatostarjeta
- * @param titular2
- * @param id
- * @param NT2
- * @param vencimiento2
- * @param CDS2
+ * @param {string} titular2 - Titular de la tarjeta con la que se va pagar.
+ * @param {number} id - Dni del dueño de la tarjeta
+ * @param {number} NT2 - Numero de tarjeta
+ * @param {number} vencimiento2 - Vencimiento de la tarjeta
+ * @param {number}CDS2 - Codigo de seguridad de tarjeta
  * @return
  */
 let validardatostarjeta = (titular2, id, NT2, vencimiento2, CDS2) => {
@@ -505,7 +512,7 @@ let validardatostarjeta = (titular2, id, NT2, vencimiento2, CDS2) => {
 
 }
 /**
- * Descripción
+ * Permite que al aparecer el alert sobre el error en la carga del titular de la tarjeta, el usuario al apretar aceptar pueda volver a cargar
  * @method cerrarDialogoTitular
  */
 let cerrarDialogoTitular = () => {
@@ -516,7 +523,7 @@ let cerrarDialogoTitular = () => {
     document.tarjeta.titular.value = titular;
 }
 /**
- * Descripción
+ * Permite que al aparecer el alert sobre el error en la carga del dni, el usuario al apretar aceptar pueda volver a cargar
  * @method cerrarDialogoDNI2
  */
 let cerrarDialogoDNI2 = () => {
@@ -527,7 +534,8 @@ let cerrarDialogoDNI2 = () => {
     document.tarjeta.Dni.value = dni;
 }
 /**
- * Descripción
+ * Permite que al aparecer el alert sobre el error en la carga del numero de tarjeta
+ * , el usuario al apretar aceptar pueda volver a cargar
  * @method cerrarDialogoNT
  */
 let cerrarDialogoNT = () => {
@@ -538,7 +546,7 @@ let cerrarDialogoNT = () => {
     document.tarjeta.NT.value = NT;
 }
 /**
- * Descripción
+ * Permite que al aparecer el alert sobre el error en la carga del codigo de seguridad, el usuario al apretar aceptar pueda volver a cargar
  * @method cerrarDialogoCDS
  */
 let cerrarDialogoCDS = () => {
@@ -550,7 +558,8 @@ let cerrarDialogoCDS = () => {
 }
 
 /**
- * Descripción
+ * Permite que al aparecer el alert sobre el error en la carga del vencimiento de la tarjeta,
+ * el usuario al apretar aceptar pueda volver a cargar
  * @method cerrarDialogoVen
  */
 let cerrarDialogoVen = () => {
@@ -564,7 +573,7 @@ let cerrarDialogoVen = () => {
 
 
 /**
- * Descripción
+ * Desplaza la imagen de una hamburguesa a lo largo del ancho de la pagina de forma de pago
  * @method animarhamb
  */
 var x = 0;
@@ -590,11 +599,11 @@ let animarhamburguesa = () => {
     x += dx;
 }
 
-
-
-
-
-
+/**
+ * Crea tres arrays distintos con lo guardado en el localstorage: hamburguesas, precios y cantidad.
+ * Verifica el nombre del restaurante y en funcion de eso combina el tipo, con el precio y la cantidad de hamburguesas
+ * @method animarhamb
+ */
 var arrayBurger = [];
 let arrayPrices = [];
 let arrayCant = [];
@@ -704,7 +713,11 @@ let cargararray = () =>{
 
 
 }
-
+/**
+ * Invoca al array burguer y junto con la forma de pago, el total, decuento y cantidad construye el ticket.
+ * Utiliza forEach para recorrer el array
+ * @method animarhamb
+ */
 function ticket(){
 
     var descuento, vuelto, totalfinal, fpago;
@@ -755,10 +768,6 @@ function ticket(){
     }
 
     ctx.fillText("Muchas Gracias por su compra 🤍 ",3, alturarenglon+ 100);
-
-
-
-
 
 }
 
