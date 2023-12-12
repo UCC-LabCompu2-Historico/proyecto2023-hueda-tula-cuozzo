@@ -6,7 +6,7 @@
  * @method CargarLS
  */
 let CargarLS = () => {
-    var cant1, cant2, cant3, tipo1, tipo2, tipo3;
+    let cant1, cant2, cant3, tipo1, tipo2, tipo3;
     cant1 = localStorage.getItem("canthambLS");
     cant2 = localStorage.getItem("canthambLS2");
     cant3 = localStorage.getItem("canthambLS3");
@@ -16,7 +16,7 @@ let CargarLS = () => {
 
 
 
-    var totalf = Number(cant1) * Number(tipo1) + Number(cant2) * Number(tipo2) + Number(cant3) * Number(tipo3);
+    const totalf = Number(cant1) * Number(tipo1) + Number(cant2) * Number(tipo2) + Number(cant3) * Number(tipo3);
     localStorage.setItem("totalf", totalf);
     document.getElementById("total").value = totalf;
     document.getElementById("descuento").value = 0;
@@ -255,7 +255,7 @@ let GuardarLSMolly = () => {
  */
 let Descuento = () => {
 
-    var descuento, totalFinal, totalf1;
+    let descuento, totalFinal, totalf1;
     totalf1 =localStorage.getItem("totalf");
 
     descuento = Number(totalf1) * (20 / 100);
@@ -275,10 +275,10 @@ let Descuento = () => {
  * @method Vuelto
  */
 let Vuelto = () => {
-    var vuelto, totalfv;
+    let vuelto, totalfv;
     const cantidad = document.getElementById("cantidad").value;
     totalfv = localStorage.getItem("totalFinal");
-    var numeros = /^[0-9]*$/;
+    const numeros = /^[0-9]*$/;
 
 
     if (cantidad.search(numeros) || Number(cantidad) < Number(totalfv) || cantidad === "") {
@@ -310,8 +310,8 @@ let initialY;
 
 function dibujar(event) {
 
-    var canvas = document.getElementById("canvasAdibujar");
-    var ctx = canvas.getContext("2d");
+    const canvas = document.getElementById("canvasAdibujar");
+    const ctx = canvas.getContext("2d");
 
     let xAnterior = 0, yAnterior = 0, xActual = 0, yActual = 0;
     const obtenerXReal = (clientX) => clientX - canvas.getBoundingClientRect().left;
@@ -346,7 +346,7 @@ function dibujar(event) {
  * @method limpiarCanvas
  */
 function limpiarCanvas() {
-    var canvas = document.getElementById("canvasAdibujar");
+    let canvas = document.getElementById("canvasAdibujar");
     var ctx = canvas.getContext("2d");
     canvas.width = canvas.width;
 }
@@ -362,9 +362,9 @@ function limpiarCanvas() {
  */
 let validardatosefectivo = (name, lastname, id, ammount) => {
 
-    var letras = /^[a-zA-Z\s]*$/;
-    var numeros = /^[0-9]*$/;
-    var totalf2;
+    const letras = /^[a-zA-Z\s]*$/;
+    const numeros = /^[0-9]*$/;
+    let totalf2;
     let validar = true;
     let medio;
     totalf2 = localStorage.getItem("totalFinal");
@@ -463,8 +463,8 @@ let cerrarDialogoCantidad = () => {
  */
 let validardatostarjeta = (titular2, id, NT2, vencimiento2, CDS2) => {
 
-    var letras = /^[a-zA-Z\s]*$/;
-    var numeros = /^[0-9]*$/;
+    const letras = /^[a-zA-Z\s]*$/;
+    const numeros = /^[0-9]*$/;
     let validar = true;
     let medio;
 
