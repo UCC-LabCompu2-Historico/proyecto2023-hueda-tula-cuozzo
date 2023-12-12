@@ -690,20 +690,20 @@ let cargararray = () =>{
     if( (localStorage.getItem("restaurante")) === "wonder"){
         if(cant1 != 0 ){
             arrayPrices.push(Number(cant1) * Number(tipo1));
-            arrayBurger.push("Wonder Argentina");
+            arrayBurger.push(" Argentina");
             arrayCant.push(cant1)
 
         }
         if(cant2 != 0){
             arrayPrices.push(Number(cant2) * Number(tipo2));
-            arrayBurger.push("Wonder Vegetariana");
+            arrayBurger.push(" Vegetariana");
             arrayCant.push(cant2)
 
 
         }
         if(cant3 != 0){
             arrayPrices.push(Number(cant3) * Number(tipo3));
-            arrayBurger.push("Wonder BBQ ");
+            arrayBurger.push(" BBQ ");
             arrayCant.push(cant3)
 
 
