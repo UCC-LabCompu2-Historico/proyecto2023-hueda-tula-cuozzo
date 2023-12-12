@@ -127,7 +127,6 @@ let GuardarLSHoppi = () => {
         tipooo = 1750;
     }
 
-
     console.log(arrayBurger);
 
     localStorage.setItem("canthambLS", cant);
@@ -249,7 +248,8 @@ let GuardarLSMolly = () => {
     window.open("Tarjeta.html");
 }
 /**
- * En base a lo almacenado en el local storage, calcula el descuento de un 20% en base al total a cobrar.
+ * En base a lo almacenado en el local storage, calcula el descuento de un 20% en base al total a cobrar. Lo almacena en
+ * local storage
  * Luego actualiza el total final
  * @method Descuento
  */
@@ -710,9 +710,8 @@ let cargararray = () =>{
         }
     }
 
-
-
 }
+
 /**
  * Invoca al array burguer y junto con la forma de pago, el total, decuento y cantidad construye el ticket.
  * Utiliza forEach para recorrer el array
