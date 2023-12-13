@@ -620,7 +620,7 @@ let cerrarDialogoVen = () => {
 
 /**
  * Desplaza la imagen de una hamburguesa a lo largo del ancho de la pagina de forma de pago
- * @method animarhamb
+ * @method animarhamburguesa
  */
 var x = 0;
 var dx = 2;
